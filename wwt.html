@@ -1,0 +1,180 @@
+<!DOCTYPE html><script type="application/json" id="cowork-artifact-meta">
+{
+  "name": "Wwt Ussf Signal Mapping",
+  "schemaVersion": 1,
+  "description": "Weekly briefing tracking World Wide Technology's (WWT) public content (articles, podcasts, research) alongside USAF/USSF leadership statements and conference appearances, with a best-effort mapping between WWT's market messaging and what USAF/USSF customers are publicly prioritizing. Static snapshot from public web search; treats WWT as a market bellwether, not a competitor."
+}
+</script>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>WWT &harr; USAF/USSF Signal Mapping</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #f7f7f5;
+    color: #1f1f1f;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 28px 20px 60px; }
+  header { margin-bottom: 24px; }
+  h1 { font-size: 24px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .meta { color: #666; font-size: 13px; }
+  .meta strong { color: #333; }
+  .backlink { margin-bottom: 8px; }
+  .backlink a { font-size: 12px; color: #6a6acb; text-decoration: none; font-weight: 500; }
+  .backlink a:hover { text-decoration: underline; }
+  .note {
+    background: #fff8ec; border: 1px solid #eaddb8; color: #6b5a2a;
+    font-size: 12.5px; padding: 10px 14px; border-radius: 8px; margin-top: 14px;
+  }
+  .toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 18px 0 6px; }
+  .toc a {
+    font-size: 12px; text-decoration: none; color: #444; background: #eeeeeb;
+    padding: 4px 10px; border-radius: 999px; border: 1px solid #e0e0da;
+  }
+  .toc a:hover { background: #e2e2dc; }
+  section.cat {
+    background: #ffffff; border: 1px solid #e6e6e0; border-radius: 12px;
+    padding: 18px 20px 8px; margin-top: 18px; scroll-margin-top: 16px;
+  }
+  section.cat h2 {
+    font-size: 16px; margin: 0 0 4px; display: flex; align-items: center; gap: 8px;
+  }
+  section.cat .sub { font-size: 12px; color: #888; margin: 0 0 12px; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; flex: none; }
+  .wwt .dot { background: #c0392b; }
+  .leadership .dot { background: #2b5fa8; }
+  .conferences .dot { background: #6a3fb5; }
+  .mapping .dot { background: #16a085; }
+  .item { padding: 0 0 14px; border-bottom: 1px solid #f0f0ea; margin-bottom: 14px; }
+  .item:last-child { border-bottom: none; margin-bottom: 4px; padding-bottom: 6px; }
+  .item .headline { font-weight: 600; font-size: 14.5px; margin-bottom: 3px; }
+  .item .date { color: #888; font-size: 11.5px; font-weight: 500; margin-right: 6px; }
+  .item p { margin: 4px 0 6px; font-size: 13.5px; color: #333; }
+  .item .src { font-size: 12px; }
+  .item .src a { color: #6a6acb; text-decoration: none; }
+  .item .src a:hover { text-decoration: underline; }
+  .item.empty p { color: #777; font-style: italic; margin: 4px 0 2px; }
+  .badge {
+    display: inline-block; font-size: 10.5px; font-weight: 600; color: #1f5a3d;
+    background: #e3f3ea; border: 1px solid #c3e2d1; border-radius: 5px;
+    padding: 1px 6px; margin-left: 6px; vertical-align: middle;
+  }
+  .badge.upcoming { color: #4a2f8a; background: #ece5fb; border-color: #d7c8f5; }
+  .tag {
+    display: inline-block; font-size: 10.5px; font-weight: 600; color: #555;
+    background: #f0f0ea; border: 1px solid #e0e0da; border-radius: 5px;
+    padding: 1px 6px; margin: 0 4px 4px 0;
+  }
+  footer { margin-top: 28px; font-size: 12px; color: #888; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="backlink"><a href="https://news.davidvasek.work">&larr; All briefings</a></div>
+    <h1>WWT &harr; USAF/USSF Signal Mapping</h1>
+    <div class="meta">Compiled <strong>Tuesday, September 15, 2026</strong> (v1) &middot; World Wide Technology public content vs. USAF/USSF leadership priorities</div>
+    <div class="toc">
+      <a href="#wwt">WWT Content</a>
+      <a href="#leadership">Leadership Watch</a>
+      <a href="#conferences">Upcoming Conferences</a>
+      <a href="#mapping">Signal Mapping</a>
+    </div>
+    <div class="note">
+      <strong>First run &mdash; read this before trusting it.</strong> This tracks WWT (World Wide Technology) as a market bellwether, not a competitor or partner &mdash; the goal is situational awareness of what messaging is landing with USAF/USSF, not competitive positioning. It updates weekly (WWT's content cadence and the conference calendar both move slower than daily news). Two known weak spots: WWT's podcasts (TEC37, AI Proving Ground, Research &amp; Insights) usually aren't transcribed in public search, so podcast items here are sourced from titles/descriptions only, not actual talking points &mdash; treat them as directional. And the "Upcoming Conferences" section is a best-effort forward calendar assembled from event-site listings, not a verified feed &mdash; it will have gaps and won't always have confirmed speakers until close to the date. The "Signal Mapping" section is inference, not sourced fact &mdash; read it as discussion starters, not citations.
+    </div>
+  </header>
+
+  <section class="cat wwt" id="wwt">
+    <h2><span class="dot"></span>WWT Content</h2>
+    <p class="sub">Recent public content from wwt.com &mdash; articles, podcasts (AI Proving Ground, TEC37, Research &amp; Insights), federal/public-sector insights.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Ongoing (weekly)</span>AI Proving Ground Podcast: AI moving from pilot to production opex</div>
+      <p>Recent episode with AMD's John Hampton and WWT's Mike Trojecki frames enterprise AI as shifting from experimentation to a real, recurring operating expense &mdash; part of a running theme across the last several episodes (also: a GTC 2026 recap with Core42, and a VMware/NVIDIA private-AI-strategy episode). No transcript available publicly; topic inferred from episode titles/descriptions.</p>
+      <div class="src"><a href="https://www.wwt.com/podcasts/ai-proving-ground-podcast/library" target="_blank">WWT AI Proving Ground Podcast Library</a></div>
+    </div>
+    <div class="item">
+      <div class="headline"><span class="date">Recent</span>Federal AI adoption: compliance shifts, model risk, legacy systems, workforce</div>
+      <p>WWT's federal/public-sector content stream is currently centered on the friction points slowing federal AI adoption &mdash; compliance requirements in flux, model risk management, legacy system integration, and workforce readiness. Consistent with WWT's broader "AI Proving Ground" federal push (Securing AI Lab with CrowdStrike, launched March 2026, remains the anchor offering for AI-security positioning with government customers).</p>
+      <div class="src"><a href="https://www.wwt.com/industry/public-sector/insights" target="_blank">WWT Public Sector Insights</a> &middot; <a href="https://www.wwt.com/industry/federal-civilian/overview" target="_blank">WWT Federal Civilian</a></div>
+    </div>
+    <div class="item">
+      <div class="headline"><span class="date">Recent</span>WWT at 2026 AWS Summit (public-sector-exclusive edition)</div>
+      <p>WWT covered the 2026 AWS Summit in Washington, DC &mdash; the largest AWS Summit in North America and the only one built exclusively for public sector &mdash; recapping takeaways for government cloud buyers. Relevant background for anyone tracking how WWT positions itself in the federal cloud conversation alongside the JWCC recompete (see Signal Mapping below).</p>
+      <div class="src"><a href="https://www.wwt.com/industry/public-sector/insights" target="_blank">WWT Public Sector Insights</a></div>
+    </div>
+  </section>
+
+  <section class="cat leadership" id="leadership">
+    <h2><span class="dot"></span>USAF/USSF Leadership Watch</h2>
+    <p class="sub">Public statements and appearances from Air Force and Space Force leadership &mdash; reactive coverage, sourced after the fact.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Sept 3</span>Gen. Douglas Schiess sworn in as new Chief of Space Operations</div>
+      <p>Schiess succeeded Gen. Chance Saltzman as CSO on Sept 3 &mdash; only the third Chief of Space Operations in the Space Force's history. Saltzman grew the service from roughly 8,000 to 10,000 uniformed Guardians over his four-year tenure. This is a leadership transition worth tracking closely: a new CSO typically resets messaging priorities in his first 6&ndash;12 months, and his early public statements (see next item) are the clearest early signal of where USSF emphasis is headed.</p>
+      <div class="src"><a href="https://www.airandspaceforces.com/schiess-new-chief-of-space-operations-space-force/" target="_blank">Air &amp; Space Forces Magazine</a> &middot; <a href="https://spacepolicyonline.com/news/schiess-takes-charge-of-u-s-space-force/" target="_blank">SpacePolicyOnline</a></div>
+    </div>
+    <div class="item">
+      <div class="headline"><span class="date">Sept 15</span>Schiess's first major address as CSO: Space Force was decisive in Operation Epic Fury</div>
+      <p>At AFA's Air, Space &amp; Cyber Conference, Schiess said Guardians applied electronic-warfare effects to suppress enemy air defenses and communications during Operation Epic Fury (the campaign against Iran), and that Space Force capabilities were part of the calculus on whether the joint campaign could proceed at all: "Without the Space Force's capabilities, the Joint Force could not &mdash; and would not &mdash; move forward." Notable for anyone selling EW-adjacent, comms, or space-enabled C2 capabilities &mdash; this is the new CSO explicitly tying Space Force relevance to real combat operations rather than abstract deterrence.</p>
+      <div class="src"><a href="https://www.airandspaceforces.com/schiess-highlights-space-forces-role-in-epic-fury/" target="_blank">Air &amp; Space Forces Magazine</a></div>
+    </div>
+    <div class="item">
+      <div class="headline"><span class="date">Sept 14</span>CMSSF Bentivegna keynote: "The Cyber Thread of Space Power"</div>
+      <p>Chief Master Sergeant of the Space Force John Bentivegna's AFA keynote, titled "The Cyber Thread of Space Power: Forging the Guardians Who Secure Our Decision Advantage," framed cyber defense as core to Guardian identity and to protecting the data/decision pipeline space systems feed into. Directly relevant to anyone pitching cyber, identity, or data-security capabilities into USSF &mdash; this is the senior enlisted leader explicitly naming "decision advantage" security as a workforce and mission priority.</p>
+      <div class="src"><a href="https://www.afa.org/air-space-cyber-conference/2026-agenda/" target="_blank">AFA 2026 Agenda</a></div>
+    </div>
+  </section>
+
+  <section class="cat conferences" id="conferences">
+    <h2><span class="dot"></span>Upcoming Conferences <span class="badge upcoming">forward calendar</span></h2>
+    <p class="sub">Best-effort list of upcoming events with likely USAF/USSF leadership presence, IT/cyber/SATCOM-relevant. Will have gaps &mdash; treat as a starting point, not a verified feed.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Nov 2&ndash;5</span>Global MilSatCom 2026 &mdash; London</div>
+      <p>28th annual edition, 700+ senior military/government/industry leaders from 45+ nations, dedicated entirely to military SATCOM. Historically draws USSF SATCOM program leadership; worth watching for U.S. speaker announcements as the agenda firms up.</p>
+      <div class="src"><a href="https://gsoa.space/events/milsatcom-usa-2026/" target="_blank">GSOA</a></div>
+    </div>
+    <div class="item">
+      <div class="headline"><span class="date">Nov 4&ndash;5</span>CyberSat Summit 2026 (classified track) &mdash; Chantilly, VA</div>
+      <p>Closed-door, TS/SCI session at The Aerospace Corporation's SCIF, focused on cyber defense strategy for the space domain. Speaker list not yet public; flagging now so it's on the radar when announcements land.</p>
+      <div class="src"><a href="https://www.cybersatsummit.com/" target="_blank">CyberSat Summit</a></div>
+    </div>
+    <div class="item">
+      <div class="headline"><span class="date">Dec 8&ndash;10</span>Spacepower Conference 2026 (Space Force Association) &mdash; Orlando, FL</div>
+      <p>The flagship annual USSF-focused conference (4th edition), part of Spacepower Week (Dec 6&ndash;13). This will be Gen. Schiess's first Spacepower Conference as CSO &mdash; high-value target for reading where his messaging goes once it has a few months to develop beyond the AFA debut above. Registration opened; full speaker agenda not yet published as of this run.</p>
+      <div class="src"><a href="https://attendspacepower.org/" target="_blank">Spacepower Conference</a></div>
+    </div>
+  </section>
+
+  <section class="cat mapping" id="mapping">
+    <h2><span class="dot"></span>Signal Mapping</h2>
+    <p class="sub">Best-effort connections between WWT's public messaging and USAF/USSF's current public priorities. This is analysis, not sourced fact &mdash; treat as discussion starters.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Theme</span>AI moving from pilot to production &harr; DoD's "pace-setting" AI mandate</div>
+      <p><span class="tag">AI/ML ops</span>WWT's AI Proving Ground content is currently focused on AI-as-recurring-opex, i.e. getting past pilots into real production workloads. That lines up with the Department of War's January 2026 AI Strategy, which explicitly calls for measurable "pace-setting projects" rather than more experimentation, and with the Pentagon CIO's public line (from your DOW briefing) that the department "can't keep throwing people at" its tech gaps and needs to lean on automation instead. Both the market conversation and the customer conversation have moved past "should we use AI" to "how fast can we operationalize it."</p>
+      <div class="src">Cross-referenced from WWT Content and this session's DOW briefing research</div>
+    </div>
+    <div class="item">
+      <div class="headline"><span class="date">Theme</span>Securing AI (WWT/CrowdStrike lab) &harr; Bentivegna's "decision advantage" security push</div>
+      <p><span class="tag">Cyber resilience</span><span class="tag">AI/ML ops</span>WWT's Securing AI Lab positions AI-system security as a distinct discipline from general IT security. CMSSF Bentivegna's AFA keynote framed cyber defense of the "decision advantage" pipeline &mdash; the data and systems that feed space-enabled decisions &mdash; as core Guardian business. Both are pointing at the same emerging gap: as AI gets embedded into decision systems, securing the AI layer specifically (not just the network around it) becomes its own sales conversation.</p>
+      <div class="src">Cross-referenced from WWT Content and Leadership Watch above</div>
+    </div>
+    <div class="item">
+      <div class="headline"><span class="date">Theme</span>Federal AI/legacy-system friction &harr; DISA's $21.6B JWCC cloud recompete</div>
+      <p><span class="tag">JWCC/cloud</span>WWT describes federal AI adoption as constrained by legacy-system integration and compliance uncertainty. That's the same tension driving DISA's JWCC Unified Cloud Marketplace recompete (bids due Oct 6, per your DOW briefing) &mdash; a modernization vehicle explicitly framed around getting agencies off legacy infrastructure fast. Worth watching whether WWT's messaging shifts to reference JWCC directly once bids are in.</p>
+      <div class="src">Cross-referenced from WWT Content and this session's DOW briefing research</div>
+    </div>
+  </section>
+
+  <footer>
+    v1 snapshot &middot; compiled September 15, 2026 from public web search &middot; not auto-refreshing &middot; updated weekly
+  </footer>
+
+</div>
+</body>
+</html>
