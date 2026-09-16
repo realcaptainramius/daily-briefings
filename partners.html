@@ -1,0 +1,225 @@
+<!DOCTYPE html><script type="application/json" id="cowork-artifact-meta">
+{
+  "name": "WWT Partners Weekly Briefing",
+  "schemaVersion": 1,
+  "description": "Weekly tracker on major product updates, features, and innovations from WWT's strategic partners (Cisco, Dell Technologies, HPE, NetApp, F5, Intel, NVIDIA, Microsoft, Palo Alto Networks, AWS, Google Cloud, VMware), plus an open section for other notable partner news. Static snapshot from public web search."
+}
+</script>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>WWT Partners Weekly Briefing</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #f7f7f5;
+    color: #1f1f1f;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 28px 20px 60px; }
+  header { margin-bottom: 24px; }
+  h1 { font-size: 24px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .meta { color: #666; font-size: 13px; }
+  .meta strong { color: #333; }
+  .backlink { margin-bottom: 8px; }
+  .backlink a { font-size: 12px; color: #6a6acb; text-decoration: none; font-weight: 500; }
+  .backlink a:hover { text-decoration: underline; }
+  .note {
+    background: #fff8ec; border: 1px solid #eaddb8; color: #6b5a2a;
+    font-size: 12.5px; padding: 10px 14px; border-radius: 8px; margin-top: 14px;
+  }
+  .toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 18px 0 6px; }
+  .toc a {
+    font-size: 12px; text-decoration: none; color: #444; background: #eeeeeb;
+    padding: 4px 10px; border-radius: 999px; border: 1px solid #e0e0da;
+  }
+  .toc a:hover { background: #e2e2dc; }
+  section.company {
+    background: #ffffff; border: 1px solid #e6e6e0; border-radius: 12px;
+    padding: 18px 20px 8px; margin-top: 18px; scroll-margin-top: 16px;
+  }
+  section.company h2 {
+    font-size: 16px; margin: 0 0 12px; display: flex; align-items: center; gap: 8px;
+  }
+  .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; flex: none; }
+  .cisco .dot { background: #1BA1E2; }
+  .dell .dot { background: #7C3AED; }
+  .hpe .dot { background: #00A982; }
+  .netapp .dot { background: #0EA5E9; }
+  .f5 .dot { background: #DC2626; }
+  .intel .dot { background: #2563EB; }
+  .nvidia .dot { background: #65A30D; }
+  .microsoft .dot { background: #F97316; }
+  .panw .dot { background: #B91C1C; }
+  .aws .dot { background: #D97706; }
+  .gcp .dot { background: #4285F4; }
+  .vmware .dot { background: #0D9488; }
+  .other .dot { background: #6B7280; }
+  .item { padding: 0 0 14px; border-bottom: 1px solid #f0f0ea; margin-bottom: 14px; }
+  .item:last-child { border-bottom: none; margin-bottom: 4px; padding-bottom: 6px; }
+  .item .headline { font-weight: 600; font-size: 14.5px; margin-bottom: 3px; }
+  .item .date { color: #888; font-size: 11.5px; font-weight: 500; margin-right: 6px; }
+  .item p { margin: 4px 0 6px; font-size: 13.5px; color: #333; }
+  .item .src { font-size: 12px; }
+  .item .src a { color: #6a6acb; text-decoration: none; }
+  .item .src a:hover { text-decoration: underline; }
+  .item.empty p { color: #777; font-style: italic; margin: 4px 0 2px; }
+  .badge {
+    display: inline-block; font-size: 10.5px; font-weight: 600; color: #444;
+    background: #eeeeeb; border: 1px solid #e0e0da; border-radius: 5px;
+    padding: 1px 6px; margin-left: 6px; vertical-align: middle;
+  }
+  footer { margin-top: 28px; font-size: 12px; color: #888; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="backlink"><a href="https://news.davidvasek.work">&larr; All briefings</a></div>
+    <h1>WWT Partners Weekly Briefing</h1>
+    <div class="meta">Compiled <strong>Wednesday, September 16, 2026</strong> &middot; Cisco, Dell Technologies, HPE, NetApp, F5, Intel, NVIDIA, Microsoft, Palo Alto Networks, AWS, Google Cloud, VMware</div>
+    <div class="toc">
+      <a href="#cisco">Cisco</a>
+      <a href="#dell">Dell</a>
+      <a href="#hpe">HPE</a>
+      <a href="#netapp">NetApp</a>
+      <a href="#f5">F5</a>
+      <a href="#intel">Intel</a>
+      <a href="#nvidia">NVIDIA</a>
+      <a href="#microsoft">Microsoft</a>
+      <a href="#panw">Palo Alto Networks</a>
+      <a href="#aws">AWS</a>
+      <a href="#gcp">Google Cloud</a>
+      <a href="#vmware">VMware</a>
+      <a href="#other">Other Partners</a>
+    </div>
+    <div class="note">
+      (v1 / first run) This is a new weekly tracker covering major product updates, feature launches, and innovations from WWT's strategic partners (per wwt.com/explore/partners), read through the lens of what matters for WWT's business &mdash; joint solutions, partner programs, and where the ecosystem is investing &mdash; not general tech news. Compiled from public web search of official newsrooms and press coverage; it does not auto-refresh. The fixed roster covers all 12 strategic partners; an open "Other Partners" section covers additional partner news (beyond the strategic 12) when something is genuinely notable. Cadence is weekly (Monday mornings); may move to monthly if things go quiet.
+    </div>
+  </header>
+
+  <section class="company cisco" id="cisco">
+    <h2><span class="dot"></span>Cisco</h2>
+    <div class="item">
+      <div class="headline"><span class="date">Recent</span>AI Network Assistant reaches general availability in Catalyst Center</div>
+      <p>Cisco's AI Network Assistant, embedded in Catalyst Center, is now generally available &mdash; letting network engineers query network state, diagnose issues, generate configurations, and get change recommendations using natural language. Paired with Duo IAM's new support for AI agents (identity-aware access control and accountability mapping between agents and human owners), this is Cisco pushing agentic AI into both the network and identity layers of its stack, both areas WWT integrates heavily.</p>
+      <div class="src"><a href="https://www.cisco.com/site/us/en/about/whats-new.html" target="_blank">Cisco</a></div>
+    </div>
+  </section>
+
+  <section class="company dell" id="dell">
+    <h2><span class="dot"></span>Dell Technologies</h2>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 1</span>Record Q2 FY27 revenue of $47.0B, up 58% year over year</div>
+      <p>Dell's fiscal Q2 results show enterprise AI infrastructure demand still accelerating sharply. Nothing new on the product side since Dell Technologies World in May (PowerStore Elite storage, Deskside Agentic AI with NVIDIA, and the PowerRack turnkey AI system remain the latest ships), but the revenue number is a strong signal of continued AI infrastructure momentum in Dell's core enterprise business.</p>
+      <div class="src"><a href="https://investors.delltechnologies.com/news-events/press-release" target="_blank">Dell Technologies Investor Relations</a></div>
+    </div>
+  </section>
+
+  <section class="company hpe" id="hpe">
+    <h2><span class="dot"></span>Hewlett Packard Enterprise</h2>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 2</span>Record Q3 FY26 results, plus a $3.5B enterprise AI infrastructure deal booked after quarter-close</div>
+      <p>HPE posted record revenue, orders, and profitability, and disclosed a $3.5B enterprise deal signed after the quarter ended &mdash; CEO Antonio Neri pointed to surging customer demand across the portfolio. HPE execs also discussed AI and networking strategy at the Goldman Sachs Communacopia + Technology Conference on Sep 10. Worth watching whether the $3.5B deal surfaces integration or reselling opportunities.</p>
+      <div class="src"><a href="https://www.hpe.com/us/en/newsroom/press-release/2026/09/hpe-reports-fiscal-2026-third-quarter-results.html" target="_blank">HPE Newsroom</a></div>
+    </div>
+  </section>
+
+  <section class="company netapp" id="netapp">
+    <h2><span class="dot"></span>NetApp</h2>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 2</span>ONTAP validated for VMware Cloud Foundation 9.1</div>
+      <p>NetApp announced ONTAP capabilities tested and validated against VMware Cloud Foundation 9.1 (see VMware below), pairing NetApp's data management and ransomware protection with VCF's AI infrastructure push to lower cost and speed up production AI deployments. A clean example of two strategic partners' roadmaps lining up in the same week &mdash; worth flagging to any account running both stacks.</p>
+      <div class="src"><a href="https://www.netapp.com/newsroom/press-releases/news-rel-20260902-583713/" target="_blank">NetApp Newsroom</a></div>
+    </div>
+  </section>
+
+  <section class="company f5" id="f5">
+    <h2><span class="dot"></span>F5</h2>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 1</span>AI-powered WAF adds faster virtual patching against frontier-AI-driven threats</div>
+      <p>F5 announced updates to its AI-powered web application firewall aimed at blocking frontier-AI-driven attacks in the data path, with faster virtual patching and agentic threat intelligence so security teams get time to make risk-based calls instead of reactive fixes. Consistent with the broader security-vendor theme this month (see the Cybersecurity briefing) of AI-safety anxiety translating into product roadmaps.</p>
+      <div class="src"><a href="https://www.f5.com/company/news/press-releases/f5-ai-security-platform-control-enterprise-risk" target="_blank">F5</a></div>
+    </div>
+  </section>
+
+  <section class="company intel" id="intel">
+    <h2><span class="dot"></span>Intel</h2>
+    <div class="item empty">
+      <p>No significant new announcements this window. Core Ultra Series 3 ("Panther Lake," first on Intel 18A) from CES and the Computex follow-ons (Ethernet E835 controllers, Arc G-Series for handhelds) remain the latest state of play.</p>
+    </div>
+  </section>
+
+  <section class="company nvidia" id="nvidia">
+    <h2><span class="dot"></span>NVIDIA</h2>
+    <div class="item">
+      <div class="headline"><span class="date">Recent</span>Corning partnership to expand US manufacturing of AI optical connectivity</div>
+      <p>NVIDIA and Corning announced a multiyear partnership to expand US-based manufacturing of advanced optical connectivity components for next-gen AI infrastructure &mdash; a supply-chain-resilience play as much as a technology one. NVIDIA also helped launch the Open Secure AI Alliance with other partners focused on AI security standards, and continues expanding partner-delivered AI factory capacity (see the Australian NCP land/power expansion covered in this week's AI briefing).</p>
+      <div class="src"><a href="https://nvidianews.nvidia.com/news/nvidia-and-corning-announce-long-term-partnership-to-strengthen-us-manufacturing-for-ai-infrastructure" target="_blank">NVIDIA Newsroom</a></div>
+    </div>
+  </section>
+
+  <section class="company microsoft" id="microsoft">
+    <h2><span class="dot"></span>Microsoft</h2>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 2026</span>Frontier Accelerate for Marketplace launches &mdash; a consolidated partner program</div>
+      <p>Microsoft is rolling out Frontier Accelerate for Marketplace this month, unifying ISV Success, Marketplace Rewards, Azure IP co-sell, and certified software designations into a single partner offering. Directly relevant to WWT's own partner-program positioning with Microsoft. Separately, Azure Multicloud Interconnect for AWS simplifies private Azure&harr;AWS connectivity for hybrid/multicloud workloads &mdash; useful if you're architecting across both clouds for a customer.</p>
+      <div class="src"><a href="https://learn.microsoft.com/en-us/partner-center/announcements/2026-august" target="_blank">Microsoft Partner Center</a></div>
+    </div>
+  </section>
+
+  <section class="company panw" id="panw">
+    <h2><span class="dot"></span>Palo Alto Networks</h2>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 1</span>Acquires Console to deepen agentic capabilities in Cortex</div>
+      <p>Palo Alto Networks acquired Console, an AI-native platform for agentic security operations, to help Cortex customers investigate signals, prioritize work, and act at machine speed. Announced the same day as fiscal Q4/FY26 results. Another data point in the security industry's broad pivot toward agentic SOC tooling &mdash; worth cross-referencing against F5's and Cisco's moves above.</p>
+      <div class="src"><a href="https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-acquires-console-to-agentify-security" target="_blank">Palo Alto Networks</a></div>
+    </div>
+  </section>
+
+  <section class="company aws" id="aws">
+    <h2><span class="dot"></span>AWS</h2>
+    <div class="item empty">
+      <p>No major announcements this window &mdash; AWS tends to save its big product wave for re:Invent, which lands Nov 30&ndash;Dec 4 this year. Worth a placeholder reminder to revisit this section closely once that conference hits.</p>
+    </div>
+  </section>
+
+  <section class="company gcp" id="gcp">
+    <h2><span class="dot"></span>Google Cloud</h2>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 8&ndash;21 (rolling)</span>VPC Service Controls extended to Agent Gateway deployments</div>
+      <p>Google Cloud extended VPC Service Controls support to Agent Gateway deployments, tightening the security perimeter around agentic AI workloads &mdash; a meaningful incremental move for customers running agent frameworks in regulated environments. Otherwise a quiet month for Google Cloud versus the big Cloud Next wave (Virgo Network data center fabric, Gemini Enterprise Agent Platform) back in April, which remains the larger story.</p>
+      <div class="src"><a href="https://cloud.google.com/blog/topics/inside-google-cloud/whats-new-google-cloud" target="_blank">Google Cloud Blog</a></div>
+    </div>
+  </section>
+
+  <section class="company vmware" id="vmware">
+    <h2><span class="dot"></span>VMware (Broadcom)</h2>
+    <div class="item">
+      <div class="headline"><span class="date">Aug 31&ndash;Sep 3</span>VMware Explore 2026: Private AI Cloud, AI Factory, and VCF 9.1 headline a major product wave</div>
+      <p>Broadcom used VMware Explore to unveil VMware Private AI Cloud (the umbrella play for cost-effective, secure, agentic-ready private AI), VMware AI Factory (the software-defined foundation under it, with multi-vendor hardware support), VMware Cloud Foundation 9.1, and VMware Telco Cloud Platform 9 for sovereign-ready telco infrastructure. This is the single biggest strategic-partner product story this cycle &mdash; and it already has a same-week ecosystem tie-in via NetApp's ONTAP/VCF 9.1 validation above.</p>
+      <div class="src"><a href="https://www.broadcom.com/company/news/releases/broadcom-introduces-vmware-private-ai-cloud" target="_blank">Broadcom</a></div>
+    </div>
+  </section>
+
+  <section class="company other" id="other">
+    <h2><span class="dot"></span>Other Partners <span class="badge">open-ended</span></h2>
+    <p class="sub" style="font-size:12px;color:#888;margin:0 0 12px;">Notable news from partners beyond the strategic 12 — not a fixed list.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Recent</span>ServiceNow &amp; NVIDIA extend collaboration on governed autonomous agents</div>
+      <p>At ServiceNow Knowledge 2026, ServiceNow and NVIDIA extended their partnership to deliver governed autonomous agents across enterprises, from employee desktops to AI factories, building on NVIDIA Nemotron model integration announced earlier this year. Flagged here as an example of why this section exists &mdash; a non-strategic partner (ServiceNow) doing something genuinely relevant to WWT's AI/agentic services conversations.</p>
+      <div class="src"><a href="https://blogs.nvidia.com/blog/servicenow-autonomous-ai-agents-enterprises/" target="_blank">NVIDIA Blog</a></div>
+    </div>
+  </section>
+
+  <footer>
+    Static snapshot &middot; compiled September 16, 2026 from public web search of official newsroom and press sources &middot; not auto-refreshing &middot; updated weekly (Monday mornings)
+  </footer>
+
+</div>
+</body>
+</html>
