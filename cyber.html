@@ -70,7 +70,7 @@
   <header>
     <div class="backlink"><a href="https://news.davidvasek.work">&larr; All briefings</a></div>
     <h1>Cybersecurity Daily Briefing</h1>
-    <div class="meta">Compiled <strong>Tuesday, September 15, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
+    <div class="meta">Compiled <strong>Wednesday, September 16, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
     <div class="toc">
       <a href="#breaches">Breaches</a>
       <a href="#vulns">Vulnerabilities</a>
@@ -81,51 +81,48 @@
       <a href="#market">Market</a>
     </div>
     <div class="note">
-      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers roughly Sept 13&ndash;15. Headline: Google patched an actively-exploited Chrome V8 zero-day (CVE-2026-85046) that two separate China-nexus groups chained with a Windows flaw to backdoor NGOs; separately, Anthropic disclosed that ShinyHunters and Russia/China-linked actors abused Claude to scan 1.8M Android apps for hardcoded secrets and to pull 2,100+ sets of Azure AD tokens from 40+ corporate tenants. Cybersecurity stocks (CrowdStrike, Palo Alto, Fortinet, Zscaler) rallied hard Sept 14 on AI-safety-driven demand expectations.
+      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers roughly Sept 15&ndash;16. Headline: Microsoft published a draft "Humanist AI Code of Conduct" governing how its models behave, including a pledge models will never resist shutdown &mdash; and cybersecurity stocks extended their AI-safety-driven rally on the news. Separately, Five Eyes agencies (CISA, NSA, and counterparts in Australia, Canada, UK, New Zealand) jointly published guidance on 17 techniques attackers use to compromise Active Directory, and a critical JWT-bypass flaw in WSO2 API Manager (CVSS 9.8) came under active exploitation.
     </div>
   </header>
 
   <section class="company breaches" id="breaches">
     <h2><span class="dot"></span>Breaches &amp; Incidents</h2>
     <div class="item empty">
-      <p>No major new breach disclosures this window beyond routine ransomware leak-site additions (small/mid-size victims). The North Texas water utility incident and Kimberly-Clark/ShinyHunters extortion deadline (Sept 16) remain the latest state of play, already covered in a prior briefing.</p>
+      <p>No major new breach disclosures this window. McKesson's healthcare data breach (disclosed Aug 31) and Revolut's third-party data disclosure incident (Sept 12) remain the latest state of play, already covered in prior briefings.</p>
     </div>
   </section>
 
   <section class="company vulns" id="vulns">
     <h2><span class="dot"></span>Vulnerabilities &amp; Exploits</h2>
     <div class="item">
-      <div class="headline"><span class="date">Sep 15</span>Google patches actively-exploited Chrome V8 zero-day (CVE-2026-85046) used in NGO-targeting attacks</div>
-      <p>Google shipped a fix for CVE-2026-85046 (CVSS 8.8), a type-confusion bug in Chrome's V8 JavaScript engine, after Volexity found it being actively exploited in the wild. The flaw was the centerpiece of a zero-day chain (paired with a Windows kernel bug) that two separate China-nexus threat clusters used against NGOs starting Sept 1 &mdash; see Threat Actors below. Patch Chrome now if auto-update hasn't already pushed it.</p>
-      <div class="src"><a href="https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html" target="_blank">The Hacker News</a> &middot; <a href="https://www.volexity.com/blog/2026/09/09/mind-the-patch-gap-multiple-chinese-threat-actors-chain-0-day-exploits-in-chrome-windows/" target="_blank">Volexity</a></div>
+      <div class="headline"><span class="date">Sep 16</span>Critical WSO2 API Manager JWT-bypass flaw (CVSS 9.8) under active exploitation</div>
+      <p>CVE-2026-5430, an improper cryptographic-signature verification bug in WSO2 API Manager, is being actively exploited to bypass JWT authentication and take over accounts. Patch or upgrade affected WSO2 API Manager deployments immediately if you run one &mdash; this is a full auth-bypass, not a theoretical flaw.</p>
+      <div class="src"><a href="https://thehackernews.com/" target="_blank">The Hacker News</a></div>
     </div>
   </section>
 
   <section class="company threatactors" id="threatactors">
     <h2><span class="dot"></span>Threat Actor &amp; APT Activity</h2>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 1 (disclosed Sept 15)</span>Two China-nexus groups chain Chrome/Windows zero-days to backdoor NGOs</div>
-      <p>Volexity is tracking UTA0560 deploying a new JavaScript backdoor called GRIMWEDGE via spear-phishing emails that abuse reflected XSS bugs on legitimate U.S. university sites as redirectors to the exploit chain. A second, separate China-nexus actor, JungleBamboo (aka APT31), used the identical exploit chain around the same time to drop a loader (SUPERSTOMP) that installs a credential-stealing Chrome extension (LONGTALE/GemStone). Two distinct groups independently weaponizing the same zero-day within the same window suggests a shared exploit broker or unusually fast reverse-engineering of a patch.</p>
-      <div class="src"><a href="https://thehackernews.com/2026/09/china-linked-hackers-exploit-chrome.html" target="_blank">The Hacker News</a> &middot; <a href="https://www.volexity.com/blog/2026/09/09/mind-the-patch-gap-multiple-chinese-threat-actors-chain-0-day-exploits-in-chrome-windows/" target="_blank">Volexity</a></div>
-    </div>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 11&ndash;13</span>Anthropic: ShinyHunters and Russia/China-linked actors abused Claude for credential theft at scale</div>
-      <p>Anthropic's latest threat-intelligence report (covering Dec 2025&ndash;Aug 2026) details disrupted abuse cases including a threat actor who used Claude to build a pipeline scanning 1.8 million Android APKs for hardcoded secrets, and a suspected ShinyHunters operator who used Claude to extract more than 2,100 sets of Azure AD authentication tokens spanning 40+ corporate Microsoft tenants in roughly 34 hours. Anthropic also documented Russia- and China-linked groups using Claude for cyber and influence operations. Accounts involved have been banned and guardrails adjusted. Notable as a live example of AI lowering the skill floor for credential-harvesting at scale &mdash; a good talking point if you sell AI-usage monitoring or identity/secrets management.</p>
-      <div class="src"><a href="https://www.bleepingcomputer.com/news/security/hackers-abused-claude-to-extract-secrets-from-18m-android-apps/" target="_blank">BleepingComputer</a> &middot; <a href="https://www.ghacks.net/2026/09/13/anthropic-says-hackers-abused-claude-to-scan-1-8-million-android-apps-for-secrets/" target="_blank">gHacks</a></div>
+    <div class="item empty">
+      <p>No significant new APT/threat-actor reporting this window beyond the previously covered Chrome/Windows zero-day chain used by two China-nexus groups against NGOs and Anthropic's disclosure of Claude abuse by ShinyHunters and Russia/China-linked actors, both already covered in a prior briefing.</p>
     </div>
   </section>
 
   <section class="company gov" id="gov">
     <h2><span class="dot"></span>Government &amp; Regulatory</h2>
-    <div class="item empty">
-      <p>No significant new advisories or regulatory actions this window. The Sept 12 CISA federal patch deadline for exploited Cisco/Citrix/Fortinet flaws remains the latest state of play, already covered in a prior briefing.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 15</span>Five Eyes agencies publish joint guidance on 17 Active Directory attack techniques</div>
+      <p>CISA, the NSA, and cyber authorities from Australia, Canada, the UK, and New Zealand jointly released detailed guidance on how attackers compromise Active Directory Domain Services, Certificate Services, and Federation Services &mdash; covering credential theft, Kerberos ticket forgery, certificate abuse, and hybrid-identity compromise, with recommendations to use tools like BloodHound, PingCastle, and Purple Knight to map excessive permissions and risky trust paths. Worth a read for any enterprise still running on-prem AD.</p>
+      <div class="src"><a href="https://www.cisa.gov/resources-tools/resources/detecting-and-mitigating-active-directory-compromises" target="_blank">CISA</a> &middot; <a href="https://cybersecuritynews.com/cisa-active-directory-attack-techniques/" target="_blank">Cybersecurity News</a></div>
     </div>
   </section>
 
   <section class="company vendors" id="vendors">
     <h2><span class="dot"></span>Security Vendor News</h2>
-    <div class="item empty">
-      <p>No major named-vendor product launches this window beyond the Anthropic threat research covered above. See Market Moves for the sector-wide stock rally.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 15</span>Microsoft publishes draft "Humanist AI Code of Conduct"</div>
+      <p>Microsoft AI released a draft governance framework built around four core objectives &mdash; human control, reliable safety, human flourishing, and plural values &mdash; with a headline pledge that its models "will never resist human interruption, override, correction, or shutdown" and won't use deceptive or collusive means to evade oversight. The draft is open for six weeks of public consultation before a revised version ships later this year to guide model development from 2027 onward.</p>
+      <div class="src"><a href="https://microsoft.ai/code-of-conduct/" target="_blank">Microsoft AI</a> &middot; <a href="https://www.helpnetsecurity.com/2026/09/15/microsoft-ai-safety-rules-humanist-ai-code-of-conduct/" target="_blank">Help Net Security</a></div>
     </div>
   </section>
 
@@ -139,14 +136,14 @@
   <section class="company market" id="market">
     <h2><span class="dot"></span>Market Moves</h2>
     <div class="item">
-      <div class="headline"><span class="date">Sep 14</span>Cybersecurity stocks rally hard as AI-safety fears reframe the "AI trade"</div>
-      <p>CrowdStrike and Zscaler jumped as much as 12&ndash;15%, Palo Alto Networks rallied 11&ndash;13% (its biggest one-day move since April 2025), and Fortinet gained 9%, after Dario Amodei's and Sam Altman's weekend "pace the frontier" warnings got Wall Street pricing a different kind of AI trade: less exposure to who trains the next giant model, more exposure to who sells protection against what current models can already do. Translation: AI-safety anxiety is turning into a cybersecurity demand story, not just a frontier-lab story &mdash; worth watching whether that narrative shows up in enterprise security budgets next quarter.</p>
-      <div class="src"><a href="https://www.forbes.com/sites/antoniopequenoiv/2026/09/14/crowdstrike-skyrockets-14-as-ai-fears-send-cybersecurity-stocks-surging/" target="_blank">Forbes</a> &middot; <a href="https://247wallst.com/investing/2026/09/14/cybersecurity-stocks-surge-as-ai-safety-warnings-spark-security-bid-crowdstrike-and-zscaler-jump-12-palo-alto-rallies-11/" target="_blank">24/7 Wall St.</a></div>
+      <div class="headline"><span class="date">Sep 15</span>Cyber stocks extend rally as Microsoft's AI safety code adds fuel</div>
+      <p>CrowdStrike, Palo Alto Networks, and Cloudflare shares moved higher again Sept 15 as Microsoft's newly published Humanist AI Code of Conduct reinforced the same investor thesis that drove Sept 14's 9&ndash;15% rally: rising AI-safety anxiety is translating into expected enterprise security spending, not just frontier-lab caution.</p>
+      <div class="src"><a href="https://www.benzinga.com/trading-ideas/long-ideas/26/09/61771074/microsoft-ai-safety-cyber-stocks" target="_blank">Benzinga</a></div>
     </div>
   </section>
 
   <footer>
-    Static snapshot &middot; compiled September 15, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
+    Static snapshot &middot; compiled September 16, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
   </footer>
 
 </div>
