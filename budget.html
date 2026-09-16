@@ -1,0 +1,134 @@
+<!DOCTYPE html><script type="application/json" id="cowork-artifact-meta">
+{
+  "name": "Budget Ndaa Weekly Briefing",
+  "schemaVersion": 1,
+  "description": "Weekly tracker on the FY27 NDAA, defense appropriations/continuing-resolution status, budget priorities and program impacts, and IT/cyber/SATCOM procurement-vehicle policy. Static snapshot from public web search."
+}
+</script>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Federal Budget &amp; NDAA Weekly Tracker</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #f7f7f5;
+    color: #1f1f1f;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 28px 20px 60px; }
+  header { margin-bottom: 24px; }
+  h1 { font-size: 24px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .meta { color: #666; font-size: 13px; }
+  .meta strong { color: #333; }
+  .backlink { margin-bottom: 8px; }
+  .backlink a { font-size: 12px; color: #6a6acb; text-decoration: none; font-weight: 500; }
+  .backlink a:hover { text-decoration: underline; }
+  .note {
+    background: #fff8ec; border: 1px solid #eaddb8; color: #6b5a2a;
+    font-size: 12.5px; padding: 10px 14px; border-radius: 8px; margin-top: 14px;
+  }
+  .toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 18px 0 6px; }
+  .toc a {
+    font-size: 12px; text-decoration: none; color: #444; background: #eeeeeb;
+    padding: 4px 10px; border-radius: 999px; border: 1px solid #e0e0da;
+  }
+  .toc a:hover { background: #e2e2dc; }
+  section.cat {
+    background: #ffffff; border: 1px solid #e6e6e0; border-radius: 12px;
+    padding: 18px 20px 8px; margin-top: 18px; scroll-margin-top: 16px;
+  }
+  section.cat h2 {
+    font-size: 16px; margin: 0 0 4px; display: flex; align-items: center; gap: 8px;
+  }
+  section.cat .sub { font-size: 12px; color: #888; margin: 0 0 12px; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; flex: none; }
+  .ndaa .dot { background: #1f6feb; }
+  .approps .dot { background: #c0392b; }
+  .priorities .dot { background: #d97706; }
+  .vehicles .dot { background: #16a085; }
+  .item { padding: 0 0 14px; border-bottom: 1px solid #f0f0ea; margin-bottom: 14px; }
+  .item:last-child { border-bottom: none; margin-bottom: 4px; padding-bottom: 6px; }
+  .item .headline { font-weight: 600; font-size: 14.5px; margin-bottom: 3px; }
+  .item .date { color: #888; font-size: 11.5px; font-weight: 500; margin-right: 6px; }
+  .item p { margin: 4px 0 6px; font-size: 13.5px; color: #333; }
+  .item .src { font-size: 12px; }
+  .item .src a { color: #6a6acb; text-decoration: none; }
+  .item .src a:hover { text-decoration: underline; }
+  .item.empty p { color: #777; font-style: italic; margin: 4px 0 2px; }
+  footer { margin-top: 28px; font-size: 12px; color: #888; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="backlink"><a href="https://news.davidvasek.work">&larr; All briefings</a></div>
+    <h1>Federal Budget &amp; NDAA Weekly Tracker</h1>
+    <div class="meta">Compiled <strong>Wednesday, September 16, 2026</strong> &middot; FY27 NDAA, Defense Appropriations/CR, Budget Priorities, Procurement Vehicles</div>
+    <div class="toc">
+      <a href="#ndaa">NDAA Status</a>
+      <a href="#approps">Appropriations &amp; CR</a>
+      <a href="#priorities">Budget Priorities</a>
+      <a href="#vehicles">Contract Vehicles</a>
+    </div>
+    <div class="note">
+      (v1 / first run) This is a new weekly tracker, compiled from public web search of Congress.gov, committee sites, CRS reports, and defense-budget press (Breaking Defense, DefenseScoop, Defense One, Nextgov/FCW) &mdash; it does not auto-refresh. Scope: FY27 NDAA and defense appropriations status, the government-funding/CR picture, budget items and reprogramming actions relevant to IT/cyber/space/SATCOM, and procurement-vehicle policy (JWCC and similar) tied to budget timing. This deliberately does not duplicate the DoD/DOW daily briefing's day-to-day contract-award and program news &mdash; that briefing covers news, this one covers the money and the legislative calendar behind it. Cadence is weekly for now; may move to monthly if the legislative calendar goes quiet for stretches.
+    </div>
+  </header>
+
+  <section class="cat ndaa" id="ndaa">
+    <h2><span class="dot"></span>NDAA Status</h2>
+    <p class="sub">FY27 National Defense Authorization Act: House/Senate progress, conference, and IT/cyber/space provisions.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Jul 14 (still current)</span>Senate NDAA remains stalled &mdash; no floor movement since July</div>
+      <p>The House passed its FY27 NDAA (H.R. 8800, $1.15T) 219-206 in July, largely along party lines. The Senate hasn't moved since: a July 14 cloture vote on its own version (S. 4784) failed 50-46, with Senate Democrats blocking debate over the resumed Iran conflict and the administration not seeking congressional authorization for it, plus broader concerns about the defense topline. As of this run there's been no reported change in that standoff. NDAA has passed every year for 60+ years and typically isn't signed until December, so a stall in September isn't alarming on its own, but it means the bill's IT/cyber/space provisions (see below) are still not law, and won't be until House and Senate reconcile a text neither chamber has actually agreed to floor-debate together yet.</p>
+      <div class="src"><a href="https://breakingdefense.com/2026/07/house-passes-2027-ndaa-while-measure-remains-stalled-in-the-senate/" target="_blank">Breaking Defense</a> &middot; <a href="https://breakingdefense.com/2026/07/senate-democrats-block-ndaa-amid-concerns-on-iran-war-budget-topline/" target="_blank">Breaking Defense</a></div>
+    </div>
+    <div class="item">
+      <div class="headline"><span class="date">FY27 text</span>Provisions worth tracking: Space Data Network funding, SDA repeal language</div>
+      <p>The House-passed text backs the Space Force's Space Data Network family of systems &mdash; $1.5B for SDN-Backbone R&amp;D (proliferated LEO mesh constellation plus ground architecture, and bringing in additional vendors) and continued Protected Tactical SATCOM funding. It also carries draft language, going back to earlier committee prints, that would repeal the statute establishing the Space Development Agency and fold its authorities elsewhere &mdash; consistent with the "Congress weighing SDA's future" story already in this week's DoD/DOW briefing. Worth watching whether that survives conference, since it would reshape who you're selling proliferated-LEO comms and data-transport work to.</p>
+      <div class="src"><a href="https://armedservices.house.gov/uploadedfiles/fy27_ndaa_str_print_-_final.pdf" target="_blank">House Armed Services Committee</a> &middot; <a href="https://defensescoop.com/2026/04/28/space-force-space-data-network/" target="_blank">DefenseScoop</a></div>
+    </div>
+  </section>
+
+  <section class="cat approps" id="approps">
+    <h2><span class="dot"></span>Appropriations &amp; Continuing Resolution</h2>
+    <p class="sub">Defense appropriations bill status and government-funding/shutdown risk.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 2</span>Government running on a CR through Dec 11 &mdash; full-year defense appropriations still not enacted</div>
+      <p>Trump signed a stopgap (H.R. 6500) funding the government at FY26 levels through December 11, averting an October 1 shutdown and pushing the real funding fight past the midterms. For defense specifically, the House Appropriations Defense Subcommittee advanced its FY27 bill ($1.072T topline) back in June, but Senate appropriators haven't marked up their version &mdash; they've been stuck without a bipartisan topline agreement, compounded by Subcommittee Chairman Mitch McConnell's extended absence. Bottom line: nothing new is fully funded yet, and won't be before December at the earliest.</p>
+      <div class="src"><a href="https://www.defenseone.com/policy/2026/09/shutdown-threat-lifted-house-passes-stopgap-spending-bill/415757/" target="_blank">Defense One</a> &middot; <a href="https://www.akingump.com/en/insights/blogs/the-approps-drop/congress-returns-while-the-fy2027-funding-clock-ticks" target="_blank">Akin Gump</a></div>
+    </div>
+  </section>
+
+  <section class="cat priorities" id="priorities">
+    <h2><span class="dot"></span>Budget Priorities &amp; Program Impacts</h2>
+    <p class="sub">Reprogramming actions, budget requests, and funding moves affecting IT/cyber/space programs.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 2026</span>Pentagon asks Congress to reprogram $1.5B, including $600M to rush a top-secret AI compute center</div>
+      <p>The Pentagon's latest reprogramming request would shift about $1.5B in FY25/FY26 funds across a handful of priorities, the single largest being $600M to "immediately" build and equip a top-secret, high-performance AI compute center. The rest is mostly non-IT (Army MV-75 tiltrotor RDT&amp;E, Iran-operations cost coverage). Reprogramming requests need congressional defense committee sign-off, so this is a request, not yet money moved &mdash; but it's a concrete signal of where the building wants to put marginal dollars right now, and classified AI compute infrastructure is exactly the kind of program where integrators with the right clearances and cloud/IT chops have an opening.</p>
+      <div class="src"><a href="https://breakingdefense.com/2026/09/pentagons-1-5b-reprogramming-would-shift-money-to-ai-center-mv-75-tiltrotor/" target="_blank">Breaking Defense</a></div>
+    </div>
+  </section>
+
+  <section class="cat vehicles" id="vehicles">
+    <h2><span class="dot"></span>Contract Vehicles &amp; Procurement Policy</h2>
+    <p class="sub">Major IT/cyber/SATCOM contract-vehicle timelines and the budget/policy context behind them.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 15 / Q1 2027</span>JWCC Next splits into two vehicles &mdash; Core is out now, Premier lands in 2027</div>
+      <p>DISA's JWCC follow-on is arriving in two pieces: "UCM Core," the $21.6B hyperscaler cloud IDIQ, released Sept 15 with bids due Oct 6 (already flagged in this week's DoD/DOW briefing). The companion "UCM Premier" &mdash; covering non-hyperscale IaaS/PaaS/SaaS (Tier 2) and small-business/commercial-innovator offerings (Tier 3) &mdash; won't see a final solicitation until Q1 CY2027, with awards expected Q3 2027. If you're not a hyperscaler, Premier is your lane, and it's still roughly six months out from even a draft RFP. Worth revisiting this section monthly as that timeline firms up.</p>
+      <div class="src"><a href="https://www.nextgov.com/acquisition/2026/09/pentagon-unveils-first-two-solicitations-its-next-big-cloud-contract/415846/" target="_blank">Nextgov/FCW</a> &middot; <a href="https://www.govconwire.com/articles/disa-jwcc-ucm-core-21-6b-cloud-idiq-solicitation" target="_blank">GovCon Wire</a></div>
+    </div>
+  </section>
+
+  <footer>
+    Static snapshot &middot; compiled September 16, 2026 from public web search of Congress.gov, committee, and defense-budget press sources &middot; not auto-refreshing &middot; updated weekly (Monday mornings)
+  </footer>
+
+</div>
+</body>
+</html>
