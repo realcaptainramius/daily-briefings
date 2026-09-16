@@ -1,0 +1,137 @@
+<!DOCTYPE html><script type="application/json" id="cowork-artifact-meta">
+{
+  "name": "Emerging Tech Weekly Briefing",
+  "schemaVersion": 1,
+  "description": "Weekly tracker on emerging technology relevant to IT/cyber/SATCOM/tactical-comms sales — anchored on post-quantum cryptography and 5G/Open RAN, plus an open-ended radar section for other notable emerging tech as it surfaces. Static snapshot from public web search."
+}
+</script>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Emerging Technology Weekly Briefing</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #f7f7f5;
+    color: #1f1f1f;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 28px 20px 60px; }
+  header { margin-bottom: 24px; }
+  h1 { font-size: 24px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .meta { color: #666; font-size: 13px; }
+  .meta strong { color: #333; }
+  .backlink { margin-bottom: 8px; }
+  .backlink a { font-size: 12px; color: #6a6acb; text-decoration: none; font-weight: 500; }
+  .backlink a:hover { text-decoration: underline; }
+  .note {
+    background: #fff8ec; border: 1px solid #eaddb8; color: #6b5a2a;
+    font-size: 12.5px; padding: 10px 14px; border-radius: 8px; margin-top: 14px;
+  }
+  .toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 18px 0 6px; }
+  .toc a {
+    font-size: 12px; text-decoration: none; color: #444; background: #eeeeeb;
+    padding: 4px 10px; border-radius: 999px; border: 1px solid #e0e0da;
+  }
+  .toc a:hover { background: #e2e2dc; }
+  section.cat {
+    background: #ffffff; border: 1px solid #e6e6e0; border-radius: 12px;
+    padding: 18px 20px 8px; margin-top: 18px; scroll-margin-top: 16px;
+  }
+  section.cat h2 {
+    font-size: 16px; margin: 0 0 4px; display: flex; align-items: center; gap: 8px;
+  }
+  section.cat .sub { font-size: 12px; color: #888; margin: 0 0 12px; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; flex: none; }
+  .pqc .dot { background: #6a3fb5; }
+  .fiveg .dot { background: #1f6feb; }
+  .radar .dot { background: #16a085; }
+  .item { padding: 0 0 14px; border-bottom: 1px solid #f0f0ea; margin-bottom: 14px; }
+  .item:last-child { border-bottom: none; margin-bottom: 4px; padding-bottom: 6px; }
+  .item .headline { font-weight: 600; font-size: 14.5px; margin-bottom: 3px; }
+  .item .date { color: #888; font-size: 11.5px; font-weight: 500; margin-right: 6px; }
+  .item p { margin: 4px 0 6px; font-size: 13.5px; color: #333; }
+  .item .src { font-size: 12px; }
+  .item .src a { color: #6a6acb; text-decoration: none; }
+  .item .src a:hover { text-decoration: underline; }
+  .item.empty p { color: #777; font-style: italic; margin: 4px 0 2px; }
+  .badge {
+    display: inline-block; font-size: 10.5px; font-weight: 600; color: #1a6b52;
+    background: #e3f5ee; border: 1px solid #c3e8db; border-radius: 5px;
+    padding: 1px 6px; margin-left: 6px; vertical-align: middle;
+  }
+  footer { margin-top: 28px; font-size: 12px; color: #888; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="backlink"><a href="https://news.davidvasek.work">&larr; All briefings</a></div>
+    <h1>Emerging Technology Weekly Briefing</h1>
+    <div class="meta">Compiled <strong>Wednesday, September 16, 2026</strong> &middot; Post-Quantum Cryptography, 5G/Open RAN &amp; Tactical Networking, Emerging Tech Radar</div>
+    <div class="toc">
+      <a href="#pqc">Post-Quantum Cryptography</a>
+      <a href="#5g">5G / Open RAN</a>
+      <a href="#radar">Emerging Tech Radar</a>
+    </div>
+    <div class="note">
+      (v1 / first run) This is a new weekly tracker, compiled from public web search of NIST/NSA/CISA sources, defense-tech press, and vendor announcements &mdash; it does not auto-refresh. Two anchor sections (PQC and 5G/Open RAN) track sustained, deadline-driven topics closely tied to your IT/cyber/network/SATCOM/tactical-comms business. The third section, Emerging Tech Radar, is deliberately open-ended: it's not limited to a fixed topic list and is meant to flex week to week to whatever genuinely new or notable technology surfaces &mdash; quantum computing, AI-enabled networking, novel RF/optical comms, edge compute, non-terrestrial networks, and anything else with real crossover to your world. If a Radar topic becomes a sustained, recurring story, it can graduate into its own anchor section later. Cadence is weekly for now; may move to monthly if things go quiet.
+    </div>
+  </header>
+
+  <section class="cat pqc" id="pqc">
+    <h2><span class="dot"></span>Post-Quantum Cryptography</h2>
+    <p class="sub">NIST/NSA standards, CNSA 2.0 and CMMC deadlines, and PQC vendor/DoD adoption.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 21 (5 days out)</span>FIPS 140-2 sunsets to "Historical" status &mdash; hard cutover for new procurement</div>
+      <p>On September 21, every FIPS 140-2 validation certificate moves to Historical status with NIST's Cryptographic Module Validation Program. Existing systems keep running, but agencies "should not include" Historical-status modules in new procurements going forward &mdash; only FIPS 140-3 validated modules qualify. For DoD contractors under CMMC/DFARS, this has direct audit teeth: CMMC Level 2 enforcement follows seven weeks later, on November 10. If any product in your stack is still quoting a FIPS 140-2 cert as its compliance story, that's now a live gap for any new federal deal, not a future one.</p>
+      <div class="src"><a href="https://www.safelogic.com/blog/what-happens-on-september-21-2026" target="_blank">SafeLogic</a> &middot; <a href="https://cmmcreadynow.com/blog/fips-140-2-sunset-transition-fips-140-3-cmmc" target="_blank">CMMC Ready Now</a></div>
+    </div>
+    <div class="item">
+      <div class="headline"><span class="date">Ongoing</span>CNSA 2.0 timeline: network gear this year, all new NSS acquisitions by Jan 1, 2027</div>
+      <p>NSA's CNSA 2.0 suite (ML-KEM-1024 for key establishment, ML-DSA-87 for signatures, plus AES-256/SHA-384-512) is the mandated quantum-resistant algorithm set for National Security Systems. VPNs, firewalls, routers, and switches used in NSS need CNSA 2.0 support this year; every new NSS acquisition must be CNSA 2.0-compliant starting January 1, 2027, with full exclusive use across operating systems, custom applications, and cloud services required by 2033. Translation: if you're bidding network or SATCOM gear into an NSS-designated environment, CNSA 2.0 support isn't a differentiator anymore, it's table stakes starting in about three and a half months.</p>
+      <div class="src"><a href="https://www.qusecure.com/cnsa-2-0-pqc-requirements-timelines-federal-impact/" target="_blank">QuSecure</a></div>
+    </div>
+    <div class="item">
+      <div class="headline"><span class="date">Context</span>DoD still says no to QKD &mdash; PQC algorithms, not quantum hardware, are the sanctioned path</div>
+      <p>Worth knowing when a vendor pitches quantum key distribution hardware: DoD's CIO has stated the department does not currently allow QKD (or similar quantum-hardware key distribution) for confidentiality, authenticity, or integrity purposes. The sanctioned path is algorithmic &mdash; CNSA 2.0/PQC software and firmware upgrades, not photon-based key exchange. QuSecure's QuProtect platform reaching TRL-7 at the Army's Project Convergence Capstone 6 is a useful real-world proof point of that algorithmic approach maturing in an operational setting.</p>
+      <div class="src"><a href="https://fedtechmagazine.com/article/2026/07/guide-quantum-key-distribution-federal-government-perfcon" target="_blank">FedTech Magazine</a></div>
+    </div>
+  </section>
+
+  <section class="cat fiveg" id="5g">
+    <h2><span class="dot"></span>5G / Open RAN &amp; Tactical Networking</h2>
+    <p class="sub">DoD's open-architecture 5G push, tactical-edge deployments, and vendor moves.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Recent</span>Pentagon-backed open-source RAN stack ("OCUDU") is now a working codebase</div>
+      <p>Under a National Spectrum Consortium contract, DeepSig and Software Radio Systems have spent the past several months building out OCUDU, an open-source 5G/6G software stack the Pentagon wants to publish for broader use. It's reportedly now a functioning, downloadable RAN stack, not just a spec on paper. DoD's rationale for open RAN generally: security through transparency, letting military engineers actually inspect and patch the stack rather than trust a vendor's black box. If your SATCOM/tactical comms offering touches the RAN layer, this is the reference architecture to know.</p>
+      <div class="src"><a href="https://defensescoop.com/2026/03/01/pentagon-to-publish-open-source-software-stack-5g-6g-networks/" target="_blank">DefenseScoop</a></div>
+    </div>
+    <div class="item">
+      <div class="headline"><span class="date">May 2026</span>Lockheed &amp; Nokia Federal ship modular 5G.MIL for the tactical edge</div>
+      <p>Lockheed Martin and Nokia Federal Solutions integrated carrier-grade 5G with Lockheed's 5G.MIL capability inside the Department of War's CMOSS open-architecture framework, aimed at secure, resilient, high-speed comms at the tactical edge with rapid upgrade paths across vehicles and platforms. Consistent with the DoD budget directive to roll out private 5G/Open RAN across all DoD bases globally &mdash; this is one of the concrete integrator plays landing inside that mandate.</p>
+      <div class="src"><a href="https://thedefensewatch.com/policy-strategy/lockheed-martin-and-nokia-launch-mission-critical-5g-for-dod-open-architecture-standards/" target="_blank">The Defense Watch</a></div>
+    </div>
+  </section>
+
+  <section class="cat radar" id="radar">
+    <h2><span class="dot"></span>Emerging Tech Radar <span class="badge">open-ended</span></h2>
+    <p class="sub">Whatever else is genuinely new and relevant this week — not a fixed topic list.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Late 2026 (planned)</span>Lockheed, IBM &amp; Swiss defense procurement stand up a quantum computing hub</div>
+      <p>IBM and Lockheed Martin, working with Swiss defense agency armasuisse, are building a national quantum innovation hub at ETH Zurich, anchored by Switzerland's first on-premises IBM Quantum System Two, to be installed at the Swiss National Supercomputing Centre in Lugano by late 2026. Notable as an allied-nation, defense-funded quantum computing (not just quantum-safe crypto) investment &mdash; a different track from the PQC migration work above, and one to watch if quantum compute starts showing up in allied targeting/logistics modeling work relevant to coalition ops.</p>
+      <div class="src"><a href="https://thequantuminsider.com/2026/03/09/understanding-quantum-networking-and-its-industrial-potential/" target="_blank">The Quantum Insider</a></div>
+    </div>
+  </section>
+
+  <footer>
+    Static snapshot &middot; compiled September 16, 2026 from public web search of standards bodies, defense-tech press, and vendor sources &middot; not auto-refreshing &middot; updated weekly
+  </footer>
+
+</div>
+</body>
+</html>
