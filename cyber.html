@@ -71,7 +71,7 @@
   <header>
     <div class="backlink"><a href="https://news.davidvasek.work">&larr; All briefings</a></div>
     <h1>Cybersecurity Daily Briefing</h1>
-    <div class="meta">Compiled <strong>Wednesday, September 16, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
+    <div class="meta">Compiled <strong>Thursday, September 17, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
     <div class="toc">
       <a href="#breaches">Breaches</a>
       <a href="#vulns">Vulnerabilities</a>
@@ -82,48 +82,55 @@
       <a href="#market">Market</a>
     </div>
     <div class="note">
-      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers roughly Sept 15&ndash;16. Headline: Microsoft published a draft "Humanist AI Code of Conduct" governing how its models behave, including a pledge models will never resist shutdown &mdash; and cybersecurity stocks extended their AI-safety-driven rally on the news. Separately, Five Eyes agencies (CISA, NSA, and counterparts in Australia, Canada, UK, New Zealand) jointly published guidance on 17 techniques attackers use to compromise Active Directory, and a critical JWT-bypass flaw in WSO2 API Manager (CVSS 9.8) came under active exploitation.
+      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers roughly Sept 15&ndash;17. Two critical Cisco flaws under active exploitation dominate today: an unauthenticated, CVSS-10.0 root-access bug in Cisco ISE (CVE-2026-76460) and an actively exploited root-command-execution bug in Cisco Secure Email Gateway (CVE-2026-76461), which CISA pushed agencies to patch by Sept 17. Also notable: CenterPoint Energy confirmed a breach of up to ~7.5M customer records via an unsecured API.
     </div>
   </header>
 
   <section class="company breaches" id="breaches">
     <h2><span class="dot"></span>Breaches &amp; Incidents</h2>
-    <div class="item empty">
-      <p>No major new breach disclosures this window. McKesson's healthcare data breach (disclosed Aug 31) and Revolut's third-party data disclosure incident (Sept 12) remain the latest state of play, already covered in prior briefings.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 14&ndash;16</span>CenterPoint Energy confirms breach of up to ~7.5M customer records</div>
+      <p>The Houston-based utility confirmed in a Sept 14 SEC 8-K filing that an unauthorized third party accessed customer personal information through an external-facing system. A threat actor claims to have pulled 7.49M records via an API allegedly lacking adequate authentication and rate limiting; CenterPoint hasn't confirmed that exact figure but has engaged outside responders and hardened the affected system. Multiple proposed class-action suits have already been filed.</p>
+      <div class="src"><a href="https://www.bleepingcomputer.com/news/security/centerpoint-energy-confirms-customer-data-stolen-in-cyberattack/" target="_blank">BleepingComputer</a> &middot; <a href="https://www.theregister.com/cyber-crime/2026/09/15/centerpoint-energy-confirms-intruder-helped-themselves-to-customer-information/5296523" target="_blank">The Register</a></div>
     </div>
   </section>
 
   <section class="company vulns" id="vulns">
     <h2><span class="dot"></span>Vulnerabilities &amp; Exploits</h2>
     <div class="item">
-      <div class="headline"><span class="date">Sep 16</span>Critical WSO2 API Manager JWT-bypass flaw (CVSS 9.8) under active exploitation</div>
-      <p>CVE-2026-5430, an improper cryptographic-signature verification bug in WSO2 API Manager, is being actively exploited to bypass JWT authentication and take over accounts. Patch or upgrade affected WSO2 API Manager deployments immediately if you run one &mdash; this is a full auth-bypass, not a theoretical flaw.</p>
-      <div class="src"><a href="https://thehackernews.com/" target="_blank">The Hacker News</a></div>
+      <div class="headline"><span class="date">Sep 15&ndash;17</span>Two critical Cisco bugs under active exploitation &mdash; ISE (CVSS 10.0) and Secure Email Gateway</div>
+      <p>CVE-2026-76460, a maximum-severity (CVSS 10.0) flaw in Cisco ISE, lets unauthenticated attackers bypass the web management interface and run commands as root; Cisco confirms active exploitation. A second, related bug, CVE-2026-76461 in Cisco Secure Email Gateway, allows root-level arbitrary command execution and is also being actively exploited &mdash; CISA pushed agencies to patch it before Sept 17. If you run either product, this is drop-everything patching, not routine maintenance.</p>
+      <div class="src"><a href="https://cyberpress.org/hackers-exploit-critical-cisco-ise-flaw/" target="_blank">Cyber Press</a> &middot; <a href="https://threatprotect.qualys.com/2026/09/15/cisco-secure-email-gateway-vulnerability-exploited-in-attacks-cve-2026-76461/" target="_blank">Qualys ThreatPROTECT</a></div>
+    </div>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 8</span>Microsoft's largest-ever Patch Tuesday: 974 CVEs, including 2 exploited zero-days</div>
+      <p>September's Patch Tuesday set a record at 974 CVEs (113 critical, 20 wormable). Two are already under active exploitation: CVE-2026-85880 and CVE-2026-81963, both Windows elevation-of-privilege bugs (ALPC and Update Stack respectively) that let an attacker who already has a foothold escalate to SYSTEM. Both require existing access, so pair patching with a look at initial-access controls, not just the patch itself.</p>
+      <div class="src"><a href="https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-september-2026/" target="_blank">CrowdStrike</a> &middot; <a href="https://www.darkreading.com/vulnerabilities-threats/patch-tuesday-another-record-974-cves" target="_blank">Dark Reading</a></div>
     </div>
   </section>
 
   <section class="company threatactors" id="threatactors">
     <h2><span class="dot"></span>Threat Actor &amp; APT Activity</h2>
-    <div class="item empty">
-      <p>No significant new APT/threat-actor reporting this window beyond the previously covered Chrome/Windows zero-day chain used by two China-nexus groups against NGOs and Anthropic's disclosure of Claude abuse by ShinyHunters and Russia/China-linked actors, both already covered in a prior briefing.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Sep (ongoing)</span>Energy/utilities sector hit in 66% of tracked APT campaigns; usual state-linked crew active</div>
+      <p>A new industry roundup finds energy and utilities the most-targeted sector across observed APT campaigns this period, with China-linked Mustang Panda, North Korea's Lazarus Group, and Russia's Sandworm among the most active groups, spanning attacks across 18 countries. Separately, researchers flagged APT28 weaponizing a newly disclosed vulnerability within 24 hours of disclosure &mdash; a reminder that patch-cycle SLAs matter more than they used to.</p>
+      <div class="src"><a href="https://industrialcyber.co/reports/energy-and-utilities-sector-targeted-in-66-of-observed-apt-campaigns-as-mustang-panda-lazarus-sandworm-remain-active/" target="_blank">Industrial Cyber</a></div>
     </div>
   </section>
 
   <section class="company gov" id="gov">
     <h2><span class="dot"></span>Government &amp; Regulatory</h2>
     <div class="item">
-      <div class="headline"><span class="date">Sep 15</span>Five Eyes agencies publish joint guidance on 17 Active Directory attack techniques</div>
-      <p>CISA, the NSA, and cyber authorities from Australia, Canada, the UK, and New Zealand jointly released detailed guidance on how attackers compromise Active Directory Domain Services, Certificate Services, and Federation Services &mdash; covering credential theft, Kerberos ticket forgery, certificate abuse, and hybrid-identity compromise, with recommendations to use tools like BloodHound, PingCastle, and Purple Knight to map excessive permissions and risky trust paths. Worth a read for any enterprise still running on-prem AD.</p>
-      <div class="src"><a href="https://www.cisa.gov/resources-tools/resources/detecting-and-mitigating-active-directory-compromises" target="_blank">CISA</a> &middot; <a href="https://cybersecuritynews.com/cisa-active-directory-attack-techniques/" target="_blank">Cybersecurity News</a></div>
+      <div class="headline"><span class="date">Sep 17</span>CISA adds 15 more CVEs to Known Exploited Vulnerabilities catalog this week</div>
+      <p>CISA's KEV catalog picked up 15 new entries this week, including the Cisco ISE and Secure Email Gateway flaws above, keeping pressure on federal civilian agencies' patch deadlines under Binding Operational Directive 22-01. Worth cross-checking your own patch backlog against the fresh KEV list rather than waiting for a formal advisory summary.</p>
+      <div class="src"><a href="https://senserva.com/exploited-this-week.html" target="_blank">Senserva KEV Tracker</a> &middot; <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank">CISA KEV Catalog</a></div>
     </div>
   </section>
 
   <section class="company vendors" id="vendors">
     <h2><span class="dot"></span>Security Vendor News</h2>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 15</span>Microsoft publishes draft "Humanist AI Code of Conduct"</div>
-      <p>Microsoft AI released a draft governance framework built around four core objectives &mdash; human control, reliable safety, human flourishing, and plural values &mdash; with a headline pledge that its models "will never resist human interruption, override, correction, or shutdown" and won't use deceptive or collusive means to evade oversight. The draft is open for six weeks of public consultation before a revised version ships later this year to guide model development from 2027 onward.</p>
-      <div class="src"><a href="https://microsoft.ai/code-of-conduct/" target="_blank">Microsoft AI</a> &middot; <a href="https://www.helpnetsecurity.com/2026/09/15/microsoft-ai-safety-rules-humanist-ai-code-of-conduct/" target="_blank">Help Net Security</a></div>
+    <div class="item empty">
+      <p>No significant new vendor announcements this window beyond Microsoft's draft "Humanist AI Code of Conduct" (published Sept 15, already covered in a prior briefing).</p>
     </div>
   </section>
 
@@ -136,15 +143,13 @@
 
   <section class="company market" id="market">
     <h2><span class="dot"></span>Market Moves</h2>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 15</span>Cyber stocks extend rally as Microsoft's AI safety code adds fuel</div>
-      <p>CrowdStrike, Palo Alto Networks, and Cloudflare shares moved higher again Sept 15 as Microsoft's newly published Humanist AI Code of Conduct reinforced the same investor thesis that drove Sept 14's 9&ndash;15% rally: rising AI-safety anxiety is translating into expected enterprise security spending, not just frontier-lab caution.</p>
-      <div class="src"><a href="https://www.benzinga.com/trading-ideas/long-ideas/26/09/61771074/microsoft-ai-safety-cyber-stocks" target="_blank">Benzinga</a></div>
+    <div class="item empty">
+      <p>No significant new market moves confirmed for this specific window. General 2026 sector context remains strong &mdash; cybersecurity startups have raised roughly $1.35B+ year-to-date with several $250M+ rounds (Cyera, Horizon3.ai, Dream Security) and an active IPO pipeline (Rubrik and Netskope already public; Cohesity reportedly prepping to follow) &mdash; but none of that is confirmed as new news specifically from the last 24&ndash;48 hours, so treat it as background rather than today's headline.</p>
     </div>
   </section>
 
   <footer>
-    Static snapshot &middot; compiled September 16, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
+    Static snapshot &middot; compiled September 17, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
   </footer>
 
 </div>
