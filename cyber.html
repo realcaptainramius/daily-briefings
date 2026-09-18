@@ -71,7 +71,7 @@
   <header>
     <div class="backlink"><a href="https://news.davidvasek.work">&larr; All briefings</a></div>
     <h1>Cybersecurity Daily Briefing</h1>
-    <div class="meta">Compiled <strong>Thursday, September 17, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
+    <div class="meta">Compiled <strong>Friday, September 18, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
     <div class="toc">
       <a href="#breaches">Breaches</a>
       <a href="#vulns">Vulnerabilities</a>
@@ -82,74 +82,93 @@
       <a href="#market">Market</a>
     </div>
     <div class="note">
-      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers roughly Sept 15&ndash;17. Two critical Cisco flaws under active exploitation dominate today: an unauthenticated, CVSS-10.0 root-access bug in Cisco ISE (CVE-2026-76460) and an actively exploited root-command-execution bug in Cisco Secure Email Gateway (CVE-2026-76461), which CISA pushed agencies to patch by Sept 17. Also notable: CenterPoint Energy confirmed a breach of up to ~7.5M customer records via an unsecured API.
+      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers roughly Sept 16&ndash;18. Three fresh KEV entries dominate today: a zero-click Google Pixel modem flaw, an actively exploited Acronis Backup plugin bug, and ransomware gangs now confirmed exploiting a critical VMware vCenter RCE across 47 countries &mdash; all three carry a Sept 19 federal patch deadline. Also notable: ShinyHunters' breach of Florida's DMV "DAVID" database via a stolen police officer's credentials.
     </div>
   </header>
 
   <section class="company breaches" id="breaches">
     <h2><span class="dot"></span>Breaches &amp; Incidents</h2>
     <div class="item">
-      <div class="headline"><span class="date">Sep 14&ndash;16</span>CenterPoint Energy confirms breach of up to ~7.5M customer records</div>
-      <p>The Houston-based utility confirmed in a Sept 14 SEC 8-K filing that an unauthorized third party accessed customer personal information through an external-facing system. A threat actor claims to have pulled 7.49M records via an API allegedly lacking adequate authentication and rate limiting; CenterPoint hasn't confirmed that exact figure but has engaged outside responders and hardened the affected system. Multiple proposed class-action suits have already been filed.</p>
-      <div class="src"><a href="https://www.bleepingcomputer.com/news/security/centerpoint-energy-confirms-customer-data-stolen-in-cyberattack/" target="_blank">BleepingComputer</a> &middot; <a href="https://www.theregister.com/cyber-crime/2026/09/15/centerpoint-energy-confirms-intruder-helped-themselves-to-customer-information/5296523" target="_blank">The Register</a></div>
+      <div class="headline"><span class="date">Sep 3&ndash;17</span>ShinyHunters breaches Florida DMV "DAVID" database via stolen police credentials</div>
+      <p>ShinyHunters claims it stole 200,000+ driver records from Florida's DAVID system after compromising accounts &mdash; including one belonging to an FBI agent &mdash; using credentials improperly stored on a Plant City Police Department employee's personal device. The breach began Sept 3; Florida's DMV (FLHSMV) confirmed and says it was mitigated. The gang has been posting proof on its leak site, including data on a high-profile deceased individual, to pressure a ransom.</p>
+      <div class="src"><a href="https://www.bleepingcomputer.com/news/security/florida-confirms-dmv-database-breached-via-stolen-police-account/" target="_blank">BleepingComputer</a> &middot; <a href="https://www.bankinfosecurity.com/breach-roundup-shinyhunters-claims-florida-dmv-hack-a-32792" target="_blank">BankInfoSecurity</a></div>
     </div>
   </section>
 
   <section class="company vulns" id="vulns">
     <h2><span class="dot"></span>Vulnerabilities &amp; Exploits</h2>
     <div class="item">
-      <div class="headline"><span class="date">Sep 15&ndash;17</span>Two critical Cisco bugs under active exploitation &mdash; ISE (CVSS 10.0) and Secure Email Gateway</div>
-      <p>CVE-2026-76460, a maximum-severity (CVSS 10.0) flaw in Cisco ISE, lets unauthenticated attackers bypass the web management interface and run commands as root; Cisco confirms active exploitation. A second, related bug, CVE-2026-76461 in Cisco Secure Email Gateway, allows root-level arbitrary command execution and is also being actively exploited &mdash; CISA pushed agencies to patch it before Sept 17. If you run either product, this is drop-everything patching, not routine maintenance.</p>
-      <div class="src"><a href="https://cyberpress.org/hackers-exploit-critical-cisco-ise-flaw/" target="_blank">Cyber Press</a> &middot; <a href="https://threatprotect.qualys.com/2026/09/15/cisco-secure-email-gateway-vulnerability-exploited-in-attacks-cve-2026-76461/" target="_blank">Qualys ThreatPROTECT</a></div>
+      <div class="headline"><span class="date">Sep 15&ndash;16</span>Ransomware gangs now confirmed exploiting critical VMware vCenter RCE (CVSS 9.8) across 47 countries</div>
+      <p>CISA says ransomware operators have moved from establishing persistence to active exploitation of CVE-2026-59310, an unauthenticated directory-traversal RCE in vCenter's Syslog server (patched by Broadcom July 29). DFIR firm QUIRSO found 361+ compromised IPs across 47 countries, with attackers deploying reverse-SSH tools for persistent access. CISA added it to KEV with a 3-day federal patch window &mdash; treat any internet-facing vCenter as compromised until verified otherwise.</p>
+      <div class="src"><a href="https://www.bleepingcomputer.com/news/security/cisa-critical-vmware-vcenter-rce-flaw-now-exploited-by-ransomware-gangs/" target="_blank">BleepingComputer</a> &middot; <a href="https://petri.com/vmware-vcenter-flaw-ransomware-groups/" target="_blank">Petri</a></div>
     </div>
     <div class="item">
-      <div class="headline"><span class="date">Sep 8</span>Microsoft's largest-ever Patch Tuesday: 974 CVEs, including 2 exploited zero-days</div>
-      <p>September's Patch Tuesday set a record at 974 CVEs (113 critical, 20 wormable). Two are already under active exploitation: CVE-2026-85880 and CVE-2026-81963, both Windows elevation-of-privilege bugs (ALPC and Update Stack respectively) that let an attacker who already has a foothold escalate to SYSTEM. Both require existing access, so pair patching with a look at initial-access controls, not just the patch itself.</p>
-      <div class="src"><a href="https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-september-2026/" target="_blank">CrowdStrike</a> &middot; <a href="https://www.darkreading.com/vulnerabilities-threats/patch-tuesday-another-record-974-cves" target="_blank">Dark Reading</a></div>
+      <div class="headline"><span class="date">Sep 15&ndash;16</span>Google patches zero-click Pixel modem flaw exploited in targeted attacks</div>
+      <p>CVE-2026-58704 is a permission-bypass logic error in the Pixel cellular modem enabling remote privilege escalation with no user interaction &mdash; a zero-click bug, and the "limited, targeted" framing plus modem-level exploitation point toward spyware-vendor or state-actor tradecraft. Google patched it Sept 15; CISA added it to KEV Sept 16 with a Sept 19 FCEB deadline.</p>
+      <div class="src"><a href="https://www.bleepingcomputer.com/news/security/google-fixes-actively-exploited-android-zero-day-on-pixel-devices/" target="_blank">BleepingComputer</a> &middot; <a href="https://www.theregister.com/security/2026/09/16/google-pixel-phones-pwned-in-zero-click-attacks/" target="_blank">The Register</a></div>
+    </div>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 16</span>Acronis Backup plugin for cPanel/WHM exploited for Linux privilege escalation</div>
+      <p>CVE-2026-87886 (CVSS 7.8) stems from insecure default file permissions in Acronis's Backup plugin for cPanel and WHM, letting a low-privileged local attacker escalate to root. Acronis confirms limited, targeted exploitation but hasn't disclosed post-exploitation payloads. Added to CISA's KEV catalog Sept 16, Sept 19 FCEB deadline.</p>
+      <div class="src"><a href="https://www.helpnetsecurity.com/2026/09/16/acronis-backup-plugin-vulnerability-exploited-cve-2026-87886/" target="_blank">Help Net Security</a> &middot; <a href="https://thehackernews.com/2026/09/acronis-cpanel-backup-plugin.html" target="_blank">The Hacker News</a></div>
+    </div>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 15&ndash;17</span>Two critical Cisco bugs (ISE, Secure Email Gateway) remain under active exploitation; Sept 17 patch deadline now passed</div>
+      <p>Follow-up on yesterday's items: CVE-2026-76460 (Cisco ISE, CVSS 10.0, unauthenticated root) and CVE-2026-76461 (Cisco Secure Email Gateway, root command execution) carried a CISA-mandated Sept 17 patch deadline for federal agencies. If you haven't confirmed patching on either product, treat this as overdue, not routine.</p>
+      <div class="src"><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank">CISA KEV Catalog</a></div>
     </div>
   </section>
 
   <section class="company threatactors" id="threatactors">
     <h2><span class="dot"></span>Threat Actor &amp; APT Activity</h2>
     <div class="item">
-      <div class="headline"><span class="date">Sep (ongoing)</span>Energy/utilities sector hit in 66% of tracked APT campaigns; usual state-linked crew active</div>
-      <p>A new industry roundup finds energy and utilities the most-targeted sector across observed APT campaigns this period, with China-linked Mustang Panda, North Korea's Lazarus Group, and Russia's Sandworm among the most active groups, spanning attacks across 18 countries. Separately, researchers flagged APT28 weaponizing a newly disclosed vulnerability within 24 hours of disclosure &mdash; a reminder that patch-cycle SLAs matter more than they used to.</p>
-      <div class="src"><a href="https://industrialcyber.co/reports/energy-and-utilities-sector-targeted-in-66-of-observed-apt-campaigns-as-mustang-panda-lazarus-sandworm-remain-active/" target="_blank">Industrial Cyber</a></div>
+      <div class="headline"><span class="date">Sep (recent)</span>Russia's APT28 exploits newly disclosed Microsoft Office flaw within days of disclosure ("Operation Neusploit")</div>
+      <p>APT28 (aka UAC-0001, Fancy Bear) has been attributed to attacks exploiting a newly disclosed Microsoft Office vulnerability as part of a campaign dubbed Operation Neusploit &mdash; another reminder that patch-cycle SLAs for Office/Windows flaws now need to assume state-actor weaponization within days, not weeks.</p>
+      <div class="src"><a href="https://thehackernews.com/2026/09/threatsday-self-rewriting-agents-800.html" target="_blank">The Hacker News</a></div>
+    </div>
+    <div class="item">
+      <div class="headline"><span class="date">Aug&ndash;Sep</span>China-nexus APT among early exploiters of the VMware vCenter flaw</div>
+      <p>German IR firm QUIRSO's investigation into the vCenter CVE-2026-59310 exploitation (see Vulnerabilities above) traces early activity to a China-nexus APT establishing persistence shortly after the July patch, before ransomware crews piled on this month &mdash; a useful reminder that KEV entries often understate how long sophisticated actors have already had a foothold.</p>
+      <div class="src"><a href="https://tech-insider.org/vmware-vcenter-cve-2026-59310-zero-day-2026/" target="_blank">Tech Insider</a></div>
     </div>
   </section>
 
   <section class="company gov" id="gov">
     <h2><span class="dot"></span>Government &amp; Regulatory</h2>
     <div class="item">
-      <div class="headline"><span class="date">Sep 17</span>CISA adds 15 more CVEs to Known Exploited Vulnerabilities catalog this week</div>
-      <p>CISA's KEV catalog picked up 15 new entries this week, including the Cisco ISE and Secure Email Gateway flaws above, keeping pressure on federal civilian agencies' patch deadlines under Binding Operational Directive 22-01. Worth cross-checking your own patch backlog against the fresh KEV list rather than waiting for a formal advisory summary.</p>
-      <div class="src"><a href="https://senserva.com/exploited-this-week.html" target="_blank">Senserva KEV Tracker</a> &middot; <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank">CISA KEV Catalog</a></div>
+      <div class="headline"><span class="date">Sep 16&ndash;19</span>CISA loads three new actively-exploited CVEs into KEV with a common Sept 19 deadline</div>
+      <p>The Pixel modem flaw, the Acronis Backup plugin bug, and the VMware vCenter RCE all landed in CISA's Known Exploited Vulnerabilities catalog within a day of each other, all carrying a Sept 19 FCEB patch deadline under Binding Operational Directive 22-01. Three unrelated products, one compressed patch window &mdash; worth flagging to any customer running Pixel fleets, cPanel/WHM with Acronis, or vCenter.</p>
+      <div class="src"><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank">CISA KEV Catalog</a></div>
     </div>
   </section>
 
   <section class="company vendors" id="vendors">
     <h2><span class="dot"></span>Security Vendor News</h2>
-    <div class="item empty">
-      <p>No significant new vendor announcements this window beyond Microsoft's draft "Humanist AI Code of Conduct" (published Sept 15, already covered in a prior briefing).</p>
+    <div class="item">
+      <div class="headline"><span class="date">Sep (recent)</span>CrowdStrike touts SafeMind agentic-AI defense platform amid 89% YoY jump in AI-enabled attacks</div>
+      <p>CrowdStrike SVP Adam Meyers said the company saw nearly as many "agentic adversary" incidents in the past month as in the prior six months combined, part of an 89% year-over-year rise in attacks CrowdStrike classifies as AI-enabled per its 2026 Global Threat Report. SafeMind, CrowdStrike's open-ecosystem AI security platform, routes requests across its own models plus Anthropic, OpenAI, and open-source alternatives depending on task.</p>
+      <div class="src"><a href="https://www.crowdstrike.com/en-us/news/" target="_blank">CrowdStrike Newsroom</a></div>
     </div>
   </section>
 
   <section class="company cloud" id="cloud">
     <h2><span class="dot"></span>Cloud &amp; Infrastructure Security</h2>
     <div class="item empty">
-      <p>No significant new cloud/infrastructure security incidents reported this window. The F5 BIG-IP APM Linux rootkit disclosed earlier this month remains the latest state of play, already covered in a prior briefing.</p>
+      <p>No significant new cloud/infrastructure security incidents reported this window beyond the VMware vCenter ransomware exploitation covered above. The F5 BIG-IP APM Linux rootkit disclosed earlier this month remains the latest other state of play, already covered in a prior briefing.</p>
     </div>
   </section>
 
   <section class="company market" id="market">
     <h2><span class="dot"></span>Market Moves</h2>
-    <div class="item empty">
-      <p>No significant new market moves confirmed for this specific window. General 2026 sector context remains strong &mdash; cybersecurity startups have raised roughly $1.35B+ year-to-date with several $250M+ rounds (Cyera, Horizon3.ai, Dream Security) and an active IPO pipeline (Rubrik and Netskope already public; Cohesity reportedly prepping to follow) &mdash; but none of that is confirmed as new news specifically from the last 24&ndash;48 hours, so treat it as background rather than today's headline.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Sep (recent)</span>Cybersecurity stocks hit record highs; Armis crosses $300M ARR ahead of expected IPO</div>
+      <p>Palo Alto Networks and CrowdStrike shares jumped roughly 6% and 5% respectively to set closing records, with Fortinet, Cloudflare, and SentinelOne also climbing, as investors reward the sector's AI-security narrative. Separately, Armis surpassed $300M in annual recurring revenue as it continues prepping for a widely expected IPO; Cohesity remains in the on-deck circle after shelving its Veritas acquisition. Background context, not a single dated catalyst.</p>
+      <div class="src"><a href="https://finance.yahoo.com/technology/ai/articles/cybersecurity-stocks-surge-palo-alto-202524523.html" target="_blank">Yahoo Finance</a> &middot; <a href="https://www.morningstar.com/stocks/ipos-make-comeback-these-9-cybersecurity-startups-could-be-next" target="_blank">Morningstar</a></div>
     </div>
   </section>
 
   <footer>
-    Static snapshot &middot; compiled September 17, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
+    Static snapshot &middot; compiled September 18, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
   </footer>
 
 </div>
