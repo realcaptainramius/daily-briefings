@@ -122,6 +122,16 @@
   <section class="company threatactors" id="threatactors">
     <h2><span class="dot"></span>Threat Actor &amp; APT Activity</h2>
     <div class="item">
+      <div class="headline"><span class="date">Sep 21</span>New "TASK#STOMP" PowerShell backdoor harvests documents, Wi-Fi passwords, clipboard data</div>
+      <p>Securonix researchers detailed a campaign that uses wscript.exe to launch an encoded VBScript, which in turn starts two hidden PowerShell modules &mdash; one continuously harvesting and exfiltrating business documents (prioritizing Word, PDF, PowerPoint, then Excel), the other maintaining a second token-authenticated C2 channel for screenshots, Wi-Fi passwords, clipboard theft and arbitrary commands. Five redundant persistence mechanisms (four scheduled tasks plus a Startup-folder copy) mean partial cleanup won't kill it. No attribution to a known APT yet, but the document-priority pattern points to targeted espionage over opportunistic crimeware.</p>
+      <div class="src"><a href="https://www.helpnetsecurity.com/2026/09/21/taskstomp-windows-backdoor/" target="_blank">Help Net Security</a> &middot; <a href="https://thehackernews.com/2026/09/taskstomp-powershell-backdoor-steals.html" target="_blank">The Hacker News</a></div>
+    </div>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 21</span>"ChainScript" RAT resolves its C2 address from a Polygon smart contract</div>
+      <p>Blackpoint Cyber found a new Node.js RAT delivered via ClickFix-style lures posing as Spotify, Zoom Workplace and Microsoft Teams installers &mdash; one malicious Reddit ad campaign served 108 impressions in 48 hours. Instead of a hardcoded C2 domain, ChainScript queries a Polygon blockchain smart contract at runtime to resolve its live WebSocket C2 address, an EtherHiding-style technique that lets operators rotate infrastructure without touching the malware itself. Capabilities include an interactive shell, file operations, screenshot capture, and crypto-wallet enumeration across desktop apps and browser extensions.</p>
+      <div class="src"><a href="https://securityaffairs.com/199471/malware/chainscript-the-rat-that-hides-its-command-server-inside-a-blockchain-contract.html" target="_blank">Security Affairs</a> &middot; <a href="https://thehackernews.com/2026/09/clickfix-lures-deploy-chainscript-rat.html" target="_blank">The Hacker News</a></div>
+    </div>
+    <div class="item">
       <div class="headline"><span class="date">this week</span>Transparent Tribe (APT36) deploys new Rust backdoor against India/Afghanistan government and defense targets</div>
       <p>Zscaler ThreatLabz attributes "Operation RapidRust" to the Pakistan-aligned group, using previously undocumented tools (RUSTYSHADE, RUSTYMOVE, PSNATCH, BASHNATCH) against government and defense organizations. Comes about a month after Acronis tied the same group to a separate campaign against Afghan telecom and South Asian critical infrastructure.</p>
       <div class="src"><a href="https://thehackernews.com/2026/09/transparent-tribe-deploys-new-rust.html" target="_blank">The Hacker News</a></div>
