@@ -71,7 +71,7 @@
   <header>
     <div class="backlink"><a href="https://news.davidvasek.work">&larr; All briefings</a></div>
     <h1>Cybersecurity Daily Briefing</h1>
-    <div class="meta">Compiled <strong>Friday, September 18, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
+    <div class="meta">Compiled <strong>Monday, September 21, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
     <div class="toc">
       <a href="#breaches">Breaches</a>
       <a href="#vulns">Vulnerabilities</a>
@@ -82,91 +82,86 @@
       <a href="#market">Market</a>
     </div>
     <div class="note">
-      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers roughly Sept 16&ndash;18. Three fresh KEV entries dominate today: a zero-click Google Pixel modem flaw, an actively exploited Acronis Backup plugin bug, and ransomware gangs now confirmed exploiting a critical VMware vCenter RCE across 47 countries &mdash; all three carry a Sept 19 federal patch deadline. Also notable: ShinyHunters' breach of Florida's DMV "DAVID" database via a stolen police officer's credentials.
+      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers the weekend, roughly Sept 18&ndash;21. Headline: CISA's Sept 19 addition of three actively-exploited Linux kernel flaws carries a Sept 21 federal patch deadline &mdash; today &mdash; under BOD 26-04. Also notable: CrowdSec revised its account of a May supply-chain breach, admitting investor and user data leaked after initially denying it.
     </div>
   </header>
 
   <section class="company breaches" id="breaches">
     <h2><span class="dot"></span>Breaches &amp; Incidents</h2>
     <div class="item">
-      <div class="headline"><span class="date">Sep 3&ndash;17</span>ShinyHunters breaches Florida DMV "DAVID" database via stolen police credentials</div>
-      <p>ShinyHunters claims it stole 200,000+ driver records from Florida's DAVID system after compromising accounts &mdash; including one belonging to an FBI agent &mdash; using credentials improperly stored on a Plant City Police Department employee's personal device. The breach began Sept 3; Florida's DMV (FLHSMV) confirmed and says it was mitigated. The gang has been posting proof on its leak site, including data on a high-profile deceased individual, to pressure a ransom.</p>
-      <div class="src"><a href="https://www.bleepingcomputer.com/news/security/florida-confirms-dmv-database-breached-via-stolen-police-account/" target="_blank">BleepingComputer</a> &middot; <a href="https://www.bankinfosecurity.com/breach-roundup-shinyhunters-claims-florida-dmv-hack-a-32792" target="_blank">BankInfoSecurity</a></div>
+      <div class="headline"><span class="date">Sep 18&ndash;19</span>CrowdSec revises breach account: investor and user data did leak, contradicting its first statement</div>
+      <p>French security vendor CrowdSec disclosed that an attacker copied ~170 private GitHub repos on May 22 using a former employee's still-active account, itself compromised via May's TanStack npm supply-chain attack (CVE-2026-45321) &mdash; the same campaign that hit Mistral AI and OpenAI. The leaked archive, posted publicly Sept 16, contained 83 users' emails and 51 investors' names/emails/investment details from 2020. Notably, CrowdSec's Sept 17 first statement said "no client data, name, or organization was leaked" and blamed a backdoored component directly; the Sept 18 follow-up reversed both claims. CrowdSec says its public IP-blocklist engine and infrastructure were not touched.</p>
+      <div class="src"><a href="https://thehackernews.com/2026/09/crowdsec-says-tanstack-npm-attack-led.html" target="_blank">The Hacker News</a> &middot; <a href="https://www.crowdsec.net/blog/tanstack-supply-chain-attack-analysis" target="_blank">CrowdSec</a></div>
     </div>
   </section>
 
   <section class="company vulns" id="vulns">
     <h2><span class="dot"></span>Vulnerabilities &amp; Exploits</h2>
     <div class="item">
-      <div class="headline"><span class="date">Sep 15&ndash;16</span>Ransomware gangs now confirmed exploiting critical VMware vCenter RCE (CVSS 9.8) across 47 countries</div>
-      <p>CISA says ransomware operators have moved from establishing persistence to active exploitation of CVE-2026-59310, an unauthenticated directory-traversal RCE in vCenter's Syslog server (patched by Broadcom July 29). DFIR firm QUIRSO found 361+ compromised IPs across 47 countries, with attackers deploying reverse-SSH tools for persistent access. CISA added it to KEV with a 3-day federal patch window &mdash; treat any internet-facing vCenter as compromised until verified otherwise.</p>
-      <div class="src"><a href="https://www.bleepingcomputer.com/news/security/cisa-critical-vmware-vcenter-rce-flaw-now-exploited-by-ransomware-gangs/" target="_blank">BleepingComputer</a> &middot; <a href="https://petri.com/vmware-vcenter-flaw-ransomware-groups/" target="_blank">Petri</a></div>
+      <div class="headline"><span class="date">Sep 19</span>CISA adds three actively-exploited Linux kernel flaws to KEV; patch deadline is today (Sep 21)</div>
+      <p>CVE-2025-39682 (CVSS 9.8, TLS receive-path memory disclosure/DoS), CVE-2026-53266 (CVSS 8.8, ebtables SNAT/ARP out-of-bounds write enabling local privilege escalation), and CVE-2025-39964 (CVSS 7.8, AF_ALG socket race condition) all carry evidence of active exploitation and a federal remediation deadline of Sept 21 under Binding Operational Directive 26-04 &mdash; CISA is also requiring forensic triage, not just patching, for potentially exposed assets.</p>
+      <div class="src"><a href="https://thehackernews.com/2026/09/cisa-flags-three-linux-kernel.html" target="_blank">The Hacker News</a> &middot; <a href="https://www.cisa.gov/news-events/alerts/2026/09/18/cisa-adds-one-known-exploited-vulnerability-catalog" target="_blank">CISA</a></div>
     </div>
     <div class="item">
-      <div class="headline"><span class="date">Sep 15&ndash;16</span>Google patches zero-click Pixel modem flaw exploited in targeted attacks</div>
-      <p>CVE-2026-58704 is a permission-bypass logic error in the Pixel cellular modem enabling remote privilege escalation with no user interaction &mdash; a zero-click bug, and the "limited, targeted" framing plus modem-level exploitation point toward spyware-vendor or state-actor tradecraft. Google patched it Sept 15; CISA added it to KEV Sept 16 with a Sept 19 FCEB deadline.</p>
-      <div class="src"><a href="https://www.bleepingcomputer.com/news/security/google-fixes-actively-exploited-android-zero-day-on-pixel-devices/" target="_blank">BleepingComputer</a> &middot; <a href="https://www.theregister.com/security/2026/09/16/google-pixel-phones-pwned-in-zero-click-attacks/" target="_blank">The Register</a></div>
+      <div class="headline"><span class="date">Sep 19</span>Critical Orkes Conductor pre-auth RCE (CVSS 9.8) exploited in the wild</div>
+      <p>CVE-2026-58138 lets unauthenticated attackers execute arbitrary OS commands on Orkes Conductor's workflow engine by submitting malicious JavaScript/Python inline workflow definitions, abusing unsandboxed GraalVM evaluators. Fortinet issued an outbreak alert after observing active exploitation.</p>
+      <div class="src"><a href="https://thehackernews.com/" target="_blank">The Hacker News</a></div>
     </div>
     <div class="item">
-      <div class="headline"><span class="date">Sep 16</span>Acronis Backup plugin for cPanel/WHM exploited for Linux privilege escalation</div>
-      <p>CVE-2026-87886 (CVSS 7.8) stems from insecure default file permissions in Acronis's Backup plugin for cPanel and WHM, letting a low-privileged local attacker escalate to root. Acronis confirms limited, targeted exploitation but hasn't disclosed post-exploitation payloads. Added to CISA's KEV catalog Sept 16, Sept 19 FCEB deadline.</p>
-      <div class="src"><a href="https://www.helpnetsecurity.com/2026/09/16/acronis-backup-plugin-vulnerability-exploited-cve-2026-87886/" target="_blank">Help Net Security</a> &middot; <a href="https://thehackernews.com/2026/09/acronis-cpanel-backup-plugin.html" target="_blank">The Hacker News</a></div>
+      <div class="headline"><span class="date">disclosed ~Sep 18&ndash;19</span>Check Point patches critical unauthenticated root RCE in Management/Log Servers</div>
+      <p>CVE-2026-91843 (CVSS 9.8) is a stack overflow in Check Point's pre-authentication login handler that could let a remote attacker run code as root with no credentials. Check Point shipped a fix via LivePatch and says it has no evidence of in-the-wild exploitation yet &mdash; patch before that changes.</p>
+      <div class="src"><a href="https://www.bleepingcomputer.com/news/security/check-point-warns-critical-flaw-lets-hackers-execute-code-as-root/" target="_blank">BleepingComputer</a></div>
     </div>
     <div class="item">
-      <div class="headline"><span class="date">Sep 15&ndash;17</span>Two critical Cisco bugs (ISE, Secure Email Gateway) remain under active exploitation; Sept 17 patch deadline now passed</div>
-      <p>Follow-up on yesterday's items: CVE-2026-76460 (Cisco ISE, CVSS 10.0, unauthenticated root) and CVE-2026-76461 (Cisco Secure Email Gateway, root command execution) carried a CISA-mandated Sept 17 patch deadline for federal agencies. If you haven't confirmed patching on either product, treat this as overdue, not routine.</p>
-      <div class="src"><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank">CISA KEV Catalog</a></div>
+      <div class="headline"><span class="date">Sep 18</span>Working exploit code published for four Linux kernel local-root flaws</div>
+      <p>Researcher Asim Manizada released technical writeups and working exploits for four kernel bugs &mdash; dubbed DirtyAH6, TUNderflow, PPPoEject, and DiagSpill &mdash; after a coordinated disclosure hold. All four are already patched in current kernels; no in-the-wild exploitation reported yet, but any system on an older kernel is now a easier target with public exploit code circulating.</p>
+      <div class="src"><a href="https://thehackernews.com/2026/09/public-exploits-released-for-four-linux.html" target="_blank">The Hacker News</a></div>
     </div>
   </section>
 
   <section class="company threatactors" id="threatactors">
     <h2><span class="dot"></span>Threat Actor &amp; APT Activity</h2>
     <div class="item">
-      <div class="headline"><span class="date">Aug&ndash;Sep</span>China-nexus APT among early exploiters of the VMware vCenter flaw</div>
-      <p>German IR firm QUIRSO's investigation into the vCenter CVE-2026-59310 exploitation (see Vulnerabilities above) traces early activity to a China-nexus APT establishing persistence shortly after the July patch, before ransomware crews piled on this month &mdash; a useful reminder that KEV entries often understate how long sophisticated actors have already had a foothold.</p>
-      <div class="src"><a href="https://tech-insider.org/vmware-vcenter-cve-2026-59310-zero-day-2026/" target="_blank">Tech Insider</a></div>
-    </div>
-    <div class="item empty">
-      <p>No other new APT activity confirmed this window. An "APT28 exploits new Office flaw" item pulled after date-checking &mdash; the underlying Operation Neusploit campaign was actually disclosed in late January 2026, roughly eight months stale, not new.</p>
+      <div class="headline"><span class="date">this week</span>Transparent Tribe (APT36) deploys new Rust backdoor against India/Afghanistan government and defense targets</div>
+      <p>Zscaler ThreatLabz attributes "Operation RapidRust" to the Pakistan-aligned group, using previously undocumented tools (RUSTYSHADE, RUSTYMOVE, PSNATCH, BASHNATCH) against government and defense organizations. Comes about a month after Acronis tied the same group to a separate campaign against Afghan telecom and South Asian critical infrastructure.</p>
+      <div class="src"><a href="https://thehackernews.com/2026/09/transparent-tribe-deploys-new-rust.html" target="_blank">The Hacker News</a></div>
     </div>
   </section>
 
   <section class="company gov" id="gov">
     <h2><span class="dot"></span>Government &amp; Regulatory</h2>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 16&ndash;19</span>CISA loads three new actively-exploited CVEs into KEV with a common Sept 19 deadline</div>
-      <p>The Pixel modem flaw, the Acronis Backup plugin bug, and the VMware vCenter RCE all landed in CISA's Known Exploited Vulnerabilities catalog within a day of each other, all carrying a Sept 19 FCEB patch deadline under Binding Operational Directive 22-01. Three unrelated products, one compressed patch window &mdash; worth flagging to any customer running Pixel fleets, cPanel/WHM with Acronis, or vCenter.</p>
-      <div class="src"><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank">CISA KEV Catalog</a></div>
+    <div class="item empty">
+      <p>No new items distinct from the KEV/BOD 26-04 Linux kernel deadline already covered above &mdash; that is today's operative government-driven action item.</p>
     </div>
   </section>
 
   <section class="company vendors" id="vendors">
     <h2><span class="dot"></span>Security Vendor News</h2>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 1</span>CrowdStrike touts SafeMind agentic-AI defense platform amid 89% YoY jump in AI-enabled attacks</div>
-      <p>CrowdStrike SVP Adam Meyers said the company saw nearly as many "agentic adversary" incidents in the past month as in the prior six months combined, part of an 89% year-over-year rise in attacks CrowdStrike classifies as AI-enabled per its 2026 Global Threat Report. SafeMind, CrowdStrike's open-ecosystem AI security platform, routes requests across its own models plus Anthropic, OpenAI, and open-source alternatives depending on task. Tied to CrowdStrike's Fal.Con conference &mdash; background context rather than this week's news, included since it hasn't appeared in a prior briefing.</p>
-      <div class="src"><a href="https://www.crowdstrike.com/en-us/news/" target="_blank">CrowdStrike Newsroom</a></div>
+    <div class="item empty">
+      <p>No significant new vendor product or strategy news this window beyond the Check Point and Fortinet advisories already covered above.</p>
     </div>
   </section>
 
   <section class="company cloud" id="cloud">
     <h2><span class="dot"></span>Cloud &amp; Infrastructure Security</h2>
-    <div class="item empty">
-      <p>No significant new cloud/infrastructure security incidents reported this window beyond the VMware vCenter ransomware exploitation covered above. The F5 BIG-IP APM Linux rootkit disclosed earlier this month remains the latest other state of play, already covered in a prior briefing.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 18</span>Microsoft patches maximum-severity (CVSS 10.0) Azure AI Foundry privilege-escalation flaw</div>
+      <p>CVE-2026-85889 stemmed from missing authentication on a critical function in Azure AI Foundry (Microsoft Foundry), letting an unauthorized attacker elevate privileges over the network. Microsoft says no customer action is required and there's no evidence of exploitation; credited to independent researcher R&eacute;my Marot.</p>
+      <div class="src"><a href="https://thehackernews.com/2026/09/microsoft-patches-cvss-100-azure-ai.html" target="_blank">The Hacker News</a></div>
     </div>
   </section>
 
   <section class="company market" id="market">
     <h2><span class="dot"></span>Market Moves</h2>
     <div class="item">
-      <div class="headline"><span class="date">Sep 14</span>CrowdStrike and Palo Alto Networks post their largest one-day jumps since April 2025 on AI-security demand</div>
-      <p>CrowdStrike shares rose roughly 13.8% and Palo Alto Networks roughly 13% in a single session &mdash; each stock's biggest one-day move since April 2025 &mdash; as investors rewarded both companies' AI-security positioning. Cybersecurity IPO chatter continues separately (Armis, Netskope, and others cited as potential 2026&ndash;27 candidates), but no confirmed new IPO filing or financial disclosure this window.</p>
-      <div class="src"><a href="https://finance.yahoo.com/technology/ai/articles/cybersecurity-stocks-surge-palo-alto-202524523.html" target="_blank">Yahoo Finance</a></div>
+      <div class="headline"><span class="date">Sep 18</span>Data security startup MIND raises $72M</div>
+      <p>MIND, a data-security company built around AI-driven data exposure and DLP, closed a $72M round, reaching eight-figure revenue in under two years &mdash; one of the faster-scaling names in a cybersecurity funding market still running hot on AI-security demand.</p>
+      <div class="src"><a href="https://fintech.global/2026/09/18/mind-raises-72m-as-ai-turns-data-security-urgent/" target="_blank">Fintech Global</a></div>
     </div>
   </section>
 
   <footer>
-    Static snapshot &middot; compiled September 18, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
+    Static snapshot &middot; compiled September 21, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
   </footer>
 
 </div>
