@@ -71,7 +71,7 @@
   <header>
     <div class="backlink"><a href="https://news.davidvasek.work">&larr; All briefings</a></div>
     <h1>Cybersecurity Daily Briefing</h1>
-    <div class="meta">Compiled <strong>Monday, September 21, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
+    <div class="meta">Compiled <strong>Tuesday, September 22, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
     <div class="toc">
       <a href="#breaches">Breaches</a>
       <a href="#vulns">Vulnerabilities</a>
@@ -82,96 +82,68 @@
       <a href="#market">Market</a>
     </div>
     <div class="note">
-      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers the weekend, roughly Sept 18&ndash;21. Headline: CISA's Sept 19 addition of three actively-exploited Linux kernel flaws carries a Sept 21 federal patch deadline &mdash; today &mdash; under BOD 26-04. Also notable: CrowdSec revised its account of a May supply-chain breach, admitting investor and user data leaked after initially denying it.
+      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers since the Sept 21 update. Two items: CISA added a Zyxel switch RCE to its KEV catalog (Sept 24 deadline), and Ireland's DPC fined Google &euro;403M over location-data GDPR violations.
     </div>
   </header>
 
   <section class="company breaches" id="breaches">
     <h2><span class="dot"></span>Breaches &amp; Incidents</h2>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 18&ndash;19</span>CrowdSec revises breach account: investor and user data did leak, contradicting its first statement</div>
-      <p>French security vendor CrowdSec disclosed that an attacker copied ~170 private GitHub repos on May 22 using a former employee's still-active account, itself compromised via May's TanStack npm supply-chain attack (CVE-2026-45321) &mdash; the same campaign that hit Mistral AI and OpenAI. The leaked archive, posted publicly Sept 16, contained 83 users' emails and 51 investors' names/emails/investment details from 2020. Notably, CrowdSec's Sept 17 first statement said "no client data, name, or organization was leaked" and blamed a backdoored component directly; the Sept 18 follow-up reversed both claims. CrowdSec says its public IP-blocklist engine and infrastructure were not touched.</p>
-      <div class="src"><a href="https://thehackernews.com/2026/09/crowdsec-says-tanstack-npm-attack-led.html" target="_blank">The Hacker News</a> &middot; <a href="https://www.crowdsec.net/blog/tanstack-supply-chain-attack-analysis" target="_blank">CrowdSec</a></div>
+    <div class="item empty">
+      <p>No new breach disclosures this window beyond the CrowdSec revision already covered in a prior briefing.</p>
     </div>
   </section>
 
   <section class="company vulns" id="vulns">
     <h2><span class="dot"></span>Vulnerabilities &amp; Exploits</h2>
     <div class="item">
-      <div class="headline"><span class="date">Sep 19</span>CISA adds three actively-exploited Linux kernel flaws to KEV; patch deadline is today (Sep 21)</div>
-      <p>CVE-2025-39682 (CVSS 9.8, TLS receive-path memory disclosure/DoS), CVE-2026-53266 (CVSS 8.8, ebtables SNAT/ARP out-of-bounds write enabling local privilege escalation), and CVE-2025-39964 (CVSS 7.8, AF_ALG socket race condition) all carry evidence of active exploitation and a federal remediation deadline of Sept 21 under Binding Operational Directive 26-04 &mdash; CISA is also requiring forensic triage, not just patching, for potentially exposed assets.</p>
-      <div class="src"><a href="https://thehackernews.com/2026/09/cisa-flags-three-linux-kernel.html" target="_blank">The Hacker News</a> &middot; <a href="https://www.cisa.gov/news-events/alerts/2026/09/18/cisa-adds-one-known-exploited-vulnerability-catalog" target="_blank">CISA</a></div>
+      <div class="headline"><span class="date">Sep 21</span>CISA adds Zyxel GS1900 switch RCE to KEV; federal patch deadline Sep 24</div>
+      <p>CVE-2026-7273 (CVSS 8.8) is a stack-based buffer overflow in the GS1900 series' CGI handler &mdash; an unauthenticated attacker on the local network can send a crafted HTTP request to execute OS commands on the switch. CISA also flagged it as requiring forensic triage, not just patching, under BOD 26-04, with a remediation deadline of Sept 24.</p>
+      <div class="src"><a href="https://www.cisa.gov/news-events/alerts/2026/09/21/cisa-adds-one-known-exploited-vulnerability-catalog" target="_blank">CISA</a> &middot; <a href="https://cybersecuritynews.com/cisa-warns-of-zyxel-gs1900-switches-flaw-exploited/" target="_blank">Cybersecurity News</a></div>
     </div>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 19</span>Critical Orkes Conductor pre-auth RCE (CVSS 9.8) exploited in the wild</div>
-      <p>CVE-2026-58138 lets unauthenticated attackers execute arbitrary OS commands on Orkes Conductor's workflow engine by submitting malicious JavaScript/Python inline workflow definitions, abusing unsandboxed GraalVM evaluators. Fortinet issued an outbreak alert after observing active exploitation.</p>
-      <div class="src"><a href="https://thehackernews.com/" target="_blank">The Hacker News</a></div>
-    </div>
-    <div class="item">
-      <div class="headline"><span class="date">disclosed ~Sep 18&ndash;19</span>Check Point patches critical unauthenticated root RCE in Management/Log Servers</div>
-      <p>CVE-2026-91843 (CVSS 9.8) is a stack overflow in Check Point's pre-authentication login handler that could let a remote attacker run code as root with no credentials. Check Point shipped a fix via LivePatch and says it has no evidence of in-the-wild exploitation yet &mdash; patch before that changes.</p>
-      <div class="src"><a href="https://www.bleepingcomputer.com/news/security/check-point-warns-critical-flaw-lets-hackers-execute-code-as-root/" target="_blank">BleepingComputer</a></div>
-    </div>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 18</span>Working exploit code published for four Linux kernel local-root flaws</div>
-      <p>Researcher Asim Manizada released technical writeups and working exploits for four kernel bugs &mdash; dubbed DirtyAH6, TUNderflow, PPPoEject, and DiagSpill &mdash; after a coordinated disclosure hold. All four are already patched in current kernels; no in-the-wild exploitation reported yet, but any system on an older kernel is now a easier target with public exploit code circulating.</p>
-      <div class="src"><a href="https://thehackernews.com/2026/09/public-exploits-released-for-four-linux.html" target="_blank">The Hacker News</a></div>
+    <div class="item empty">
+      <p>No further update on the earlier Linux kernel KEV additions, Orkes Conductor RCE, Check Point RCE, or the four public Linux exploits beyond what's already been covered.</p>
     </div>
   </section>
 
   <section class="company threatactors" id="threatactors">
     <h2><span class="dot"></span>Threat Actor &amp; APT Activity</h2>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 21</span>New "TASK#STOMP" PowerShell backdoor harvests documents, Wi-Fi passwords, clipboard data</div>
-      <p>Securonix researchers detailed a campaign that uses wscript.exe to launch an encoded VBScript, which in turn starts two hidden PowerShell modules &mdash; one continuously harvesting and exfiltrating business documents (prioritizing Word, PDF, PowerPoint, then Excel), the other maintaining a second token-authenticated C2 channel for screenshots, Wi-Fi passwords, clipboard theft and arbitrary commands. Five redundant persistence mechanisms (four scheduled tasks plus a Startup-folder copy) mean partial cleanup won't kill it. No attribution to a known APT yet, but the document-priority pattern points to targeted espionage over opportunistic crimeware.</p>
-      <div class="src"><a href="https://www.helpnetsecurity.com/2026/09/21/taskstomp-windows-backdoor/" target="_blank">Help Net Security</a> &middot; <a href="https://thehackernews.com/2026/09/taskstomp-powershell-backdoor-steals.html" target="_blank">The Hacker News</a></div>
-    </div>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 21</span>"ChainScript" RAT resolves its C2 address from a Polygon smart contract</div>
-      <p>Blackpoint Cyber found a new Node.js RAT delivered via ClickFix-style lures posing as Spotify, Zoom Workplace and Microsoft Teams installers &mdash; one malicious Reddit ad campaign served 108 impressions in 48 hours. Instead of a hardcoded C2 domain, ChainScript queries a Polygon blockchain smart contract at runtime to resolve its live WebSocket C2 address, an EtherHiding-style technique that lets operators rotate infrastructure without touching the malware itself. Capabilities include an interactive shell, file operations, screenshot capture, and crypto-wallet enumeration across desktop apps and browser extensions.</p>
-      <div class="src"><a href="https://securityaffairs.com/199471/malware/chainscript-the-rat-that-hides-its-command-server-inside-a-blockchain-contract.html" target="_blank">Security Affairs</a> &middot; <a href="https://thehackernews.com/2026/09/clickfix-lures-deploy-chainscript-rat.html" target="_blank">The Hacker News</a></div>
-    </div>
-    <div class="item">
-      <div class="headline"><span class="date">this week</span>Transparent Tribe (APT36) deploys new Rust backdoor against India/Afghanistan government and defense targets</div>
-      <p>Zscaler ThreatLabz attributes "Operation RapidRust" to the Pakistan-aligned group, using previously undocumented tools (RUSTYSHADE, RUSTYMOVE, PSNATCH, BASHNATCH) against government and defense organizations. Comes about a month after Acronis tied the same group to a separate campaign against Afghan telecom and South Asian critical infrastructure.</p>
-      <div class="src"><a href="https://thehackernews.com/2026/09/transparent-tribe-deploys-new-rust.html" target="_blank">The Hacker News</a></div>
+    <div class="item empty">
+      <p>No new campaign this window met this briefing's confidence bar for a fresh, clearly-dated item. TASK#STOMP, ChainScript, and the Transparent Tribe/Operation RapidRust reporting already covered in a prior briefing remain the latest state of play.</p>
     </div>
   </section>
 
   <section class="company gov" id="gov">
     <h2><span class="dot"></span>Government &amp; Regulatory</h2>
-    <div class="item empty">
-      <p>No new items distinct from the KEV/BOD 26-04 Linux kernel deadline already covered above &mdash; that is today's operative government-driven action item.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 21</span>Ireland's DPC fines Google &euro;403M over location-data GDPR violations</div>
+      <p>The Irish Data Protection Commission fined Google &euro;403M (~$463M) &mdash; its fourth-largest GDPR penalty to date &mdash; following a probe opened in February 2020 into Web &amp; App Activity, Location History, and Location Accuracy features from 2018&ndash;2020. The DPC found users may have been unaware their location was used to target ads or infer interests, and lost control over their personal data as a result. Google has six months to bring processing into compliance.</p>
+      <div class="src"><a href="https://www.dataprotection.ie/en/news-media/latest-news/data-protection-commission-fines-google-eu403-million-following-inquiry-googles-processing-location" target="_blank">Irish DPC</a> &middot; <a href="https://www.bleepingcomputer.com/news/security/google-fined-403-million-over-location-data-privacy-violations/" target="_blank">BleepingComputer</a></div>
     </div>
   </section>
 
   <section class="company vendors" id="vendors">
     <h2><span class="dot"></span>Security Vendor News</h2>
     <div class="item empty">
-      <p>No significant new vendor product or strategy news this window beyond the Check Point and Fortinet advisories already covered above.</p>
+      <p>No significant new vendor product or strategy news this window.</p>
     </div>
   </section>
 
   <section class="company cloud" id="cloud">
     <h2><span class="dot"></span>Cloud &amp; Infrastructure Security</h2>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 18</span>Microsoft patches maximum-severity (CVSS 10.0) Azure AI Foundry privilege-escalation flaw</div>
-      <p>CVE-2026-85889 stemmed from missing authentication on a critical function in Azure AI Foundry (Microsoft Foundry), letting an unauthorized attacker elevate privileges over the network. Microsoft says no customer action is required and there's no evidence of exploitation; credited to independent researcher R&eacute;my Marot.</p>
-      <div class="src"><a href="https://thehackernews.com/2026/09/microsoft-patches-cvss-100-azure-ai.html" target="_blank">The Hacker News</a></div>
+    <div class="item empty">
+      <p>No significant new cloud-specific vulnerability or incident this window beyond the Azure AI Foundry flaw already covered in a prior briefing.</p>
     </div>
   </section>
 
   <section class="company market" id="market">
     <h2><span class="dot"></span>Market Moves</h2>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 18</span>Data security startup MIND raises $72M</div>
-      <p>MIND, a data-security company built around AI-driven data exposure and DLP, closed a $72M round, reaching eight-figure revenue in under two years &mdash; one of the faster-scaling names in a cybersecurity funding market still running hot on AI-security demand.</p>
-      <div class="src"><a href="https://fintech.global/2026/09/18/mind-raises-72m-as-ai-turns-data-security-urgent/" target="_blank">Fintech Global</a></div>
+    <div class="item empty">
+      <p>No new funding rounds or M&amp;A confirmed for this window.</p>
     </div>
   </section>
 
   <footer>
-    Static snapshot &middot; compiled September 21, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
+    Static snapshot &middot; compiled September 22, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
   </footer>
 
 </div>
