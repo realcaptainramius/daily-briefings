@@ -71,7 +71,7 @@
   <header>
     <div class="backlink"><a href="https://news.davidvasek.work">&larr; All briefings</a></div>
     <h1>Cybersecurity Daily Briefing</h1>
-    <div class="meta">Compiled <strong>Tuesday, September 22, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
+    <div class="meta">Compiled <strong>Wednesday, September 23, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
     <div class="toc">
       <a href="#breaches">Breaches</a>
       <a href="#vulns">Vulnerabilities</a>
@@ -82,68 +82,87 @@
       <a href="#market">Market</a>
     </div>
     <div class="note">
-      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers since the Sept 21 update. Two items: CISA added a Zyxel switch RCE to its KEV catalog (Sept 24 deadline), and Ireland's DPC fined Google &euro;403M over location-data GDPR violations.
+      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers since the Sept 22 update. Busy window: extortion group ShinyHunters claims an FBI systems breach, CISA added four actively-exploited zero-days (Check Point, F5 BIG-IP APM, Arista, and more) to its KEV catalog, and data-security startup Cyera raised $400M at a $12B+ valuation.
     </div>
   </header>
 
   <section class="company breaches" id="breaches">
     <h2><span class="dot"></span>Breaches &amp; Incidents</h2>
-    <div class="item empty">
-      <p>No new breach disclosures this window beyond the CrowdSec revision already covered in a prior briefing.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 22</span>ShinyHunters claims breach of FBI systems, theft of agent and applicant data</div>
+      <p>Extortion group ShinyHunters claims it breached FBIjobs.gov and related FBI systems (Criminal Justice, HR, Medlink), stealing 2&ndash;3 TB of personal, employment and medical data on agents and applicants, including agents' spouses' home addresses and phone numbers. The group says it exploited an Oracle PeopleSoft zero-day to pivot into FBI-managed AWS GovCloud servers; 404 Media verified a data sample against public records. The FBI confirmed it is investigating "unauthorized activity affecting FBIjobs.gov." ShinyHunters frames the attack as retaliation for an FBI advisory on its Canvas LMS extortion campaign.</p>
+      <div class="src"><a href="https://techcrunch.com/2026/09/22/hacking-group-shinyhunters-claims-it-breached-the-fbi-stole-agents-and-applicants-data/" target="_blank">TechCrunch</a> &middot; <a href="https://thehackernews.com/2026/09/shinyhunters-claims-fbi-breach-says-it.html" target="_blank">The Hacker News</a></div>
     </div>
   </section>
 
   <section class="company vulns" id="vulns">
     <h2><span class="dot"></span>Vulnerabilities &amp; Exploits</h2>
     <div class="item">
-      <div class="headline"><span class="date">Sep 21</span>CISA adds Zyxel GS1900 switch RCE to KEV; federal patch deadline Sep 24</div>
-      <p>CVE-2026-7273 (CVSS 8.8) is a stack-based buffer overflow in the GS1900 series' CGI handler &mdash; an unauthenticated attacker on the local network can send a crafted HTTP request to execute OS commands on the switch. CISA also flagged it as requiring forensic triage, not just patching, under BOD 26-04, with a remediation deadline of Sept 24.</p>
-      <div class="src"><a href="https://www.cisa.gov/news-events/alerts/2026/09/21/cisa-adds-one-known-exploited-vulnerability-catalog" target="_blank">CISA</a> &middot; <a href="https://cybersecuritynews.com/cisa-warns-of-zyxel-gs1900-switches-flaw-exploited/" target="_blank">Cybersecurity News</a></div>
+      <div class="headline"><span class="date">Sep 22</span>Check Point patches critical management-server zero-day exploited since July; CISA adds four flaws to KEV</div>
+      <p>Check Point patched CVE-2026-93616 (CVSS 9.8), a directory-traversal/file-upload flaw in Security Management Server, Multi-Domain Server, Log Server and SmartEvent that let unauthenticated attackers upload and execute scripts as root; exploited in targeted attacks since July 23. A related VPN certificate-validation flaw, CVE-2026-85102, has seen exploitation attempts against Check Point Spark firewalls since Sept 12. CISA added both, plus Arista VeloCloud Orchestrator (CVE-2026-93952) and F5 BIG-IP APM (CVE-2026-94127, detailed below), to its KEV catalog on Sept 22, with a Sept 25 federal remediation deadline.</p>
+      <div class="src"><a href="https://thehackernews.com/2026/09/check-point-warns-of-management-server.html" target="_blank">The Hacker News</a> &middot; <a href="https://www.cisa.gov/news-events/alerts/2026/09/22/cisa-adds-four-known-exploited-vulnerabilities-catalog" target="_blank">CISA</a></div>
     </div>
     <div class="item empty">
-      <p>No further update on the earlier Linux kernel KEV additions, Orkes Conductor RCE, Check Point RCE, or the four public Linux exploits beyond what's already been covered.</p>
+      <p>No further update on the earlier Zyxel GS1900 switch RCE, Linux kernel KEV additions, or Orkes Conductor RCE beyond what's already been covered.</p>
     </div>
   </section>
 
   <section class="company threatactors" id="threatactors">
     <h2><span class="dot"></span>Threat Actor &amp; APT Activity</h2>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 22</span>Pakistan-linked SideCopy expands targeting to Indian academia with ReverseRAT</div>
+      <p>Trellix reports that SideCopy (aka TAG-140), previously focused on Indian defense/government targets, has broadened to academic institutions via spear-phishing with weaponized ZIP/LNK files disguised as PDFs that trigger mshta.exe to deploy the ReverseRAT trojan. ReverseRAT, in use by the group since 2021, harvests system metadata, credentials, screenshots and clipboard data, and supports remote command execution and persistence via the registry.</p>
+      <div class="src"><a href="https://thehackernews.com/2026/09/sidecopy-broadens-india-targeting-to.html" target="_blank">The Hacker News</a></div>
+    </div>
     <div class="item empty">
-      <p>No new campaign this window met this briefing's confidence bar for a fresh, clearly-dated item. TASK#STOMP, ChainScript, and the Transparent Tribe/Operation RapidRust reporting already covered in a prior briefing remain the latest state of play.</p>
+      <p>No further update on TASK#STOMP, ChainScript, or the Transparent Tribe/Operation RapidRust reporting beyond what's already been covered.</p>
     </div>
   </section>
 
   <section class="company gov" id="gov">
     <h2><span class="dot"></span>Government &amp; Regulatory</h2>
     <div class="item">
-      <div class="headline"><span class="date">Sep 21</span>Ireland's DPC fines Google &euro;403M over location-data GDPR violations</div>
-      <p>The Irish Data Protection Commission fined Google &euro;403M (~$463M) &mdash; its fourth-largest GDPR penalty to date &mdash; following a probe opened in February 2020 into Web &amp; App Activity, Location History, and Location Accuracy features from 2018&ndash;2020. The DPC found users may have been unaware their location was used to target ads or infer interests, and lost control over their personal data as a result. Google has six months to bring processing into compliance.</p>
-      <div class="src"><a href="https://www.dataprotection.ie/en/news-media/latest-news/data-protection-commission-fines-google-eu403-million-following-inquiry-googles-processing-location" target="_blank">Irish DPC</a> &middot; <a href="https://www.bleepingcomputer.com/news/security/google-fined-403-million-over-location-data-privacy-violations/" target="_blank">BleepingComputer</a></div>
+      <div class="headline"><span class="date">Sep 22</span>Armenian national sentenced for role in Ryuk ransomware extortion scheme</div>
+      <p>The U.S. Attorney's Office for the District of Oregon announced the sentencing of Karen Vardanyan, 35, extradited from Ukraine, to 24 months in federal prison plus 3 years supervised release for acting as an initial-access specialist in Ryuk ransomware attacks on U.S. companies, including Oregon victims. He was ordered to pay $1,219,106 in restitution after pleading guilty in July, following his April 2025 arrest.</p>
+      <div class="src"><a href="https://www.bleepingcomputer.com/news/security/ryuk-ransomware-member-sentenced-to-24-months-in-prison/" target="_blank">BleepingComputer</a></div>
+    </div>
+    <div class="item empty">
+      <p>No further update on Ireland's DPC &euro;403M Google fine beyond what's already been covered.</p>
     </div>
   </section>
 
   <section class="company vendors" id="vendors">
     <h2><span class="dot"></span>Security Vendor News</h2>
-    <div class="item empty">
-      <p>No significant new vendor product or strategy news this window.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 22</span>Palo Alto Networks launches Unit 42 "continuous" AI-driven vulnerability defense</div>
+      <p>Palo Alto Networks announced a new AI-driven security service using cyber-focused models &mdash; including Anthropic's Claude Mythos 5 and OpenAI's GPT-5.6-Cyber, plus open-weight models &mdash; to continuously identify vulnerabilities across corporate systems as part of its Unit 42 offering.</p>
+      <div class="src"><a href="https://www.axios.com/2026/09/22/palo-alto-networks-cyber-defense-ai-agents" target="_blank">Axios</a></div>
     </div>
   </section>
 
   <section class="company cloud" id="cloud">
     <h2><span class="dot"></span>Cloud &amp; Infrastructure Security</h2>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 22</span>F5 patches critical BIG-IP APM zero-day enabling unauthenticated RCE on OAuth servers</div>
+      <p>F5 disclosed CVE-2026-94127, a heap-based buffer overflow (CVSS 9.8) in BIG-IP APM affecting instances configured as OAuth authorization servers; unauthenticated attackers can send crafted traffic to achieve remote code execution. F5 issued engineering hotfixes; Shadowserver tracks over 14,700 internet-exposed BIG-IP APM instances. CISA added it to KEV the same day with a Sept 25 federal remediation deadline.</p>
+      <div class="src"><a href="https://thehackernews.com/2026/09/f5-patches-critical-big-ip-apm-zero-day.html" target="_blank">The Hacker News</a> &middot; <a href="https://www.bleepingcomputer.com/news/security/f5-warns-of-big-ip-apm-remote-code-execution-zero-day-exploited-in-attacks/" target="_blank">BleepingComputer</a></div>
+    </div>
     <div class="item empty">
-      <p>No significant new cloud-specific vulnerability or incident this window beyond the Azure AI Foundry flaw already covered in a prior briefing.</p>
+      <p>No further update on the Azure AI Foundry flaw beyond what's already been covered.</p>
     </div>
   </section>
 
   <section class="company market" id="market">
     <h2><span class="dot"></span>Market Moves</h2>
-    <div class="item empty">
-      <p>No new funding rounds or M&amp;A confirmed for this window.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 22</span>Data-security startup Cyera raises additional $400M from Goldman Sachs, valuation tops $12B</div>
+      <p>Cyera announced $400 million in new funding from Goldman Sachs as an extension of a Series G round that originally closed in June 2026, pushing the company's valuation above $12 billion. Cyera's cloud platform discovers and classifies where sensitive business data resides, who can access it, and whether it's securely stored.</p>
+      <div class="src"><a href="https://siliconangle.com/2026/09/22/cyera-raises-another-400m-amid-ai-agent-security-push/" target="_blank">SiliconANGLE</a></div>
     </div>
   </section>
 
   <footer>
-    Static snapshot &middot; compiled September 22, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
+    Static snapshot &middot; compiled September 23, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
   </footer>
 
 </div>

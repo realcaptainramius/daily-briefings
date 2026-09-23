@@ -72,7 +72,7 @@
   <header>
     <div class="backlink"><a href="https://news.davidvasek.work">&larr; All briefings</a></div>
     <h1>AI &amp; Frontier Tech Daily Briefing</h1>
-    <div class="meta">Compiled <strong>Tuesday, September 22, 2026</strong> &middot; Anthropic, OpenAI, Google, Microsoft, xAI, Nvidia, Nuclear-for-AI, Space-for-AI</div>
+    <div class="meta">Compiled <strong>Wednesday, September 23, 2026</strong> &middot; Anthropic, OpenAI, Google, Microsoft, xAI, Nvidia, Nuclear-for-AI, Space-for-AI</div>
     <div class="toc">
       <a href="#anthropic">Anthropic</a>
       <a href="#openai">OpenAI</a>
@@ -84,28 +84,31 @@
       <a href="#space">Space</a>
     </div>
     <div class="note">
-      This is a static snapshot compiled from official/company and press sources &mdash; it does not auto-refresh. This run covers since the Sept 21 update. Quieter news day: Anthropic's headline is a research release rather than corporate news, and Nvidia's valuation multiple compressing is the notable market item.
+      This is a static snapshot compiled from official/company and press sources &mdash; it does not auto-refresh. This run covers since the Sept 22 update. Both frontier labs moved on pricing: Anthropic shipped Claude Opus 5.5 at a lower cost than Opus 5, and OpenAI launched GPT-6 Sol and GPT-6 Luna via API with roughly 50% lower pricing.
     </div>
   </header>
 
   <section class="company anthropic" id="anthropic">
     <h2><span class="dot"></span>Anthropic</h2>
     <div class="item">
-      <div class="headline"><span class="date">Sep 22</span>Claude optimizes 30+ open-source biomolecular modeling tools, launches $1M protein-design competition with Adaptyv Bio</div>
-      <p>Working within the "Claude Science" framework and supervised by two Anthropic staff with biology (not inference-optimization) backgrounds, Claude rewrote 36 model implementations across 30+ open-source biomolecular tools &mdash; structure prediction, hallucination, structure generation, inverse folding, genomics, and protein language models &mdash; for a roughly 4x average speedup, plus a new low-memory mode that runs 10,000+ token biomolecular systems on a single Nvidia GPU node. Anthropic open-sourced the optimized code and, with Adaptyv Bio, launched a protein-design competition: $1M in Claude credits plus $1M in Adaptyv wet-lab validation for 5,000+ designs, with Modal (compute) and Twist Bioscience (DNA synthesis) also contributing.</p>
-      <div class="src"><a href="https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling" target="_blank">Anthropic</a> &middot; <a href="https://www.adaptyvbio.com/blog/anthropic-1" target="_blank">Adaptyv Bio</a></div>
+      <div class="headline"><span class="date">Sep 22</span>Anthropic launches Claude Opus 5.5 at roughly 40% lower cost than Opus 5</div>
+      <p>Anthropic released Claude Opus 5.5, priced at $4/M input and $20/M output tokens &mdash; about 40% cheaper to run than Opus 5 &mdash; while matching Claude Fable 5.1-level performance on most tasks.</p>
+      <div class="src"><a href="https://www.anthropic.com/news" target="_blank">Anthropic</a></div>
+    </div>
+    <div class="item empty">
+      <p>No further update on the biomolecular-modeling tooling release and $1M Adaptyv Bio protein-design competition beyond what's already been covered.</p>
     </div>
   </section>
 
   <section class="company openai" id="openai">
     <h2><span class="dot"></span>OpenAI</h2>
     <div class="item">
-      <div class="headline"><span class="date">upcoming Oct 14</span>GPT-5.5 to be retired from ChatGPT, ChatGPT Work and Codex</div>
-      <p>OpenAI will pull GPT-5.5 from plan-based access in ChatGPT, ChatGPT Work and Codex on October 14 &mdash; just 174 days after its April 23 launch &mdash; pointing users to GPT-5.6 Sol or GPT-6 Astra instead. API access to GPT-5.5 continues unaffected. Regular ChatGPT users should see a seamless model switch; Codex users on GPT-5.5 need to migrate workflows before the deadline.</p>
-      <div class="src"><a href="https://www.businesstoday.in/technology/artificial-intelligence/story/openai-to-retire-gpt-5-5-from-chatgpt-work-and-codex-on-october-14-what-changes-to-expect-555782-2026-09-16" target="_blank">Business Today</a></div>
+      <div class="headline"><span class="date">Sep 22</span>OpenAI launches GPT-6 Sol and GPT-6 Luna via API, cuts prices roughly 50%</div>
+      <p>OpenAI made gpt-6-sol available via API, with gradual rollout to ChatGPT Work and Codex, priced at $2/$10 per million input/output tokens &mdash; down about 50% &mdash; alongside a cheaper Luna tier at $0.10/$0.50 per million tokens. Sol lists a 1.05M-token context window and 128K max output; both models are built on the GPT-6 Astra technology stack.</p>
+      <div class="src"><a href="https://github.blog/changelog/2026-09-22-openais-gpt-6-sol-and-gpt-6-luna-now-available/" target="_blank">GitHub Changelog</a></div>
     </div>
     <div class="item empty">
-      <p>No further update on the Hugging Face incident, the Advisory Group on Mathematics and AI, or the __obi cookie story beyond what's already been covered.</p>
+      <p>No further update on the GPT-5.5 retirement (still on track for Oct 14), the Hugging Face incident, the Advisory Group on Mathematics and AI, or the __obi cookie story beyond what's already been covered.</p>
     </div>
   </section>
 
@@ -118,51 +121,43 @@
 
   <section class="company microsoft" id="microsoft">
     <h2><span class="dot"></span>Microsoft</h2>
-    <div class="item empty">
-      <p>No significant updates this window. Microsoft published internal Copilot case studies (Sept 22) covering finance, sales and cloud-architecture staff, but this is workflow marketing content rather than a product or policy development.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 22</span>Microsoft to offer 30&ndash;50% Copilot discounts for bulk enterprise seats ahead of October relaunch</div>
+      <p>Microsoft announced tiered enterprise pricing cuts on Copilot subscriptions &mdash; 30% off for 1,000&ndash;10,000 seats, 50% off for 10,000+ seats &mdash; taking effect in October alongside a redesigned "AI super app" that folds in coding tools and agent features. Reported via secondary coverage; Microsoft's own newsroom post was not independently reachable for this run.</p>
+      <div class="src"><a href="https://www.gurufocus.com/news/9092686/microsoft-boosts-copilot-discounts-to-3050-for-enterprise-customers" target="_blank">GuruFocus</a></div>
     </div>
   </section>
 
   <section class="company xai" id="xai">
     <h2><span class="dot"></span>xAI / Grok</h2>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 16</span>Grok Build ships cross-session memory, generally available</div>
-      <p>Grok Build's coding agent now retains conventions, decisions and project facts across sessions, reading its own prior notes before touching related code in later sessions &mdash; a catch-up item not previously covered in this briefing.</p>
-      <div class="src"><a href="https://www.unite.ai/xai-adds-cross-session-memory-to-grok-build-coding-agent/" target="_blank">Unite.AI</a></div>
-    </div>
     <div class="item empty">
-      <p>No further update on Grok 4.7 or Grok Voice Transcribe 2.0 beyond what's already been covered.</p>
+      <p>No significant new developments this window. Grok Build's cross-session memory rollout, Grok Voice Transcribe 2.0, and the mid-September "Grok Bot Galaxy" enterprise event remain the latest state of play, already covered in a prior briefing.</p>
     </div>
   </section>
 
   <section class="company nvidia" id="nvidia">
     <h2><span class="dot"></span>Nvidia</h2>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 22</span>Nvidia's valuation multiple falls to its cheapest in over a decade</div>
-      <p>Nvidia's forward price-earnings multiple has dropped below 17x expected profit over the next 12 months &mdash; among its lowest readings in more than ten years &mdash; suggesting investors are growing less convinced the company can keep delivering blockbuster results even as the stock itself hasn't collapsed. A valuation-compression story, not a business-fundamentals one.</p>
-      <div class="src"><a href="https://www.bloomberg.com/news/articles/2026-09-22/nvidia-s-stock-is-flashing-a-warning-sign-as-valuation-falls" target="_blank">Bloomberg</a></div>
-    </div>
     <div class="item empty">
-      <p>No update on the Nvidia&ndash;Anthropic IPO anchor-investment talks beyond what's already been covered &mdash; still unconfirmed, no signed deal as of this run.</p>
+      <p>No significant new developments this window beyond routine stock commentary. The valuation-multiple compression reported Sept 22 and the still-unconfirmed Nvidia&ndash;Anthropic IPO anchor-investment talks remain the latest state of play, already covered in a prior briefing.</p>
     </div>
   </section>
 
   <section class="company nuclear" id="nuclear">
     <h2><span class="dot"></span>Nuclear Power for AI</h2>
     <div class="item empty">
-      <p>No significant new deals reported this window. The existing pipeline &mdash; Meta's Vistra/TerraPower/Oklo/Constellation agreements, Microsoft's Three Mile Island restart, Google's Kairos Power SMR order, and Amazon's Susquehanna/Talen campus &mdash; remains the latest state of play; hyperscalers have committed 9.8+ GW across 13+ deals with only ~1.9GW operational today.</p>
+      <p>No significant new datacenter power deals reported this window. The Atlantic Council held its third annual Nuclear Energy Policy Summit Sept 22&ndash;23 on the UN General Assembly sidelines, covering public/private nuclear funding and next-gen reactor deployment amid rising demand including from AI &mdash; policy context, not a new corporate deal. The existing pipeline &mdash; Meta's Vistra/TerraPower/Oklo/Constellation agreements, Microsoft's Three Mile Island restart, Google's Kairos Power SMR order, and Amazon's Susquehanna/Talen campus &mdash; remains the latest state of play.</p>
     </div>
   </section>
 
   <section class="company space" id="space">
     <h2><span class="dot"></span>Space (AI-relevant)</h2>
     <div class="item empty">
-      <p>No significant new developments this window. See the Space Weekly Briefing for fuller company-by-company coverage, including Starcloud's newly-detailed second satellite.</p>
+      <p>No significant new AI-specific developments this window. See the Space Weekly Briefing for fuller company-by-company coverage, including Starcloud's plan to run Bitcoin-mining hardware alongside its Blackwell B200 GPUs on the upcoming Starcloud-2 satellite.</p>
     </div>
   </section>
 
   <footer>
-    Static snapshot &middot; compiled September 22, 2026 from public web search of official/company and press sources &middot; not auto-refreshing
+    Static snapshot &middot; compiled September 23, 2026 from public web search of official/company and press sources &middot; not auto-refreshing
   </footer>
 
 </div>
