@@ -71,7 +71,7 @@
   <header>
     <div class="backlink"><a href="https://news.davidvasek.work">&larr; All briefings</a></div>
     <h1>Cybersecurity Daily Briefing</h1>
-    <div class="meta">Compiled <strong>Friday, September 25, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
+    <div class="meta">Compiled <strong>Monday, September 28, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
     <div class="toc">
       <a href="#breaches">Breaches</a>
       <a href="#vulns">Vulnerabilities</a>
@@ -82,103 +82,95 @@
       <a href="#market">Market</a>
     </div>
     <div class="note">
-      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers since the Sept 24 update. An autonomous AI-agent campaign stole 600,000+ credit cards from online retailers at roughly $25/target; a password-spraying campaign compromised forgotten Microsoft 365 service accounts across 28 tenants; Cloudflare disclosed and patched a cross-tenant data-exposure bug in its Containers platform; and cloud-security firm Island raised $400M at a $6.4B valuation.
+      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers the weekend since the Sept 25 update. Citrix confirmed two actively exploited NetScaler ADC/Gateway zero-days now on CISA's KEV list with a Sept 30 federal patch deadline; suspected North Korean hackers stole $351.6M from crypto exchange Bitget, pushing 2026 DPRK crypto theft past $1B; Arizona's state court system was breached, exposing protective-order addresses; and Microsoft detailed an AI-driven Azure attack that destroyed cloud resources via a leaked service-principal secret.
     </div>
   </header>
 
   <section class="company breaches" id="breaches">
     <h2><span class="dot"></span>Breaches &amp; Incidents</h2>
     <div class="item">
-      <div class="headline"><span class="date">Sep 24</span>Autonomous AI-agent campaign steals 600,000+ credit cards, hits 100+ retailer sites with skimmers</div>
-      <p>Researchers disclosed a financially motivated campaign, active since July, in which an attacker used AI agent tooling &mdash; Strix for vulnerability scanning, an autonomous exploitation engine called Cairn, and Claude Opus 4.6 for campaign orchestration and tactical decisions &mdash; to attack hundreds of online retailers at a marginal cost of roughly $25 per target. The operation compromised at least 119 websites with skimmer code, including a Fortune 500 hospitality company, a major U.S. airline and a large industrial-supplies distributor, stealing 600,000+ card records at an estimated total AI spend of $12,000&ndash;$18,000.</p>
-      <div class="src"><a href="https://www.bleepingcomputer.com/news/security/malicious-ai-agents-steal-600k-credit-cards-infect-100-plus-sites-with-skimmers/" target="_blank">BleepingComputer</a> &middot; <a href="https://www.securityweek.com/ai-powered-campaign-targets-hundreds-of-online-retailers/" target="_blank">SecurityWeek</a></div>
+      <div class="headline"><span class="date">Sep 25</span>Arizona state court system breached, exposing protective-order addresses</div>
+      <p>The Arizona Supreme Court/Administrative Office of the Courts disclosed that hackers breached the state court system and copied personally identifiable information on many Arizonans. Most sensitive: confidential home addresses of people with current or former protective orders may have been exposed, raising safety concerns for domestic-violence survivors. No evidence yet that stolen data has been shared publicly; the chief justice is coordinating with the FBI's Arizona field office.</p>
+      <div class="src"><a href="https://cybernews.com/news/hackers-breach-arizona-court-system/" target="_blank">Cybernews</a> &middot; <a href="https://www.azfamily.com/2026/09/27/victim-says-arizona-court-cyberattack-has-left-her-feeling-vulnerable/" target="_blank">AZFamily</a></div>
     </div>
-    <div class="item empty">
-      <p>No further update on the OpenAI/Australian Medicare portal breach or the fbijobs.gov/ShinyHunters investigation beyond what's already been covered.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 25&ndash;27</span>Kiteworks orders precautionary global shutdown over imminent zero-day threat intel</div>
+      <p>Secure file-transfer vendor Kiteworks told customers to shut down servers for 6&ndash;9 hours after receiving law-enforcement threat intelligence of a possible imminent zero-day attack. The advisory was lifted Sept 27 after Kiteworks isolated the risk to its "Advanced Forms" product, which affected installations were told to keep offline pending a fix; no confirmed compromise occurred.</p>
+      <div class="src"><a href="https://techcrunch.com/2026/09/25/kiteworks-urges-customers-to-shut-down-their-servers-amid-imminent-threat-of-cyberattack/" target="_blank">TechCrunch</a></div>
     </div>
   </section>
 
   <section class="company vulns" id="vulns">
     <h2><span class="dot"></span>Vulnerabilities &amp; Exploits</h2>
     <div class="item">
-      <div class="headline"><span class="date">Sep 23</span>Critical WordPress core RCE moves from probing to active compromise within a day of patch</div>
-      <p>A CVSS 9.2 unauthenticated RCE in WordPress core (CVE-2026-87902, a path-traversal flaw in get_page_template() allowing inclusion of an arbitrary local PHP file) saw probing roughly 5 hours after the WordPress 7.1.2 patch shipped; by Sept 23 attackers escalated to actual compromise, including a pearcmd.php-based file write chained to a GitHub-hosted upload shell, with telemetry recording 68 exploitation attempts.</p>
-      <div class="src"><a href="https://www.bleepingcomputer.com/news/security/hackers-start-exploiting-critical-wordpress-flaw-for-code-execution/" target="_blank">BleepingComputer</a> &middot; <a href="https://thehackernews.com/2026/09/attackers-exploit-wordpress-cve-2026.html" target="_blank">The Hacker News</a></div>
+      <div class="headline"><span class="date">Sep 27</span>Citrix confirms two actively exploited NetScaler zero-days; CISA orders federal patching by Sept 30</div>
+      <p>Citrix confirmed active in-the-wild exploitation of CVE-2026-88771 (CVSS 9.5, improper input validation allowing unauthenticated arbitrary command execution on any NetScaler ADC/Gateway build, no special feature required) and CVE-2026-88772 (memory overflow leading to RCE/DoS when DTLS is enabled, on by default for VPN virtual servers). CISA added both to its KEV catalog the same day, confirming global exploitation and giving federal civilian agencies until Sept 30 to patch under BOD 26-04. Fixes ship in NetScaler ADC/Gateway 14.1-73.37 and 13.1-64.23, alongside six other patched flaws (CVE-2026-88773 through -88778).</p>
+      <div class="src"><a href="https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway" target="_blank">CISA</a> &middot; <a href="https://www.bleepingcomputer.com/news/security/citrix-admins-warned-to-shut-down-netscalers-over-2-exploited-zero-days/" target="_blank">BleepingComputer</a></div>
     </div>
     <div class="item">
-      <div class="headline"><span class="date">Sep 23</span>Public exploit released for unpatched Ubuntu kernel container-escape flaw</div>
-      <p>Security firm DepthFirst published research and a working exploit for CVE-2026-80521, a use-after-free in the Linux kernel's AF_UNIX socket garbage collector that lets an unprivileged process inside a container escape to host root. The bug was fixed upstream Aug 6, but Ubuntu had not shipped the patch for 26.04/24.04/22.04 LTS as of publication; it is reachable from default Docker/Kubernetes seccomp profiles and affects AWS/Azure/GCP kernel packages too. Not yet in CISA's KEV catalog; no confirmed in-the-wild exploitation yet.</p>
-      <div class="src"><a href="https://thehackernews.com/2026/09/exploit-released-for-unpatched-ubuntu.html" target="_blank">The Hacker News</a></div>
+      <div class="headline"><span class="date">Sep 25</span>Teen researcher discloses Microsoft internal "Titan" analytics auth bypass</div>
+      <p>A 16-year-old researcher publicly detailed an authentication flaw in Microsoft's internal Titan analytics service, where unsigned JWTs allowed forged admin access and raw SQL queries against a metadata-estimated 17.3 trillion database rows (not confirmed unique customer records). Reported to MSRC Sept 5, locked down by Microsoft Sept 9, a $5,000 bounty paid Sept 17; no evidence of malicious exploitation.</p>
+      <div class="src"><a href="https://gbhackers.com/16-year-old-researcher-discovers-microsoft-authentication-bug/" target="_blank">GBHackers</a></div>
     </div>
     <div class="item empty">
-      <p>No further update on the WordPress core RCE, the Check Point management-server zero-day, the F5 BIG-IP APM flaw, or the related KEV additions beyond what's already been covered.</p>
+      <p>No further update on the WordPress core RCE or the Ubuntu kernel container-escape exploit beyond what's already been covered.</p>
     </div>
   </section>
 
   <section class="company threatactors" id="threatactors">
     <h2><span class="dot"></span>Threat Actor &amp; APT Activity</h2>
     <div class="item">
-      <div class="headline"><span class="date">Sep 24</span>"TeamFiltration" campaign compromises seven M365 service accounts across 28 tenants via password spraying</div>
-      <p>Proofpoint disclosed a campaign tracked as UNK_CondorFiltration that used the TeamFiltration tool to password-spray 5,714 Microsoft 365 accounts across 28 tenants (primarily Chilean retail and financial institutions) between July 21 and Aug 16, originating from 1,487 unique AWS EC2 IPs. Seven accounts were compromised, all unmanaged service/functional accounts with default or unrotated passwords and no MFA &mdash; not individual employee accounts &mdash; with post-access activity including sign-ins from a German VPN node and access to OfficeHome, Azure Portal and SharePoint Online.</p>
-      <div class="src"><a href="https://thehackernews.com/2026/09/teamfiltration-compromises-seven.html" target="_blank">The Hacker News</a> &middot; <a href="https://www.proofpoint.com/us/blog/threat-insight/Spraying-in-the-Andes-TeamFiltration-Returns" target="_blank">Proofpoint</a></div>
-    </div>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 23</span>China-linked UTA0565 chains Chrome and Windows zero-days to deploy new CLEANGULP malware</div>
-      <p>Volexity reports UTA0565 (China-linked) exploiting a Chrome/Windows zero-day chain (CVE-2026-85046 and CVE-2026-87491 in Chrome; CVE-2026-85880 in Windows ALPC) via fake websites impersonating media outlets and an NGO, to sandbox-escape and drop a new, heavily obfuscated C-based malware family, CLEANGULP, supporting shell commands, process listing, file transfer and beacon-object-file execution. One campaign used Hong Kong activist-themed phishing lures spoofing the Center for American Progress against Asian government targets.</p>
-      <div class="src"><a href="https://thehackernews.com/2026/09/chinese-hackers-exploit-chrome-windows.html" target="_blank">The Hacker News</a></div>
+      <div class="headline"><span class="date">Sep 24&ndash;25</span>Suspected North Korean hackers steal $351.6M from crypto exchange Bitget</div>
+      <p>Bitget said attackers compromised a backend wallet system, spoofed transaction data and drained hot/warm wallets of $351.6M across Ethereum, XRP Ledger, Arbitrum, Avalanche, Optimism, BSC and Base, with unauthorized transfers first identified at 18:31 UTC Sept 24. Bitget CEO Gracy Chen linked the attack pattern and VPN infrastructure to known North Korean tradecraft; Mandiant and SlowMist are investigating. The theft pushes North Korea's 2026 confirmed/suspected crypto haul past $1.04B, the second-largest year on record and the largest single heist of 2026. Losses will be covered by Bitget's $464M+ User Protection Fund.</p>
+      <div class="src"><a href="https://www.securityweek.com/north-korea-suspected-in-351-million-bitget-crypto-heist/" target="_blank">SecurityWeek</a> &middot; <a href="https://www.bloomberg.com/news/articles/2026-09-25/bitget-hack-pushes-north-korean-crypto-haul-past-1-billion" target="_blank">Bloomberg</a></div>
     </div>
     <div class="item empty">
-      <p>No further update on the NCC Group ransomware record report, the SideCopy/ReverseRAT targeting of Indian academia, or the Transparent Tribe/Operation RapidRust reporting beyond what's already been covered.</p>
+      <p>No further update on the TeamFiltration/UNK_CondorFiltration M365 password-spraying campaign or the UTA0565/CLEANGULP Chrome-Windows zero-day chain beyond what's already been covered.</p>
     </div>
   </section>
 
   <section class="company gov" id="gov">
     <h2><span class="dot"></span>Government &amp; Regulatory</h2>
-    <div class="item empty">
-      <p>No significant new developments this window. The CISA/FBI joint fact sheet on third-party ICS integrator risk and the UK government's shift to "service-led" cyber governance remain the latest state of play, already covered in a prior briefing.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 27</span>CISA adds Citrix NetScaler zero-days to KEV catalog under BOD 26-04</div>
+      <p>Separate from Citrix's own vendor disclosure, CISA's Binding Operational Directive 26-04 action added CVE-2026-88771 and CVE-2026-88772 to the Known Exploited Vulnerabilities catalog and gave Federal Civilian Executive Branch agencies until Sept 30, 2026 to secure all vulnerable NetScaler appliances, citing confirmed global exploitation (see Vulnerabilities above).</p>
+      <div class="src"><a href="https://www.cisa.gov/news-events/alerts/2026/09/27/cisa-adds-two-known-exploited-vulnerabilities-catalog" target="_blank">CISA</a></div>
     </div>
   </section>
 
   <section class="company vendors" id="vendors">
     <h2><span class="dot"></span>Security Vendor News</h2>
     <div class="item">
-      <div class="headline"><span class="date">Sep 24</span>CrowdStrike named a Leader in Forrester Wave: Proactive Security Platforms, Q3 2026</div>
-      <p>CrowdStrike said it was named a Leader in Forrester's new "Proactive Security Platforms, Q3 2026" evaluation, ranking highest of all vendors in the Strategy category with maximum scores on four criteria including Innovation and Roadmap. The report frames the proactive-security market as shifting from exposure visibility/prioritization to AI-driven automated action, positioning CrowdStrike's Falcon platform &mdash; which unifies exposure management, threat intel, SecOps and AI-driven remediation &mdash; as a leader in that transition.</p>
-      <div class="src"><a href="https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-named-leader-proactive-security-platforms" target="_blank">CrowdStrike IR</a></div>
+      <div class="headline"><span class="date">Sep 25</span>KELA and Fujitsu announce cybersecurity collaboration agreement</div>
+      <p>Threat-intelligence firm KELA and Fujitsu announced a partnership combining KELA's dark-web/underground threat intelligence, attack surface management and continuous threat exposure management with Fujitsu's service-delivery capabilities. Fujitsu will resell/integrate KELA's threat intelligence into a new cyber defense service in Japan aimed at shifting customers toward "Active Cyber Defense."</p>
+      <div class="src"><a href="https://www.globenewswire.com/news-release/2026/09/25/3368977/0/en/kela-and-fujitsu-enter-into-cybersecurity-collaboration-agreement.html" target="_blank">GlobeNewswire</a></div>
     </div>
     <div class="item empty">
-      <p>No further update on the Airbus Cybersecurity PARACOM contract or the Palo Alto Networks Unit 42 AI-driven vulnerability-defense launch beyond what's already been covered.</p>
+      <p>No further update on CrowdStrike's Forrester Wave Leader recognition or the Airbus Cybersecurity PARACOM contract beyond what's already been covered.</p>
     </div>
   </section>
 
   <section class="company cloud" id="cloud">
     <h2><span class="dot"></span>Cloud &amp; Infrastructure Security</h2>
     <div class="item">
-      <div class="headline"><span class="date">Sep 24</span>Cloudflare discloses and patches cross-tenant data-exposure bug in Containers platform</div>
-      <p>Cloudflare published a post-mortem on a vulnerability in its Containers platform (also affecting Sandboxes and Browser Rendering's Browser Run) where Linux dm-thin storage pools configured with skip_block_zeroing let a customer, via a small write, read up to 60 KiB of residual, unzeroed disk data left behind by a different tenant's deleted container &mdash; recovering directory structures, database pages and structurally complete SQLite databases on 18 of 24 tested placements. Researcher Oren Yomtov (Accomplish) reported it via HackerOne on Sept 4; Cloudflare removed the unsafe flag, retired affected container disks and cleared image caches by Sept 19, and says telemetry shows no evidence of malicious exploitation.</p>
-      <div class="src"><a href="https://blog.cloudflare.com/containers-cross-tenant-vulnerability/" target="_blank">Cloudflare Blog</a></div>
+      <div class="headline"><span class="date">Sep 25</span>Microsoft details AI-driven "Storm-3168" Azure attack that destroyed cloud resources via a leaked secret</div>
+      <p>Microsoft published a new report on a June 2026 attack, publicly detailed for the first time Sept 25, in which two compromised Azure service principals mapped a victim tenant and, in about 18 hours (roughly 7 minutes for the destructive burst), deleted 100+ storage accounts, a Key Vault and a Function App, and pulled storage account keys. Root cause: a service principal's client ID/secret/tenant ID was pasted into a public GitHub issue and remained visible in the issue's public edit history even after the post was edited. Microsoft links the activity to JADEPUFFER, previously described as the first ransomware operation run end-to-end with LLM assistance.</p>
+      <div class="src"><a href="https://www.microsoft.com/en-us/security/blog/2026/09/25/storm-3168-agentic-driven-cloud-attacks-using-compromised-service-principals/" target="_blank">Microsoft Security Blog</a> &middot; <a href="https://thehackernews.com/2026/09/jadepuffer-linked-attackers-used.html" target="_blank">The Hacker News</a></div>
     </div>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 23&ndash;24</span>Malicious MemTensor AI-memory packages on npm/PyPI steal developer credentials</div>
-      <p>SlowMist warned that an attacker compromised MemTensor's GitHub Actions release pipeline and pushed malicious versions of the MemoryOS PyPI package and the memtensor/memos-cloud-openclaw-plugin npm package &mdash; both AI-agent long-term-memory tools used with LLM/agent runtimes including OpenClaw. The tainted packages embedded cross-platform Go binaries that harvest npm/PyPI tokens, GitHub/GitLab credentials, AWS/SSH keys and environment variables, exfiltrating them to attacker infrastructure.</p>
-      <div class="src"><a href="https://thehackernews.com/2026/09/compromised-memtensor-packages-deliver.html" target="_blank">The Hacker News</a></div>
+    <div class="item empty">
+      <p>No further update on the Cloudflare Containers cross-tenant bug or the MemTensor malicious npm/PyPI packages beyond what's already been covered.</p>
     </div>
   </section>
 
   <section class="company market" id="market">
     <h2><span class="dot"></span>Market Moves</h2>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 24</span>Enterprise browser-security firm Island raises $400M Series F at $6.4B valuation</div>
-      <p>Island raised a $400M Series F led by Evolution Equity Partners, with participation from Sequoia Capital, Coatue Management, Insight Partners, J.P. Morgan Growth Equity Partners, Cyberstarts, Georgian and others, lifting its valuation to $6.4B &mdash; more than double its 2024 valuation. Total raised since its 2020 launch now exceeds $1B; funds will expand Island's "agentic control plane" governing both human and AI-agent workflows across endpoints, apps and networks. The company had reached roughly $200M in revenue, growing about 100% annually.</p>
-      <div class="src"><a href="https://www.securityweek.com/island-raises-400-million-at-6-4-billion-valuation/" target="_blank">SecurityWeek</a> &middot; <a href="https://www.globenewswire.com/news-release/2026/09/24/3368154/0/en/island-announces-400-million-series-f-bringing-valuation-to-6-4-billion.html" target="_blank">GlobeNewswire</a></div>
-    </div>
     <div class="item empty">
-      <p>No further update on Upwind's acquisition of Aegis or Cyera's $400M raise beyond what's already been covered.</p>
+      <p>No significant new funding, M&amp;A or IPO developments this window. Island's $400M Series F and Cyera's $400M raise remain the latest state of play, already covered in a prior briefing.</p>
     </div>
   </section>
 
   <footer>
-    Static snapshot &middot; compiled September 25, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
+    Static snapshot &middot; compiled September 28, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
   </footer>
 
 </div>
