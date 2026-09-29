@@ -71,7 +71,7 @@
   <header>
     <div class="backlink"><a href="https://news.davidvasek.work">&larr; All briefings</a></div>
     <h1>Cybersecurity Daily Briefing</h1>
-    <div class="meta">Compiled <strong>Monday, September 28, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
+    <div class="meta">Compiled <strong>Tuesday, September 29, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
     <div class="toc">
       <a href="#breaches">Breaches</a>
       <a href="#vulns">Vulnerabilities</a>
@@ -82,95 +82,66 @@
       <a href="#market">Market</a>
     </div>
     <div class="note">
-      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers the weekend since the Sept 25 update. Citrix confirmed two actively exploited NetScaler ADC/Gateway zero-days now on CISA's KEV list with a Sept 30 federal patch deadline; suspected North Korean hackers stole $351.6M from crypto exchange Bitget, pushing 2026 DPRK crypto theft past $1B; Arizona's state court system was breached, exposing protective-order addresses; and Microsoft detailed an AI-driven Azure attack that destroyed cloud resources via a leaked service-principal secret.
+      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers the period since the Sept 28 update. It was a quiet window: the only new verified item is the Carbonato botnet, which hijacks exposed Docker hosts to run an AI agent controlled over Telegram. The Citrix NetScaler zero-days (CISA Sept 30 deadline) and the Bitget heist remain the dominant stories.
     </div>
   </header>
 
   <section class="company breaches" id="breaches">
     <h2><span class="dot"></span>Breaches &amp; Incidents</h2>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 25</span>Arizona state court system breached, exposing protective-order addresses</div>
-      <p>The Arizona Supreme Court/Administrative Office of the Courts disclosed that hackers breached the state court system and copied personally identifiable information on many Arizonans. Most sensitive: confidential home addresses of people with current or former protective orders may have been exposed, raising safety concerns for domestic-violence survivors. No evidence yet that stolen data has been shared publicly; the chief justice is coordinating with the FBI's Arizona field office.</p>
-      <div class="src"><a href="https://cybernews.com/news/hackers-breach-arizona-court-system/" target="_blank">Cybernews</a> &middot; <a href="https://www.azfamily.com/2026/09/27/victim-says-arizona-court-cyberattack-has-left-her-feeling-vulnerable/" target="_blank">AZFamily</a></div>
-    </div>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 25&ndash;27</span>Kiteworks orders precautionary global shutdown over imminent zero-day threat intel</div>
-      <p>Secure file-transfer vendor Kiteworks told customers to shut down servers for 6&ndash;9 hours after receiving law-enforcement threat intelligence of a possible imminent zero-day attack. The advisory was lifted Sept 27 after Kiteworks isolated the risk to its "Advanced Forms" product, which affected installations were told to keep offline pending a fix; no confirmed compromise occurred.</p>
-      <div class="src"><a href="https://techcrunch.com/2026/09/25/kiteworks-urges-customers-to-shut-down-their-servers-amid-imminent-threat-of-cyberattack/" target="_blank">TechCrunch</a></div>
+    <div class="item empty">
+      <p>No significant new developments this window. The Arizona court-system breach and the Kiteworks precautionary shutdown remains the latest state of play, already covered in a prior briefing.</p>
     </div>
   </section>
 
   <section class="company vulns" id="vulns">
     <h2><span class="dot"></span>Vulnerabilities &amp; Exploits</h2>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 27</span>Citrix confirms two actively exploited NetScaler zero-days; CISA orders federal patching by Sept 30</div>
-      <p>Citrix confirmed active in-the-wild exploitation of CVE-2026-88771 (CVSS 9.5, improper input validation allowing unauthenticated arbitrary command execution on any NetScaler ADC/Gateway build, no special feature required) and CVE-2026-88772 (memory overflow leading to RCE/DoS when DTLS is enabled, on by default for VPN virtual servers). CISA added both to its KEV catalog the same day, confirming global exploitation and giving federal civilian agencies until Sept 30 to patch under BOD 26-04. Fixes ship in NetScaler ADC/Gateway 14.1-73.37 and 13.1-64.23, alongside six other patched flaws (CVE-2026-88773 through -88778).</p>
-      <div class="src"><a href="https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway" target="_blank">CISA</a> &middot; <a href="https://www.bleepingcomputer.com/news/security/citrix-admins-warned-to-shut-down-netscalers-over-2-exploited-zero-days/" target="_blank">BleepingComputer</a></div>
-    </div>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 25</span>Teen researcher discloses Microsoft internal "Titan" analytics auth bypass</div>
-      <p>A 16-year-old researcher publicly detailed an authentication flaw in Microsoft's internal Titan analytics service, where unsigned JWTs allowed forged admin access and raw SQL queries against a metadata-estimated 17.3 trillion database rows (not confirmed unique customer records). Reported to MSRC Sept 5, locked down by Microsoft Sept 9, a $5,000 bounty paid Sept 17; no evidence of malicious exploitation.</p>
-      <div class="src"><a href="https://gbhackers.com/16-year-old-researcher-discovers-microsoft-authentication-bug/" target="_blank">GBHackers</a></div>
-    </div>
     <div class="item empty">
-      <p>No further update on the WordPress core RCE or the Ubuntu kernel container-escape exploit beyond what's already been covered.</p>
+      <p>No significant new developments this window. The Citrix NetScaler zero-days (CVE-2026-88771/-88772, federal patch deadline Sept 30) remains the latest state of play, already covered in a prior briefing.</p>
     </div>
   </section>
 
   <section class="company threatactors" id="threatactors">
     <h2><span class="dot"></span>Threat Actor &amp; APT Activity</h2>
     <div class="item">
-      <div class="headline"><span class="date">Sep 24&ndash;25</span>Suspected North Korean hackers steal $351.6M from crypto exchange Bitget</div>
-      <p>Bitget said attackers compromised a backend wallet system, spoofed transaction data and drained hot/warm wallets of $351.6M across Ethereum, XRP Ledger, Arbitrum, Avalanche, Optimism, BSC and Base, with unauthorized transfers first identified at 18:31 UTC Sept 24. Bitget CEO Gracy Chen linked the attack pattern and VPN infrastructure to known North Korean tradecraft; Mandiant and SlowMist are investigating. The theft pushes North Korea's 2026 confirmed/suspected crypto haul past $1.04B, the second-largest year on record and the largest single heist of 2026. Losses will be covered by Bitget's $464M+ User Protection Fund.</p>
-      <div class="src"><a href="https://www.securityweek.com/north-korea-suspected-in-351-million-bitget-crypto-heist/" target="_blank">SecurityWeek</a> &middot; <a href="https://www.bloomberg.com/news/articles/2026-09-25/bitget-hack-pushes-north-korean-crypto-haul-past-1-billion" target="_blank">Bloomberg</a></div>
+      <div class="headline"><span class="date">Sep 26&ndash;28</span>Carbonato botnet hijacks exposed Docker daemons to deploy a Telegram-controlled Hermes AI agent</div>
+      <p>Researchers detailed Carbonato, a new botnet that breaks into Docker daemons exposed without authentication on port 2375, launches a privileged container, establishes persistence, and scans neighboring networks every five minutes to spread. The implant installs the open-source Hermes Agent framework (Nous Research) unchanged and overwrites its persona file with a prompt directing it to run tasks received via Telegram, maintain persistence and collect credentials. The operation was found through an unauthenticated Docker registry that had been publicly accessible since May 2026, which also held a separate trojanized crypto-wallet app campaign.</p>
+      <div class="src"><a href="https://thehackernews.com/2026/09/carbonato-botnet-compromises-docker.html" target="_blank">The Hacker News</a> &middot; <a href="https://www.bleepingcomputer.com/news/security/new-carbonato-malware-uses-ai-agents-to-hijack-exposed-docker-hosts/" target="_blank">BleepingComputer</a></div>
     </div>
     <div class="item empty">
-      <p>No further update on the TeamFiltration/UNK_CondorFiltration M365 password-spraying campaign or the UTA0565/CLEANGULP Chrome-Windows zero-day chain beyond what's already been covered.</p>
+      <p>No further update on the Bitget/North Korea heist beyond what's already been covered.</p>
     </div>
   </section>
 
   <section class="company gov" id="gov">
     <h2><span class="dot"></span>Government &amp; Regulatory</h2>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 27</span>CISA adds Citrix NetScaler zero-days to KEV catalog under BOD 26-04</div>
-      <p>Separate from Citrix's own vendor disclosure, CISA's Binding Operational Directive 26-04 action added CVE-2026-88771 and CVE-2026-88772 to the Known Exploited Vulnerabilities catalog and gave Federal Civilian Executive Branch agencies until Sept 30, 2026 to secure all vulnerable NetScaler appliances, citing confirmed global exploitation (see Vulnerabilities above).</p>
-      <div class="src"><a href="https://www.cisa.gov/news-events/alerts/2026/09/27/cisa-adds-two-known-exploited-vulnerabilities-catalog" target="_blank">CISA</a></div>
+    <div class="item empty">
+      <p>No significant new developments this window. CISA's KEV addition of the Citrix NetScaler zero-days under BOD 26-04 remains the latest state of play, already covered in a prior briefing.</p>
     </div>
   </section>
 
   <section class="company vendors" id="vendors">
     <h2><span class="dot"></span>Security Vendor News</h2>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 25</span>KELA and Fujitsu announce cybersecurity collaboration agreement</div>
-      <p>Threat-intelligence firm KELA and Fujitsu announced a partnership combining KELA's dark-web/underground threat intelligence, attack surface management and continuous threat exposure management with Fujitsu's service-delivery capabilities. Fujitsu will resell/integrate KELA's threat intelligence into a new cyber defense service in Japan aimed at shifting customers toward "Active Cyber Defense."</p>
-      <div class="src"><a href="https://www.globenewswire.com/news-release/2026/09/25/3368977/0/en/kela-and-fujitsu-enter-into-cybersecurity-collaboration-agreement.html" target="_blank">GlobeNewswire</a></div>
-    </div>
     <div class="item empty">
-      <p>No further update on CrowdStrike's Forrester Wave Leader recognition or the Airbus Cybersecurity PARACOM contract beyond what's already been covered.</p>
+      <p>No significant new developments this window. The KELA/Fujitsu collaboration agreement (Sept 25) remains the latest state of play, already covered in a prior briefing.</p>
     </div>
   </section>
 
   <section class="company cloud" id="cloud">
     <h2><span class="dot"></span>Cloud &amp; Infrastructure Security</h2>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 25</span>Microsoft details AI-driven "Storm-3168" Azure attack that destroyed cloud resources via a leaked secret</div>
-      <p>Microsoft published a new report on a June 2026 attack, publicly detailed for the first time Sept 25, in which two compromised Azure service principals mapped a victim tenant and, in about 18 hours (roughly 7 minutes for the destructive burst), deleted 100+ storage accounts, a Key Vault and a Function App, and pulled storage account keys. Root cause: a service principal's client ID/secret/tenant ID was pasted into a public GitHub issue and remained visible in the issue's public edit history even after the post was edited. Microsoft links the activity to JADEPUFFER, previously described as the first ransomware operation run end-to-end with LLM assistance.</p>
-      <div class="src"><a href="https://www.microsoft.com/en-us/security/blog/2026/09/25/storm-3168-agentic-driven-cloud-attacks-using-compromised-service-principals/" target="_blank">Microsoft Security Blog</a> &middot; <a href="https://thehackernews.com/2026/09/jadepuffer-linked-attackers-used.html" target="_blank">The Hacker News</a></div>
-    </div>
     <div class="item empty">
-      <p>No further update on the Cloudflare Containers cross-tenant bug or the MemTensor malicious npm/PyPI packages beyond what's already been covered.</p>
+      <p>No significant new developments this window. Microsoft's Storm-3168 agentic Azure attack report (Sept 25) remains the latest state of play, already covered in a prior briefing.</p>
     </div>
   </section>
 
   <section class="company market" id="market">
     <h2><span class="dot"></span>Market Moves</h2>
     <div class="item empty">
-      <p>No significant new funding, M&amp;A or IPO developments this window. Island's $400M Series F and Cyera's $400M raise remain the latest state of play, already covered in a prior briefing.</p>
+      <p>No significant new funding, M&amp;A or IPO developments verified this window. Island's $400M Series F and Cyera's $400M raise remain the latest state of play, already covered in a prior briefing.</p>
     </div>
   </section>
 
   <footer>
-    Static snapshot &middot; compiled September 28, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
+    Static snapshot &middot; compiled September 29, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
   </footer>
 
 </div>
