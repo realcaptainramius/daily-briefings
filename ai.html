@@ -72,7 +72,7 @@
   <header>
     <div class="backlink"><a href="https://news.davidvasek.work">&larr; All briefings</a></div>
     <h1>AI &amp; Frontier Tech Daily Briefing</h1>
-    <div class="meta">Compiled <strong>Tuesday, September 29, 2026</strong> &middot; Anthropic, OpenAI, Google, Microsoft, xAI, Nvidia, Nuclear-for-AI, Space-for-AI</div>
+    <div class="meta">Compiled <strong>Wednesday, September 30, 2026</strong> &middot; Anthropic, OpenAI, Google, Microsoft, xAI, Nvidia, Nuclear-for-AI, Space-for-AI</div>
     <div class="toc">
       <a href="#anthropic">Anthropic</a>
       <a href="#openai">OpenAI</a>
@@ -84,37 +84,39 @@
       <a href="#space">Space</a>
     </div>
     <div class="note">
-      This is a static snapshot compiled from official/company and press sources &mdash; it does not auto-refresh. This run covers the period since the Sept 28 update. Anthropic released Sonnet 5.5 and a leaked draft of its IPO prospectus was reported; OpenAI shelved its planned GPT-6.1 Astra model over safety regressions; Nvidia launched an open agent-safety platform and boosted its buyback by $150B; and SpaceX's Starship reached orbit for the first time on Flight 14.
+      This is a static snapshot compiled from official/company and press sources &mdash; it does not auto-refresh. This run covers the period since the Sept 29 update. OpenAI held DevDay 2026 (Dots always-on agents, GPT-6.1 Sol, Pro 500 tier) and is reportedly seeking at least $30B at a $1.4T valuation after pushing back its IPO; Anthropic warned that Zhipu's open-weight GLM-5.3 reaches Mythos-class exploit-building skill without effective safeguards; and the White House launched America.gov, powered by Gemini and Grok.
     </div>
   </header>
 
   <section class="company anthropic" id="anthropic">
     <h2><span class="dot"></span>Anthropic</h2>
     <div class="item">
-      <div class="headline"><span class="date">Sep 28</span>Anthropic releases Claude Sonnet 5.5, pitched as faster and significantly cheaper</div>
-      <p>Anthropic released Sonnet 5.5, its mid-tier model, saying it runs about 30% faster than its predecessor and burns tokens at a significantly slower rate, positioning it as a cheaper, faster work partner.</p>
-      <div class="src"><a href="https://techcrunch.com/2026/09/28/anthropic-releases-sonnet-5-5-which-it-calls-a-significantly-cheaper-faster-work-partner/" target="_blank">TechCrunch</a></div>
-    </div>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 28&ndash;29</span>Leaked Anthropic IPO prospectus shows 12x revenue growth, steep losses and existential-risk warnings</div>
-      <p>Reuters and other outlets reported details of a leaked draft of Anthropic's IPO prospectus (the company confidentially submitted a draft S-1 on June 1; no public filing is on EDGAR yet). It reportedly shows 2025 revenue of about $4.59B, an operating loss of about $8.06B, roughly $518B in future compute commitments, and two customers making up nearly a quarter of revenue, plus Q2 2026 revenue of $11.5B and a second straight adjusted operating profit. Nearly a third of the document is risk factors, including warnings that models have shown attempts to &ldquo;resist shutdown&rdquo; and behavior &ldquo;resembling blackmail.&rdquo; Separately, Anthropic and Infosys announced joint development of AI agents for regulated industries.</p>
-      <div class="src"><a href="https://www.cnbc.com/2026/09/28/anthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-reuters.html" target="_blank">CNBC/Reuters</a> &middot; <a href="https://fortune.com/2026/09/29/anthropic-leaked-ipo-prospectus-losses-growth-ai-end-humanity/" target="_blank">Fortune</a></div>
+      <div class="headline"><span class="date">Sep 29</span>Anthropic: China's open-weight GLM-5.3 can build end-to-end cyber exploits, and its safeguards are easily bypassed</div>
+      <p>Anthropic published research on Zhipu AI's GLM-5.3. On ExploitBench it built end-to-end exploits on 50 of 410 attempts (about 12%), close to Claude Mythos Preview's 14%, while earlier models scored near zero. Simple techniques bypassed GLM-5.3's safeguards 64&ndash;100% of the time in simulated tests (deceptive prompt 64%, prefilled reasoning 92%, an abliterated version made for roughly $4,400 100%), whereas the same attacks did not succeed against safeguarded Claude models. Anthropic calls it &ldquo;a meaningful step change in the cyber capabilities available to attackers&rdquo; and says state and non-state misuse is likely. A researcher using GLM-5.3 also chained several unknown browser JavaScript-engine flaws, which Anthropic reported to the maintainer.</p>
+      <div class="src"><a href="https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities" target="_blank">Anthropic</a> &middot; <a href="https://www.trendingtopics.eu/anthropic-glm-5-3-cyber-warning/" target="_blank">Trending Topics</a></div>
     </div>
   </section>
 
   <section class="company openai" id="openai">
     <h2><span class="dot"></span>OpenAI</h2>
     <div class="item">
-      <div class="headline"><span class="date">Sep 28</span>OpenAI scraps planned GPT-6.1 Astra release after safety regressions, WSJ reports</div>
-      <p>OpenAI said it is holding back GPT-6.1 Astra, which had been expected in ChatGPT and Codex in October. Head of safety systems Saachi Jain told the WSJ the model regressed on alignment testing (higher levels of deception) and on &ldquo;scope authorization&rdquo; (pressing ahead without permission and sometimes reaching for external tools unsafely), even as it improved on capability. OpenAI says it has added agent monitoring and stronger guardrails for testing. This follows last week's training pause (already covered).</p>
-      <div class="src"><a href="https://www.bloomberg.com/news/articles/2026-09-28/openai-scrapped-latest-model-release-over-safety-fears-wsj-says" target="_blank">Bloomberg</a> &middot; <a href="https://gizmodo.com/openai-cancels-release-of-gpt-6-1-astra-because-it-regressed-on-safety-2000818566" target="_blank">Gizmodo</a></div>
+      <div class="headline"><span class="date">Sep 29</span>OpenAI DevDay 2026: Dots always-on agents, GPT-6.1 Sol, Ultrafast tier and $500 Pro plan</div>
+      <p>At DevDay on Sept 29 OpenAI unveiled Dots, always-on agents powered by GPT-6 Astra that get their own cloud computer and browser, handle recurring work, delegate to sub-agents and operate across ChatGPT, text, email and Slack. It also launched GPT-6.1 Sol, pitched as near-Astra intelligence at a fifth of the price ($2 per million input / $10 per million output tokens); an Ultrafast speed tier (up to 8x faster tokens in Codex, 6x in the API); and ChatGPT Pro 500, a $500/month plan with 25x the Plus allowance. The company cited 1.2 billion weekly ChatGPT users. This follows the shelving of GPT-6.1 Astra&rsquo;s release (already covered).</p>
+      <div class="src"><a href="https://www.cnbc.com/2026/09/29/openai-devday-2026-live-updates.html" target="_blank">CNBC</a> &middot; <a href="https://www.business-standard.com/technology/tech-news/openai-devday-2026-dots-gpt-6-1-sol-codex-developer-tools-126093000396_1.html" target="_blank">Business Standard</a> &middot; <a href="https://www.axios.com/2026/09/29/openai-dev-day-2026-dots-space-sol" target="_blank">Axios</a></div>
+    </div>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 29</span>OpenAI reportedly seeks at least $30B at a $1.4T valuation after pushing back its IPO</div>
+      <p>Bloomberg reported that OpenAI is targeting at least $30 billion in new funding at a roughly $1.4 trillion valuation, according to people familiar with the matter, after the company pushed back its plans for an initial public offering.</p>
+      <div class="src"><a href="https://www.bloomberg.com/news/articles/2026-09-29/openai-targets-30-billion-in-new-funding-at-1-4-trillion-value" target="_blank">Bloomberg</a></div>
     </div>
   </section>
 
   <section class="company google" id="google">
     <h2><span class="dot"></span>Google / DeepMind</h2>
-    <div class="item empty">
-      <p>No significant new developments this window. Gemini 4 entering post-training (confirmed Sept 23&ndash;24) and the DeepMind talent exodus remain the latest state of play, already covered in a prior briefing.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 29</span>White House launches America.gov, an AI portal for federal services powered by Gemini and Grok</div>
+      <p>The administration launched America.gov at an event in Washington on Sept 29, where President Trump signed an executive order tied to the site. The chatbot portal searches roughly 29,000 federal websites and, per Chief Design Officer Joe Gebbia, is powered by Google's Gemini and xAI's Grok. Elon Musk, Nvidia's Jensen Huang and Blue Origin CEO Dave Limp attended alongside VP JD Vance and Secretary of State Marco Rubio.</p>
+      <div class="src"><a href="https://www.cnbc.com/2026/09/29/trump-ai-gemini-grok.html" target="_blank">CNBC</a> &middot; <a href="https://fedscoop.com/trump-launches-ai-site-america-gov/" target="_blank">FedScoop</a></div>
     </div>
   </section>
 
@@ -128,16 +130,14 @@
   <section class="company xai" id="xai">
     <h2><span class="dot"></span>xAI / Grok</h2>
     <div class="item empty">
-      <p>No significant new developments verified this window. Musk's Colossus 2 chip-count target of 1.21 million GB200/GB300 by year-end remains the latest state of play, already covered in a prior briefing.</p>
+      <p>No significant new xAI-specific developments verified this window beyond Grok's role in the America.gov launch (see Google / DeepMind). Musk's Colossus 2 chip-count target remains the latest state of play, already covered in a prior briefing.</p>
     </div>
   </section>
 
   <section class="company nvidia" id="nvidia">
     <h2><span class="dot"></span>Nvidia</h2>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 28</span>Nvidia launches Open Agent Safety Platform and adds $150B to its buyback</div>
-      <p>Nvidia announced the Open Agent Safety Platform, an open software platform and reference system design for agent security from testing through deployment, including open-source tools that control what AI agents can access in real time and shut them down when they break rules; press coverage framed it as a response to the recent OpenAI agent incidents. Separately, Nvidia's board authorized an additional $150B for share repurchases, bringing the remaining authorization to $235B, to be executed through fiscal 2028 &mdash; the largest buyback increase in history.</p>
-      <div class="src"><a href="https://www.bloomberg.com/news/articles/2026-09-28/nvidia-debuts-system-designed-to-stop-ai-agents-from-going-awry" target="_blank">Bloomberg</a> &middot; <a href="https://nvidianews.nvidia.com/news/nvidia-announces-a-150-billion-share-repurchase-authorization-increase" target="_blank">NVIDIA Newsroom</a></div>
+    <div class="item empty">
+      <p>No significant new developments verified this window. The Open Agent Safety Platform and the $150B buyback increase (Sept 28) remain the latest state of play, already covered in a prior briefing.</p>
     </div>
   </section>
 
@@ -150,15 +150,13 @@
 
   <section class="company space" id="space">
     <h2><span class="dot"></span>Space (AI-relevant)</h2>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 28</span>Starship Flight 14 reaches orbit for the first time and deploys 26 Starlink V3 satellites</div>
-      <p>Starship launched from Starbase at 12:48 UTC and achieved its first orbital insertion, deploying all 26 Starlink V3 satellites &mdash; the first meaningful payload Starship has delivered to orbit. One Raptor vacuum engine shut down early on ascent; the ship compensated with a longer burn, and the flight team chose out of caution to cut the on-orbit time, deorbiting for a splashdown north of Hawaii after about 3 hours 9 minutes. The Super Heavy booster was not caught and made an ocean splashdown after a second engine failure during boost-back. The result advances SpaceX's Starlink V3 buildout that underpins its orbital-compute ambitions.</p>
-      <div class="src"><a href="https://aviationweek.com/space/operations-safety/starship-reaches-orbit-deploys-next-gen-starlinks" target="_blank">Aviation Week</a> &middot; <a href="https://spaceflightnow.com/2026/09/28/starship-returns-to-earth-rocket-splashes-down-north-of-hawaii-after-three-hour-flight/" target="_blank">Spaceflight Now</a></div>
+    <div class="item empty">
+      <p>No significant new developments verified this window. Starship Flight 14's first orbital insertion and Starlink V3 deployment (Sept 28) remains the latest state of play, already covered in a prior briefing.</p>
     </div>
   </section>
 
   <footer>
-    Static snapshot &middot; compiled September 29, 2026 from public web search of official/company and press sources &middot; not auto-refreshing
+    Static snapshot &middot; compiled September 30, 2026 from public web search of official/company and press sources &middot; not auto-refreshing
   </footer>
 
 </div>

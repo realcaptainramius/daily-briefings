@@ -71,7 +71,7 @@
   <header>
     <div class="backlink"><a href="https://news.davidvasek.work">&larr; All briefings</a></div>
     <h1>Cybersecurity Daily Briefing</h1>
-    <div class="meta">Compiled <strong>Tuesday, September 29, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
+    <div class="meta">Compiled <strong>Wednesday, September 30, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
     <div class="toc">
       <a href="#breaches">Breaches</a>
       <a href="#vulns">Vulnerabilities</a>
@@ -82,7 +82,7 @@
       <a href="#market">Market</a>
     </div>
     <div class="note">
-      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers the period since the Sept 28 update. It was a quiet window: the only new verified item is the Carbonato botnet, which hijacks exposed Docker hosts to run an AI agent controlled over Telegram. The Citrix NetScaler zero-days (CISA Sept 30 deadline) and the Bitget heist remain the dominant stories.
+      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers the period since the Sept 29 update. New items: Mandiant/GTIG's report that ShinyHunters is bypassing WAF mitigations to re-exploit Oracle PeopleSoft, and Anthropic's warning that Zhipu's GLM-5.3 gives attackers Mythos-class exploit-building capability. The Citrix NetScaler zero-days (CISA Sept 30 deadline) and the Bitget heist remain dominant stories.
     </div>
   </header>
 
@@ -95,20 +95,22 @@
 
   <section class="company vulns" id="vulns">
     <h2><span class="dot"></span>Vulnerabilities &amp; Exploits</h2>
-    <div class="item empty">
-      <p>No significant new developments this window. The Citrix NetScaler zero-days (CVE-2026-88771/-88772, federal patch deadline Sept 30) remains the latest state of play, already covered in a prior briefing.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Sep 25</span>ShinyHunters bypasses WAF rules to re-exploit Oracle PeopleSoft CVE-2026-35273, placing web shells on dozens of systems</div>
+      <p>Mandiant and Google Threat Intelligence Group reported that ShinyHunters (UNC6240) is again exploiting CVE-2026-35273, a CVSS 9.8 unauthenticated RCE in PeopleSoft PeopleTools 8.61/8.62 that it used as a zero-day between May 27 and June 9 (Oracle patched June 10). The group now evades organizations that relied on WAF rules instead of patching by URL-encoding a character (&ldquo;%50&rdquo; for &ldquo;P&rdquo;) in requests to /PSEMHUB. Web shells have been deployed on dozens of systems, and targeting has widened beyond education to agriculture, government, healthcare, IT services, technology and transportation. Mandiant urges installing the Oracle update, disabling the Environment Management Hub where possible, and hunting logs for both plain and encoded /PSEMHUB/ requests.</p>
+      <div class="src"><a href="https://cloud.google.com/blog/topics/threat-intelligence/shinyhunters-renewed-mass-exploitation-campaign-targeting-oracle-peoplesoft" target="_blank">Google Cloud Blog</a> &middot; <a href="https://www.bleepingcomputer.com/news/security/shinyhunters-uses-waf-bypass-trick-in-oracle-peoplesoft-attacks/" target="_blank">BleepingComputer</a> &middot; <a href="https://www.securityweek.com/google-warns-of-shinyhunters-fresh-oracle-peoplesoft-campaign/" target="_blank">SecurityWeek</a></div>
     </div>
   </section>
 
   <section class="company threatactors" id="threatactors">
     <h2><span class="dot"></span>Threat Actor &amp; APT Activity</h2>
     <div class="item">
-      <div class="headline"><span class="date">Sep 26&ndash;28</span>Carbonato botnet hijacks exposed Docker daemons to deploy a Telegram-controlled Hermes AI agent</div>
-      <p>Researchers detailed Carbonato, a new botnet that breaks into Docker daemons exposed without authentication on port 2375, launches a privileged container, establishes persistence, and scans neighboring networks every five minutes to spread. The implant installs the open-source Hermes Agent framework (Nous Research) unchanged and overwrites its persona file with a prompt directing it to run tasks received via Telegram, maintain persistence and collect credentials. The operation was found through an unauthenticated Docker registry that had been publicly accessible since May 2026, which also held a separate trojanized crypto-wallet app campaign.</p>
-      <div class="src"><a href="https://thehackernews.com/2026/09/carbonato-botnet-compromises-docker.html" target="_blank">The Hacker News</a> &middot; <a href="https://www.bleepingcomputer.com/news/security/new-carbonato-malware-uses-ai-agents-to-hijack-exposed-docker-hosts/" target="_blank">BleepingComputer</a></div>
+      <div class="headline"><span class="date">Sep 29</span>Anthropic: open-weight GLM-5.3 puts Mythos-class autonomous exploit building in attackers' hands</div>
+      <p>Anthropic research found Zhipu AI's GLM-5.3 built end-to-end exploits on about 12% of ExploitBench attempts (Claude Mythos Preview: 14%) and that its safeguards can be bypassed 64&ndash;100% of the time with simple techniques; Anthropic judges state and non-state misuse likely. A researcher used it to chain unknown flaws in a popular browser's JavaScript engine into a file-reading exploit page; the flaws were reported to the maintainer.</p>
+      <div class="src"><a href="https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities" target="_blank">Anthropic</a> &middot; <a href="https://www.trendingtopics.eu/anthropic-glm-5-3-cyber-warning/" target="_blank">Trending Topics</a></div>
     </div>
     <div class="item empty">
-      <p>No further update on the Bitget/North Korea heist beyond what's already been covered.</p>
+      <p>No further update on the Carbonato botnet or the Bitget/North Korea heist beyond what's already been covered.</p>
     </div>
   </section>
 
@@ -141,7 +143,7 @@
   </section>
 
   <footer>
-    Static snapshot &middot; compiled September 29, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
+    Static snapshot &middot; compiled September 30, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
   </footer>
 
 </div>
