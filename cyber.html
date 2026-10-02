@@ -71,7 +71,7 @@
   <header>
     <div class="backlink"><a href="https://news.davidvasek.work">&larr; All briefings</a></div>
     <h1>Cybersecurity Daily Briefing</h1>
-    <div class="meta">Compiled <strong>Thursday, October 1, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
+    <div class="meta">Compiled <strong>Friday, October 2, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
     <div class="toc">
       <a href="#breaches">Breaches</a>
       <a href="#vulns">Vulnerabilities</a>
@@ -82,12 +82,17 @@
       <a href="#market">Market</a>
     </div>
     <div class="note">
-      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers the period since the Sept 30 update. New item: the Defense Manpower Data Center breach, now put at more than 3 million military-affiliated people. The ShinyHunters/PeopleSoft WAF bypass, Anthropic&rsquo;s GLM-5.3 warning, the Citrix NetScaler zero-days and the Bitget heist remain dominant stories.
+      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers the period since the Oct 1 update. New items: an AI-agent attack on the Dutch DIVD via two Zammad zero-days, CISA&rsquo;s KEV listing of an exploited Cisco Catalyst SD-WAN Manager auth bypass (Sept 30), and the KillSec ransomware takedown and arrest of its suspected 16-year-old leader. The DMDC breach, ShinyHunters/PeopleSoft WAF bypass and Anthropic&rsquo;s GLM-5.3 warning remain dominant stories.
     </div>
   </header>
 
   <section class="company breaches" id="breaches">
     <h2><span class="dot"></span>Breaches &amp; Incidents</h2>
+    <div class="item">
+      <div class="headline"><span class="date">Oct 1</span>AI agent used two Zammad zero-days to breach the Dutch Institute for Vulnerability Disclosure</div>
+      <p>DIVD disclosed that a Sept 21 intrusion exploited two Zammad ticketing-system zero-days, CVE-2026-102489 (CVSS 9.4, unauthenticated RCE and session leak) and CVE-2026-102490 (CVSS 9.4, local privilege escalation to root), chained within seconds. The attacker moved to other services and exfiltrated data, though network segmentation stopped deeper access. Scripts contained notes in which the agent justified its own actions, which DIVD says points to an agentic AI attacker. DIVD urges all Zammad users to update to version 7 or take instances offline.</p>
+      <div class="src"><a href="https://www.bleepingcomputer.com/news/security/divd-says-zammad-zero-days-enabled-ai-driven-network-breach/" target="_blank">BleepingComputer</a> &middot; <a href="https://www.securityweek.com/zammad-zero-days-exploited-in-ai-powered-divd-hack/" target="_blank">SecurityWeek</a> &middot; <a href="https://www.helpnetsecurity.com/2026/10/01/divd-agentic-ai-attack-breach/" target="_blank">Help Net Security</a></div>
+    </div>
     <div class="item">
       <div class="headline"><span class="date">Sep 29</span>Pentagon DMDC breach exposed unencrypted records of more than 3 million people, including Social Security numbers</div>
       <p>The Defense Manpower Data Center said a vulnerability in a file-sharing system, found July 16 and patched, gave a small number of unauthorized users access to a server holding unencrypted personal data between October 2025 and July 2026. About 2.76 million living and 294,000 deceased individuals are affected; exposed fields include names, dates of birth, SSNs and job specialties. The notification letter is dated Sept 18 and the incident became public Sept 24; counts circulated Sept 29&ndash;30. DoD reports no indication of misuse and offers one year of credit monitoring. No attribution has been reported in the sources reviewed.</p>
@@ -98,6 +103,11 @@
   <section class="company vulns" id="vulns">
     <h2><span class="dot"></span>Vulnerabilities &amp; Exploits</h2>
     <div class="item">
+      <div class="headline"><span class="date">Sep 30</span>CISA adds exploited Cisco Catalyst SD-WAN Manager authentication bypass (CVE-2026-76504) to KEV</div>
+      <p>CISA added CVE-2026-76504 (CVSS 9.8) to its Known Exploited Vulnerabilities catalog on Sept 30 with a remediation due date of Oct 3. Caused by improper handling of URI encoding in an HTTP request, it lets an unauthenticated remote attacker act with admin privileges on SD-WAN Manager. Cisco has released fixed software and is aware of exploitation.</p>
+      <div class="src"><a href="https://www.cisa.gov/news-events/alerts/2026/09/30/cisa-adds-one-known-exploited-vulnerability-catalog" target="_blank">CISA</a> &middot; <a href="https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504/" target="_blank">Rapid7</a> &middot; <a href="https://securityaffairs.com/200152/security/u-s-cisa-adds-cisco-catalyst-sd-wan-manager-flaw-to-its-known-exploited-vulnerabilities-catalog.html" target="_blank">Security Affairs</a></div>
+    </div>
+    <div class="item">
       <div class="headline"><span class="date">Sep 25</span>ShinyHunters bypasses WAF rules to re-exploit Oracle PeopleSoft CVE-2026-35273, placing web shells on dozens of systems</div>
       <p>Mandiant and Google Threat Intelligence Group reported that ShinyHunters (UNC6240) is again exploiting CVE-2026-35273, a CVSS 9.8 unauthenticated RCE in PeopleSoft PeopleTools 8.61/8.62 that it used as a zero-day between May 27 and June 9 (Oracle patched June 10). The group now evades organizations that relied on WAF rules instead of patching by URL-encoding a character (&ldquo;%50&rdquo; for &ldquo;P&rdquo;) in requests to /PSEMHUB. Web shells have been deployed on dozens of systems, and targeting has widened beyond education to agriculture, government, healthcare, IT services, technology and transportation. Mandiant urges installing the Oracle update, disabling the Environment Management Hub where possible, and hunting logs for both plain and encoded /PSEMHUB/ requests.</p>
       <div class="src"><a href="https://cloud.google.com/blog/topics/threat-intelligence/shinyhunters-renewed-mass-exploitation-campaign-targeting-oracle-peoplesoft" target="_blank">Google Cloud Blog</a> &middot; <a href="https://www.bleepingcomputer.com/news/security/shinyhunters-uses-waf-bypass-trick-in-oracle-peoplesoft-attacks/" target="_blank">BleepingComputer</a> &middot; <a href="https://www.securityweek.com/google-warns-of-shinyhunters-fresh-oracle-peoplesoft-campaign/" target="_blank">SecurityWeek</a></div>
@@ -106,6 +116,11 @@
 
   <section class="company threatactors" id="threatactors">
     <h2><span class="dot"></span>Threat Actor &amp; APT Activity</h2>
+    <div class="item">
+      <div class="headline"><span class="date">Oct 1</span>Police seize KillSec infrastructure and arrest suspected 16-year-old leader</div>
+      <p>Spanish police announced the arrest of a 16-year-old Romanian national suspected of administering KillSec, part of a Sept 30 Europe-wide operation led by Hamburg authorities with Europol that also produced arrests in the UK and Romania. Five central servers and the leak site holding at least 110TB of stolen data were seized. The teen-run extortion group is said to have compromised about 500 organizations since 2024; a developer was identified but not arrested.</p>
+      <div class="src"><a href="https://therecord.media/killsec-ransomware-raas-arrests-europe" target="_blank">The Record</a> &middot; <a href="https://cyberscoop.com/killsec-ransomware-group-arrests-operation-killswitch" target="_blank">CyberScoop</a> &middot; <a href="https://www.usnews.com/news/world/articles/2026-10-01/spanish-police-arrest-16-year-old-leader-of-hacker-group-in-europe-wide-probe" target="_blank">U.S. News/AP</a></div>
+    </div>
     <div class="item">
       <div class="headline"><span class="date">Sep 29</span>Anthropic: open-weight GLM-5.3 puts Mythos-class autonomous exploit building in attackers' hands</div>
       <p>Anthropic research found Zhipu AI's GLM-5.3 built end-to-end exploits on about 12% of ExploitBench attempts (Claude Mythos Preview: 14%) and that its safeguards can be bypassed 64&ndash;100% of the time with simple techniques; Anthropic judges state and non-state misuse likely. A researcher used it to chain unknown flaws in a popular browser's JavaScript engine into a file-reading exploit page; the flaws were reported to the maintainer.</p>
@@ -145,7 +160,7 @@
   </section>
 
   <footer>
-    Static snapshot &middot; compiled October 1, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
+    Static snapshot &middot; compiled October 2, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
   </footer>
 
 </div>
