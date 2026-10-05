@@ -71,7 +71,7 @@
   <header>
     <div class="backlink"><a href="https://news.davidvasek.work">&larr; All briefings</a></div>
     <h1>Cybersecurity Daily Briefing</h1>
-    <div class="meta">Compiled <strong>Friday, October 2, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
+    <div class="meta">Compiled <strong>Monday, October 5, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
     <div class="toc">
       <a href="#breaches">Breaches</a>
       <a href="#vulns">Vulnerabilities</a>
@@ -82,7 +82,7 @@
       <a href="#market">Market</a>
     </div>
     <div class="note">
-      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers the period since the Oct 1 update. New items: an AI-agent attack on the Dutch DIVD via two Zammad zero-days, CISA&rsquo;s KEV listing of an exploited Cisco Catalyst SD-WAN Manager auth bypass (Sept 30), and the KillSec ransomware takedown and arrest of its suspected 16-year-old leader. The DMDC breach, ShinyHunters/PeopleSoft WAF bypass and Anthropic&rsquo;s GLM-5.3 warning remain dominant stories.
+      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers the period since the Oct 2 update. New items: the exploited Citrix NetScaler SAML zero-day (CVE-2026-88779, Oct 3&ndash;4), the Zammad KEV listing (Oct 2) and exploited FortiMail zero-day (Oct 1), Proofpoint&rsquo;s TA419 AI-expert phishing report (Oct 1), and Armadin&rsquo;s $255.5M Series B (Oct 1). The DMDC and DIVD breaches and the KillSec takedown carry over. Older items (Sept 25&ndash;30) rotated out. Some publisher sites could not be opened directly, so a few details rest on search summaries.
     </div>
   </header>
 
@@ -103,38 +103,43 @@
   <section class="company vulns" id="vulns">
     <h2><span class="dot"></span>Vulnerabilities &amp; Exploits</h2>
     <div class="item">
-      <div class="headline"><span class="date">Sep 30</span>CISA adds exploited Cisco Catalyst SD-WAN Manager authentication bypass (CVE-2026-76504) to KEV</div>
-      <p>CISA added CVE-2026-76504 (CVSS 9.8) to its Known Exploited Vulnerabilities catalog on Sept 30 with a remediation due date of Oct 3. Caused by improper handling of URI encoding in an HTTP request, it lets an unauthenticated remote attacker act with admin privileges on SD-WAN Manager. Cisco has released fixed software and is aware of exploitation.</p>
-      <div class="src"><a href="https://www.cisa.gov/news-events/alerts/2026/09/30/cisa-adds-one-known-exploited-vulnerability-catalog" target="_blank">CISA</a> &middot; <a href="https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504/" target="_blank">Rapid7</a> &middot; <a href="https://securityaffairs.com/200152/security/u-s-cisa-adds-cisco-catalyst-sd-wan-manager-flaw-to-its-known-exploited-vulnerabilities-catalog.html" target="_blank">Security Affairs</a></div>
+      <div class="headline"><span class="date">Oct 3&ndash;4</span>Citrix patches exploited NetScaler SAML zero-day CVE-2026-88779; CISA adds it to KEV</div>
+      <p>Citrix published bulletin CTX697174 on Oct 3 and released NetScaler ADC/Gateway 14.1-73.41 and 13.1-64.28 for CVE-2026-88779 (CVSS v4 8.7), a memory-buffer flaw that affects appliances configured for SAML authentication and can let an unauthenticated attacker cause persistent denial of service. Citrix confirmed targeted attacks on unmitigated deployments; researchers are investigating possible remote code execution. CISA added it to KEV on Oct 4 with a federal due date of Oct 7.</p>
+      <div class="src"><a href="https://www.bleepingcomputer.com/news/security/citrix-patches-netscaler-saml-zero-day-exploited-in-attacks/" target="_blank">BleepingComputer</a> &middot; <a href="https://thehackernews.com/2026/10/new-netscaler-zero-day-exploited-in.html" target="_blank">The Hacker News</a> &middot; <a href="https://www.cisa.gov/news-events/alerts/2026/10/04/cisa-adds-one-known-exploited-vulnerability-catalog" target="_blank">CISA</a></div>
     </div>
     <div class="item">
-      <div class="headline"><span class="date">Sep 25</span>ShinyHunters bypasses WAF rules to re-exploit Oracle PeopleSoft CVE-2026-35273, placing web shells on dozens of systems</div>
-      <p>Mandiant and Google Threat Intelligence Group reported that ShinyHunters (UNC6240) is again exploiting CVE-2026-35273, a CVSS 9.8 unauthenticated RCE in PeopleSoft PeopleTools 8.61/8.62 that it used as a zero-day between May 27 and June 9 (Oracle patched June 10). The group now evades organizations that relied on WAF rules instead of patching by URL-encoding a character (&ldquo;%50&rdquo; for &ldquo;P&rdquo;) in requests to /PSEMHUB. Web shells have been deployed on dozens of systems, and targeting has widened beyond education to agriculture, government, healthcare, IT services, technology and transportation. Mandiant urges installing the Oracle update, disabling the Environment Management Hub where possible, and hunting logs for both plain and encoded /PSEMHUB/ requests.</p>
-      <div class="src"><a href="https://cloud.google.com/blog/topics/threat-intelligence/shinyhunters-renewed-mass-exploitation-campaign-targeting-oracle-peoplesoft" target="_blank">Google Cloud Blog</a> &middot; <a href="https://www.bleepingcomputer.com/news/security/shinyhunters-uses-waf-bypass-trick-in-oracle-peoplesoft-attacks/" target="_blank">BleepingComputer</a> &middot; <a href="https://www.securityweek.com/google-warns-of-shinyhunters-fresh-oracle-peoplesoft-campaign/" target="_blank">SecurityWeek</a></div>
+      <div class="headline"><span class="date">Oct 2</span>CISA adds the exploited Zammad flaws (CVE-2026-102489, CVE-2026-102490) to KEV</div>
+      <p>CISA added both Zammad bugs behind the DIVD breach to KEV on Oct 2: CVE-2026-102489 (session fixation, CVSS v4 9.4) and CVE-2026-102490 (improper privilege management, local escalation to root). Federal agencies must mitigate or discontinue use by Oct 5 under BOD 26-04; the fix for CVE-2026-102489 is Zammad 7.2.0.</p>
+      <div class="src"><a href="https://www.cisa.gov/news-events/alerts/2026/10/02/cisa-adds-two-known-exploited-vulnerabilities-catalog" target="_blank">CISA</a> &middot; <a href="https://windowsforum.com/news/cisa-kev-adds-exploited-zammad-flaws-upgrade-to-7-2-0-and-hunt-for-root-compromise.447042/" target="_blank">WindowsForum</a></div>
+    </div>
+    <div class="item">
+      <div class="headline"><span class="date">Oct 1</span>Fortinet FortiMail zero-day CVE-2026-104286 exploited in the wild; CISA adds to KEV</div>
+      <p>Fortinet published advisory FG-IR-26-175 on Oct 1 and CISA added CVE-2026-104286 (CVSS 9.8) to KEV the same day. The path-traversal/NULL-byte flaw lets an unauthenticated attacker write arbitrary files via crafted HTTP(S) requests. Affected: FortiMail 8.0.0&ndash;8.0.1, 7.6.0&ndash;7.6.6, 7.4.0&ndash;7.4.8, 7.2.0&ndash;7.2.9. Reporting at the time said no patch was available; Fortinet advised disabling identity-based encryption or restricting the management interface. Check Fortinet for current fix status.</p>
+      <div class="src"><a href="https://www.securityweek.com/exploited-fortinet-fortimail-zero-day-calls-for-urgent-action/" target="_blank">SecurityWeek</a> &middot; <a href="https://www.cisa.gov/news-events/alerts/2026/10/01/cisa-adds-one-known-exploited-vulnerability-catalog" target="_blank">CISA</a></div>
     </div>
   </section>
 
   <section class="company threatactors" id="threatactors">
     <h2><span class="dot"></span>Threat Actor &amp; APT Activity</h2>
     <div class="item">
+      <div class="headline"><span class="date">Oct 1</span>Proofpoint: China-aligned TA419 impersonates AI policy figures to phish U.S. AI experts</div>
+      <p>Proofpoint reported (published Thursday, Oct 1) that TA419 targeted experts on AI regulation, export controls and national AI strategy at U.S. think tanks, universities and legal organizations. Beginning July 8 the group posed as Lynne Parker and then Heidi Crebo-Rediker, inviting targets to a fictitious AI policy advisory committee or a purported Senate Foreign Relations report, then steering repliers through a Cloudflare Turnstile check to an OneDrive adversary-in-the-middle credential-phishing page. Activity likely supports Chinese intelligence collection on U.S. AI policy.</p>
+      <div class="src"><a href="https://thehackernews.com/2026/10/china-aligned-ta419-targets-us-ai.html" target="_blank">The Hacker News</a> &middot; <a href="https://betanews.com/article/ta419-ai-policy-phishing/" target="_blank">BetaNews</a> &middot; <a href="https://securityboulevard.com/2026/10/china-linked-hackers-impersonate-ex-u-s-officials-to-target-ai-experts/" target="_blank">Security Boulevard</a></div>
+    </div>
+    <div class="item">
       <div class="headline"><span class="date">Oct 1</span>Police seize KillSec infrastructure and arrest suspected 16-year-old leader</div>
       <p>Spanish police announced the arrest of a 16-year-old Romanian national suspected of administering KillSec, part of a Sept 30 Europe-wide operation led by Hamburg authorities with Europol that also produced arrests in the UK and Romania. Five central servers and the leak site holding at least 110TB of stolen data were seized. The teen-run extortion group is said to have compromised about 500 organizations since 2024; a developer was identified but not arrested.</p>
       <div class="src"><a href="https://therecord.media/killsec-ransomware-raas-arrests-europe" target="_blank">The Record</a> &middot; <a href="https://cyberscoop.com/killsec-ransomware-group-arrests-operation-killswitch" target="_blank">CyberScoop</a> &middot; <a href="https://www.usnews.com/news/world/articles/2026-10-01/spanish-police-arrest-16-year-old-leader-of-hacker-group-in-europe-wide-probe" target="_blank">U.S. News/AP</a></div>
     </div>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 29</span>Anthropic: open-weight GLM-5.3 puts Mythos-class autonomous exploit building in attackers' hands</div>
-      <p>Anthropic research found Zhipu AI's GLM-5.3 built end-to-end exploits on about 12% of ExploitBench attempts (Claude Mythos Preview: 14%) and that its safeguards can be bypassed 64&ndash;100% of the time with simple techniques; Anthropic judges state and non-state misuse likely. A researcher used it to chain unknown flaws in a popular browser's JavaScript engine into a file-reading exploit page; the flaws were reported to the maintainer.</p>
-      <div class="src"><a href="https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities" target="_blank">Anthropic</a> &middot; <a href="https://www.trendingtopics.eu/anthropic-glm-5-3-cyber-warning/" target="_blank">Trending Topics</a></div>
-    </div>
     <div class="item empty">
-      <p>No further update on the Carbonato botnet or the Bitget/North Korea heist beyond what's already been covered.</p>
+      <p>No further update on the Carbonato botnet or the Bitget/North Korea heist beyond what&rsquo;s already been covered.</p>
     </div>
   </section>
 
   <section class="company gov" id="gov">
     <h2><span class="dot"></span>Government &amp; Regulatory</h2>
     <div class="item empty">
-      <p>No significant new developments this window. CISA's KEV addition of the Citrix NetScaler zero-days under BOD 26-04 remains the latest state of play, already covered in a prior briefing.</p>
+      <p>No significant new policy or regulatory developments verified this window beyond CISA&rsquo;s KEV additions under BOD 26-04 (see Vulnerabilities &amp; Exploits).</p>
     </div>
   </section>
 
@@ -154,13 +159,18 @@
 
   <section class="company market" id="market">
     <h2><span class="dot"></span>Market Moves</h2>
+    <div class="item">
+      <div class="headline"><span class="date">Oct 1</span>Armadin raises $255.5M Series B at a valuation above $2.5B</div>
+      <p>Armadin, the AI-native offensive-security startup led by Mandiant founder Kevin Mandia, raised $255.5 million in a Series B co-led by Andreessen Horowitz and Accel, with Bain Capital Ventures and Redpoint joining and existing investors including 8VC, GV and In-Q-Tel. Total funding is $445 million, seven months after emerging from stealth. Help Net Security covered it Oct 1; some outlets date it Oct 2.</p>
+      <div class="src"><a href="https://www.helpnetsecurity.com/2026/10/01/armadin-raises-255-5-million-funding/" target="_blank">Help Net Security</a> &middot; <a href="https://www.bankinfosecurity.com/armadin-targets-autonomous-remediation-2555m-series-b-a-33010" target="_blank">BankInfoSecurity</a> &middot; <a href="https://pulse2.com/armadin-raises-255-5-million-series-b-at-over-2-5-billion-valuation/" target="_blank">Pulse 2.0</a></div>
+    </div>
     <div class="item empty">
-      <p>No significant new funding, M&amp;A or IPO developments verified this window. Island's $400M Series F and Cyera's $400M raise remain the latest state of play, already covered in a prior briefing.</p>
+      <p>Island&rsquo;s $400M Series F remains covered in a prior briefing.</p>
     </div>
   </section>
 
   <footer>
-    Static snapshot &middot; compiled October 2, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
+    Static snapshot &middot; compiled October 5, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
   </footer>
 
 </div>
