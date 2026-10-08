@@ -71,7 +71,7 @@
   <header>
     <div class="backlink"><a href="https://news.davidvasek.work">&larr; All briefings</a></div>
     <h1>Cybersecurity Daily Briefing</h1>
-    <div class="meta">Compiled <strong>Wednesday, October 7, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
+    <div class="meta">Compiled <strong>Thursday, October 8, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
     <div class="toc">
       <a href="#breaches">Breaches</a>
       <a href="#vulns">Vulnerabilities</a>
@@ -82,35 +82,40 @@
       <a href="#market">Market</a>
     </div>
     <div class="note">
-      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers the period since the Oct 6 update. No new verified developments surfaced in this window, so existing items (Sept 29&ndash;Oct 4) are carried over unchanged; note the Citrix CVE-2026-88779 federal KEV due date is today, Oct 7. Some publisher sites could not be opened directly, so a few details rest on search summaries.
+      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers the period since the Oct 7 update (Oct 6&ndash;8; some items published Oct 6 surfaced after the prior compile). New items in Breaches, Vulnerabilities and Threat Actors; Government, Vendors, Cloud and Market carry over. The Citrix CVE-2026-88779 federal KEV due date (Oct 7) has now passed. Direct access to many publisher sites was blocked, so some details rest on search summaries. Older items (DMDC breach, Zammad KEV addition) rotated out.
     </div>
   </header>
 
   <section class="company breaches" id="breaches">
     <h2><span class="dot"></span>Breaches &amp; Incidents</h2>
     <div class="item">
+      <div class="headline"><span class="date">Oct 6&ndash;7</span>ASOS confirms breach of third-party customer-communication platform after &ldquo;HACKED&rdquo; app alert</div>
+      <p>ASOS told the London Stock Exchange that an unauthorised notification went to customers around 10 a.m. on Oct 6 after third-party platforms used to communicate with customers were accessed without authorisation. It says names and contact details may be exposed, does not believe payment-card data or passwords were affected, and that its website and app were not compromised. A group calling itself Xuanye claims it compromised a Snowflake instance and stole customer data, offering no proof; ASOS has not confirmed that, and researchers found no leaked samples. Shares fell about 12.5%.</p>
+      <div class="src"><a href="https://www.securityweek.com/asos-confirms-cyberattack-data-breach/" target="_blank">SecurityWeek</a> &middot; <a href="https://www.bleepingcomputer.com/news/security/asos-confirms-data-breach-after-hacked-in-app-notifications/" target="_blank">BleepingComputer</a> &middot; <a href="https://www.helpnetsecurity.com/2026/10/07/asos-data-breach-app-notification/" target="_blank">Help Net Security</a></div>
+    </div>
+    <div class="item">
+      <div class="headline"><span class="date">Oct 6</span>FBI removes Accenture contractor after missed patch let ShinyHunters into FBI systems</div>
+      <p>FBI cyber division chief Brett Leatherman said its review tied the incident to a third-party-managed platform where a contractor did not install an available patch, and the FBI removed the contractor. Reuters, citing two sources, identified the system as Oracle PeopleSoft HR software managed by Accenture; the FBI has not named the platform or company, and Accenture did not address the patch. ShinyHunters claimed in late September to have taken staff names, addresses, SSNs and medical records, which is unverified. One report citing Mandiant says a WAF-bypass for CVE-2026-35273 may be involved; the entry route is not confirmed.</p>
+      <div class="src"><a href="https://www.securityweek.com/fbi-blames-contractors-missed-patch-for-shinyhunters-breach/" target="_blank">SecurityWeek</a> &middot; <a href="https://thehackernews.com/2026/10/fbi-removes-accenture-contractor-after.html" target="_blank">The Hacker News</a> &middot; <a href="https://thenextweb.com/news/fbi-removes-accenture-contractor-data-breach" target="_blank">The Next Web</a></div>
+    </div>
+    <div class="item">
       <div class="headline"><span class="date">Oct 1</span>AI agent used two Zammad zero-days to breach the Dutch Institute for Vulnerability Disclosure</div>
       <p>DIVD disclosed that a Sept 21 intrusion exploited two Zammad ticketing-system zero-days, CVE-2026-102489 (CVSS 9.4, unauthenticated RCE and session leak) and CVE-2026-102490 (CVSS 9.4, local privilege escalation to root), chained within seconds. The attacker moved to other services and exfiltrated data, though network segmentation stopped deeper access. Scripts contained notes in which the agent justified its own actions, which DIVD says points to an agentic AI attacker. DIVD urges all Zammad users to update to version 7 or take instances offline.</p>
       <div class="src"><a href="https://www.bleepingcomputer.com/news/security/divd-says-zammad-zero-days-enabled-ai-driven-network-breach/" target="_blank">BleepingComputer</a> &middot; <a href="https://www.securityweek.com/zammad-zero-days-exploited-in-ai-powered-divd-hack/" target="_blank">SecurityWeek</a> &middot; <a href="https://www.helpnetsecurity.com/2026/10/01/divd-agentic-ai-attack-breach/" target="_blank">Help Net Security</a></div>
-    </div>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 29</span>Pentagon DMDC breach exposed unencrypted records of more than 3 million people, including Social Security numbers</div>
-      <p>The Defense Manpower Data Center said a vulnerability in a file-sharing system, found July 16 and patched, gave a small number of unauthorized users access to a server holding unencrypted personal data between October 2025 and July 2026. About 2.76 million living and 294,000 deceased individuals are affected; exposed fields include names, dates of birth, SSNs and job specialties. The notification letter is dated Sept 18 and the incident became public Sept 24; counts circulated Sept 29&ndash;30. DoD reports no indication of misuse and offers one year of credit monitoring. No attribution has been reported in the sources reviewed.</p>
-      <div class="src"><a href="https://www.militarytimes.com/news/pentagon-congress/2026/09/24/military-personnel-data-exposed-in-breach-agency-warns/" target="_blank">Military Times</a> &middot; <a href="https://time.com/article/2026/09/29/pentagon-department-defense-manpower-data-center-breach-personnel-information/" target="_blank">Time</a> &middot; <a href="https://abcnews.com/Politics/pentagon-breach-exposed-sensitive-data-3-million-people/story?id=136832909" target="_blank">ABC News</a></div>
     </div>
   </section>
 
   <section class="company vulns" id="vulns">
     <h2><span class="dot"></span>Vulnerabilities &amp; Exploits</h2>
     <div class="item">
+      <div class="headline"><span class="date">Oct 7</span>Exploitation attempts begin against critical Atlassian file-read flaw CVE-2026-21589 across eight Data Center/Server products</div>
+      <p>Exploitation attempts began about two hours after watchTowr published technical details, per Previdian (15 attempts from three IPs in Japan and the U.S.); watchTowr says most so far are fingerprinting and sweeping for config files. The unauthenticated arbitrary file-read flaw affects Bitbucket, Confluence, Jira Service Management, Jira Software, Bamboo, Crowd, Crucible and Fisheye. In Crowd-integrated setups, attackers can read plaintext credentials from crowd.properties and use Crowd&rsquo;s API to create Jira administrator accounts. Fixes include Crowd 6.3.7/7.0.3/7.1.7/7.2.4 and Jira Software DC 9.12.40/10.3.26/11.3.12. Sources differ on whether a full PoC was published, and the CVSS score (one source says 9.3) is unverified.</p>
+      <div class="src"><a href="https://www.helpnetsecurity.com/2026/10/07/exploitation-critical-atlassian-flaw-cve-2026-21589/" target="_blank">Help Net Security</a> &middot; <a href="https://thehackernews.com/2026/10/atlassian-data-center-flaw-draws.html" target="_blank">The Hacker News</a> &middot; <a href="https://watchtowr.com/intelligence/atlassian-arbitrary-file-access-vulnerability-jira-confluence-cve-2026-21589-faq/" target="_blank">watchTowr</a></div>
+    </div>
+    <div class="item">
       <div class="headline"><span class="date">Oct 3&ndash;4</span>Citrix patches exploited NetScaler SAML zero-day CVE-2026-88779; CISA adds it to KEV</div>
       <p>Citrix published bulletin CTX697174 on Oct 3 and released NetScaler ADC/Gateway 14.1-73.41 and 13.1-64.28 for CVE-2026-88779 (CVSS v4 8.7), a memory-buffer flaw that affects appliances configured for SAML authentication and can let an unauthenticated attacker cause persistent denial of service. Citrix confirmed targeted attacks on unmitigated deployments; researchers are investigating possible remote code execution. CISA added it to KEV on Oct 4 with a federal due date of Oct 7.</p>
       <div class="src"><a href="https://www.bleepingcomputer.com/news/security/citrix-patches-netscaler-saml-zero-day-exploited-in-attacks/" target="_blank">BleepingComputer</a> &middot; <a href="https://thehackernews.com/2026/10/new-netscaler-zero-day-exploited-in.html" target="_blank">The Hacker News</a> &middot; <a href="https://www.cisa.gov/news-events/alerts/2026/10/04/cisa-adds-one-known-exploited-vulnerability-catalog" target="_blank">CISA</a></div>
-    </div>
-    <div class="item">
-      <div class="headline"><span class="date">Oct 2</span>CISA adds the exploited Zammad flaws (CVE-2026-102489, CVE-2026-102490) to KEV</div>
-      <p>CISA added both Zammad bugs behind the DIVD breach to KEV on Oct 2: CVE-2026-102489 (session fixation, CVSS v4 9.4) and CVE-2026-102490 (improper privilege management, local escalation to root). Federal agencies must mitigate or discontinue use by Oct 5 under BOD 26-04; the fix for CVE-2026-102489 is Zammad 7.2.0.</p>
-      <div class="src"><a href="https://www.cisa.gov/news-events/alerts/2026/10/02/cisa-adds-two-known-exploited-vulnerabilities-catalog" target="_blank">CISA</a> &middot; <a href="https://windowsforum.com/news/cisa-kev-adds-exploited-zammad-flaws-upgrade-to-7-2-0-and-hunt-for-root-compromise.447042/" target="_blank">WindowsForum</a></div>
     </div>
     <div class="item">
       <div class="headline"><span class="date">Oct 1</span>Fortinet FortiMail zero-day CVE-2026-104286 exploited in the wild; CISA adds to KEV</div>
@@ -122,6 +127,11 @@
   <section class="company threatactors" id="threatactors">
     <h2><span class="dot"></span>Threat Actor &amp; APT Activity</h2>
     <div class="item">
+      <div class="headline"><span class="date">Oct 6</span>FBI and Secret Service warn FortiBleed credential campaign against Fortinet firewalls remains active</div>
+      <p>A joint advisory dated Oct 6 says the Russian-speaking operation targets internet-facing FortiGate firewalls and SSL VPN gateways using credentials from earlier Fortinet leaks and infostealer logs, plus password spraying, creating new admin accounts and in some cases deleting existing ones to lock out owners. No new CVE or zero-day is involved. The 86,644-device, 194-country figure is SOCRadar&rsquo;s count as of June 19, cited by the agencies, not a new FBI tally. The access has fed ransomware affiliates including INC/Lynx and Payload. Guidance: end admin and VPN sessions, reset credentials, enforce phishing-resistant MFA and restrict management access.</p>
+      <div class="src"><a href="https://thehackernews.com/2026/10/fbi-warns-fortibleed-remains-active.html" target="_blank">The Hacker News</a> &middot; <a href="https://www.infosecurity-magazine.com/news/fbi-secret-service-fortibleed/" target="_blank">Infosecurity Magazine</a> &middot; <a href="https://decipher.sc/2026/10/06/fbi-warns-of-fortibleed-attacks-leading-to-lockouts-ransomware/" target="_blank">Decipher</a></div>
+    </div>
+    <div class="item">
       <div class="headline"><span class="date">Oct 1</span>Proofpoint: China-aligned TA419 impersonates AI policy figures to phish U.S. AI experts</div>
       <p>Proofpoint reported (published Thursday, Oct 1) that TA419 targeted experts on AI regulation, export controls and national AI strategy at U.S. think tanks, universities and legal organizations. Beginning July 8 the group posed as Lynne Parker and then Heidi Crebo-Rediker, inviting targets to a fictitious AI policy advisory committee or a purported Senate Foreign Relations report, then steering repliers through a Cloudflare Turnstile check to an OneDrive adversary-in-the-middle credential-phishing page. Activity likely supports Chinese intelligence collection on U.S. AI policy.</p>
       <div class="src"><a href="https://thehackernews.com/2026/10/china-aligned-ta419-targets-us-ai.html" target="_blank">The Hacker News</a> &middot; <a href="https://betanews.com/article/ta419-ai-policy-phishing/" target="_blank">BetaNews</a> &middot; <a href="https://securityboulevard.com/2026/10/china-linked-hackers-impersonate-ex-u-s-officials-to-target-ai-experts/" target="_blank">Security Boulevard</a></div>
@@ -130,9 +140,6 @@
       <div class="headline"><span class="date">Oct 1</span>Police seize KillSec infrastructure and arrest suspected 16-year-old leader</div>
       <p>Spanish police announced the arrest of a 16-year-old Romanian national suspected of administering KillSec, part of a Sept 30 Europe-wide operation led by Hamburg authorities with Europol that also produced arrests in the UK and Romania. Five central servers and the leak site holding at least 110TB of stolen data were seized. The teen-run extortion group is said to have compromised about 500 organizations since 2024; a developer was identified but not arrested.</p>
       <div class="src"><a href="https://therecord.media/killsec-ransomware-raas-arrests-europe" target="_blank">The Record</a> &middot; <a href="https://cyberscoop.com/killsec-ransomware-group-arrests-operation-killswitch" target="_blank">CyberScoop</a> &middot; <a href="https://www.usnews.com/news/world/articles/2026-10-01/spanish-police-arrest-16-year-old-leader-of-hacker-group-in-europe-wide-probe" target="_blank">U.S. News/AP</a></div>
-    </div>
-    <div class="item empty">
-      <p>No further update on the Carbonato botnet or the Bitget/North Korea heist beyond what&rsquo;s already been covered.</p>
     </div>
   </section>
 
@@ -170,7 +177,7 @@
   </section>
 
   <footer>
-    Static snapshot &middot; compiled October 7, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
+    Static snapshot &middot; compiled October 8, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
   </footer>
 
 </div>
