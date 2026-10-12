@@ -73,7 +73,7 @@
   <header>
     <div class="backlink"><a href="https://news.davidvasek.work">&larr; All briefings</a></div>
     <h1>Emerging Technology Weekly Briefing</h1>
-    <div class="meta">Compiled <strong>Monday, October 5, 2026</strong> &middot; Post-Quantum Cryptography, 5G/Open RAN &amp; Tactical Networking, Emerging Tech Radar</div>
+    <div class="meta">Compiled <strong>Monday, October 12, 2026</strong> &middot; Post-Quantum Cryptography, 5G/Open RAN &amp; Tactical Networking, Emerging Tech Radar</div>
     <div class="toc">
       <a href="#pqc">Post-Quantum Cryptography</a>
       <a href="#5g">5G / Open RAN</a>
@@ -88,18 +88,18 @@
     <h2><span class="dot"></span>Post-Quantum Cryptography</h2>
     <p class="sub">NIST/NSA standards, CNSA 2.0 and CMMC deadlines, and PQC vendor/DoD adoption.</p>
     <div class="item">
-      <div class="headline"><span class="date">Oct 1</span>NSA launches Post-Quantum Cryptography Resource Hub, restates 2027/2030 NSS milestones</div>
-      <p>NSA announced a new set of measures for protecting National Security Systems from quantum threats, anchored by a Post-Quantum Cryptography Resource Hub aimed at DoW, NSS operators, and the Defense Industrial Base. The messaging restates the existing timeline: all new commercial NSS must be able to support quantum-resistant algorithms starting in 2027, and legacy systems that can't be upgraded are to be phased out by 2030. NSA also names a second threat model alongside "harvest now, decrypt later" &mdash; "trust now, exploit later," which targets authentication assets such as code-signing keys, certificate authorities, device identities, and secure-boot chains. Separately, NSA published a rewritten QKD statement the same day that keeps its 2020 position against QKD for NSS. Practical takeaway: expect customers to start asking about PQC readiness of identity/signing infrastructure, not just data-in-transit encryption. (This is a reiteration of known dates, not a new deadline.)</p>
-      <div class="src"><a href="https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/4615285/nsa-announces-post-quantum-cryptography-measures-to-safeguard-national-security/" target="_blank">NSA</a> &middot; <a href="https://oodaloop.com/briefs/technology/nsa-announces-new-post-quantum-cryptography-measures-to-protect-national-security-systems/" target="_blank">OODAloop</a> &middot; <a href="https://postquantum.com/quantum-policy/nsa-qkd-guidance-rewrite" target="_blank">PostQuantum.com</a></div>
+      <div class="headline"><span class="date">Upcoming</span>Civilian-agency PQC migration plans due to OMB/ONCD around October 22</div>
+      <p>Per secondary reporting, OMB Memorandum M-26-15 (issued June 24, following Executive Order 14412 of June 22) requires each executive department and agency to submit a PQC migration plan to OMB and the Office of the National Cyber Director within 120 days &mdash; roughly October 22, 2026. Plans are to cover risk-based prioritization, phased timelines, automated cryptographic inventory, crypto-agility architecture, third-party coordination, and funding. The memo does not apply to National Security Systems, which stay on the CNSA 2.0 track below. <em>Unconfirmed against the memo text itself:</em> all sources found are vendor/consultancy blogs and cite the date as approximate, so verify before relying on the exact day. Expect civilian-agency customers to start asking vendors for crypto inventories and PQC roadmaps in the run-up. No new NIST, NSA, or CISA PQC publications were verified for Oct 5&ndash;12; NSA's Oct 1 PQC Resource Hub announcement (covered last week) remains the latest.</p>
+      <div class="src"><a href="https://postquantum.com/security-pqc/omb-m-26-15-pqc-migration/" target="_blank">PostQuantum.com</a> &middot; <a href="https://www.zscaler.com/blogs/product-insights/what-omb-memorandum-m-26-15-requires-your-agency-pqc-migration-plan" target="_blank">Zscaler</a> &middot; <a href="https://www.encryptionconsulting.com/pqc-for-government-defense-inventory-to-cnsa-2-0-execution/" target="_blank">Encryption Consulting</a></div>
     </div>
     <div class="item">
       <div class="headline"><span class="date">Status</span>CMMC Reform Task Force report still unpublished as of early October</div>
-      <p>No change since last week's correction: CMMC Phase 2 (third-party assessment) remains suspended since July 13, and the Task Force report delivered to the DoW CIO around September 11 has not been released publicly; timing of any release is the Department's call. Keep treating the former November 10 date as off the table, and watch for the report as the next trigger.</p>
+      <p>No change found as of Oct 12: CMMC Phase 2 (third-party assessment) remains suspended since July 13, and the Task Force report delivered to the DoW CIO around September 11 has not been confirmed as released in anything found this week; timing of any release is the Department's call. Keep treating the former November 10 date as off the table, and watch for the report as the next trigger.</p>
       <div class="src"><a href="https://secureframe.com/hub/cmmc/news-updates-2026" target="_blank">Secureframe</a> &middot; <a href="https://isidefense.com/compliance-status/cmmc" target="_blank">ISI Defense</a></div>
     </div>
     <div class="item">
       <div class="headline"><span class="date">Ongoing</span>CNSA 2.0: network gear now, every new NSS acquisition by Jan 1, 2027</div>
-      <p>NSA's CNSA 2.0 suite (ML-KEM-1024 for key establishment, ML-DSA-87 for signatures, plus AES-256/SHA-384-512) remains the mandated quantum-resistant algorithm set for National Security Systems. VPNs, firewalls, routers, and switches used in NSS need CNSA 2.0 support now; every new NSS acquisition must be CNSA 2.0-compliant starting January 1, 2027 &mdash; under three months out &mdash; with exclusive use across operating systems, custom applications, and cloud services required by 2033. If you're bidding network or SATCOM gear into an NSS-designated environment, CNSA 2.0 support is table stakes, not a differentiator, and unlike the CMMC deadline above, nothing has paused this clock.</p>
+      <p>NSA's CNSA 2.0 suite (ML-KEM-1024 for key establishment, ML-DSA-87 for signatures, plus AES-256/SHA-384-512) remains the mandated quantum-resistant algorithm set for National Security Systems. VPNs, firewalls, routers, and switches used in NSS need CNSA 2.0 support now; every new NSS acquisition must be CNSA 2.0-compliant starting January 1, 2027 &mdash; under three months out (about 11 weeks) &mdash; with exclusive use across operating systems, custom applications, and cloud services required by 2033. If you're bidding network or SATCOM gear into an NSS-designated environment, CNSA 2.0 support is table stakes, not a differentiator, and unlike the CMMC deadline above, nothing has paused this clock.</p>
       <div class="src"><a href="https://www.qusecure.com/cnsa-2-0-pqc-requirements-timelines-federal-impact/" target="_blank">QuSecure</a></div>
     </div>
   </section>
@@ -108,27 +108,20 @@
     <h2><span class="dot"></span>5G / Open RAN &amp; Tactical Networking</h2>
     <p class="sub">DoD's open-architecture 5G push, tactical-edge deployments, and vendor moves.</p>
     <div class="item empty">
-      <p>No significant new Open RAN/tactical-5G developments verified for this window. NIST's updated 5G/O-RAN testbed tooling, OCUDU's move under Linux Foundation governance, and the Department of the Air Force's 84-installation private 5G push remain the latest state of play, already covered in prior briefings. A Hughes/Boost Mobile Open RAN tactical-edge trial at Navy bases surfaced in search but appears to predate this window and could not be dated with confidence, so it is omitted.</p>
+      <p>No significant new Open RAN/tactical-5G developments verified for Oct 5&ndash;12; searches returned only older material. NIST's updated 5G/O-RAN testbed tooling, OCUDU's move under Linux Foundation governance, and the Department of the Air Force's 84-installation private 5G push remain the latest state of play, already covered in prior briefings.</p>
     </div>
   </section>
 
   <section class="cat radar" id="radar">
     <h2><span class="dot"></span>Emerging Tech Radar <span class="badge">open-ended</span></h2>
     <p class="sub">Whatever else is genuinely new and relevant this week — not a fixed topic list.</p>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 29</span>NATO publishes public summary of its Quantum Technology Roadmap</div>
-      <p>NATO released the public summary of a quantum roadmap its Allies approved July 30, covering quantum computing, sensing, and communications, with activities including use-case identification, pilots, standardization/interoperability, annual maturity assessments, and adoption of post-quantum cryptography standards. Named milestones include quantum-sensor sea trials in 2026&ndash;2027, an initial military-pilot report in early 2027, and a communications pilot linking NATO HQ in Brussels with SHAPE in Mons by end of 2027; public deadlines run through Q3 2029. Notably, commentary points out it sets no firm PQC migration date. Relevant for allied/coalition comms and interoperability requirements.</p>
-      <div class="src"><a href="https://nato.int/en/news-and-events/articles/news/2026/09/29/nato-releases-quantum-technology-roadmap" target="_blank">NATO</a> &middot; <a href="https://thequantuminsider.com/2026/09/30/nato-sets-quantum-roadmap-for-military-trials-and-secure-communications/" target="_blank">The Quantum Insider</a> &middot; <a href="https://postquantum.com/quantum-policy/nato-quantum-technology-roadmap/" target="_blank">PostQuantum.com</a></div>
-    </div>
-    <div class="item">
-      <div class="headline"><span class="date">Sep 29</span>University of Vienna reports first in-orbit operation of a programmable quantum photonic processor</div>
-      <p>A University of Vienna-led team posted a preprint describing a programmable photonic quantum processor operating on a nanosatellite (launched June 2025) &mdash; a 6-mode photonic circuit manipulating two photons, in a roughly 9.8 kg, 10 W payload. Detector failures, radiation damage, and sunlight noise limited usable measurement time to about 30 minutes per orbit, and no practical computing task or quantum advantage was shown. It's a preprint-stage technology demonstration, not a fielded capability, but a data point for on-board processing in non-terrestrial/SATCOM contexts.</p>
-      <div class="src"><a href="https://thequantuminsider.com/2026/09/29/one-giant-leap-researchers-demonstrate-programmable-quantum-photonic-processor-in-orbit/" target="_blank">The Quantum Insider</a> &middot; <a href="https://quantumcomputingreport.com/university-of-vienna-demonstrates-first-in-orbit-operation-of-a-programmable-quantum-photonic-processor/" target="_blank">Quantum Computing Report</a> &middot; <a href="https://arxiv.org/abs/2609.25248" target="_blank">arXiv preprint</a></div>
+    <div class="item empty">
+      <p>No new radar items verified for Oct 5&ndash;12 across quantum computing, free-space optics, AI-enabled networking, novel RF/optical comms, edge compute, or non-terrestrial networks; searches surfaced only items from earlier in 2026 or without a corroborating second source. Last week's NATO Quantum Technology Roadmap summary (Sep 29) and the University of Vienna in-orbit photonic processor preprint (Sep 29) remain the latest verified items, already covered.</p>
     </div>
   </section>
 
   <footer>
-    Static snapshot &middot; compiled October 5, 2026 from public web search of standards bodies, defense-tech press, and vendor sources &middot; not auto-refreshing &middot; updated weekly
+    Static snapshot &middot; compiled October 12, 2026 from public web search of standards bodies, defense-tech press, and vendor sources &middot; not auto-refreshing &middot; updated weekly
   </footer>
 
 </div>
