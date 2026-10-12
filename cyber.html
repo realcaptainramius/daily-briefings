@@ -71,7 +71,7 @@
   <header>
     <div class="backlink"><a href="https://news.davidvasek.work">&larr; All briefings</a></div>
     <h1>Cybersecurity Daily Briefing</h1>
-    <div class="meta">Compiled <strong>Friday, October 9, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
+    <div class="meta">Compiled <strong>Monday, October 12, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
     <div class="toc">
       <a href="#breaches">Breaches</a>
       <a href="#vulns">Vulnerabilities</a>
@@ -82,7 +82,7 @@
       <a href="#market">Market</a>
     </div>
     <div class="note">
-      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers the period since the Oct 8 update (Oct 8&ndash;9). No new items could be verified against a dated source in this window, so all sections carry over; Atlassian CVE-2026-21589 exploitation remains the most active story. Direct access to publisher sites was blocked, so some details rest on search summaries. Nothing rotated out this run.
+      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers the period since the Oct 9 update (Oct 9&ndash;12). New: the multinational Flax Typhoon advisory with five CISA KEV additions, and exploitation of AhsayCBS flaws. Other sections carry over; Atlassian CVE-2026-21589 exploitation remains active. Direct access to publisher sites was blocked, so details rest on search summaries. Nothing rotated out this run.
     </div>
   </header>
 
@@ -108,6 +108,11 @@
   <section class="company vulns" id="vulns">
     <h2><span class="dot"></span>Vulnerabilities &amp; Exploits</h2>
     <div class="item">
+      <div class="headline"><span class="date">Oct 7&ndash;9</span>Attackers chain AhsayCBS flaws CVE-2026-105133/105134 to drop web shells and XMRig miners</div>
+      <p>Huntress reports exploitation beginning Oct 7 (23:20 UTC) and five organizations targeted as of Oct 8. CVE-2026-105133 (CVSS v4 5.5) is an improper-authentication flaw and CVE-2026-105134 (CVSS v4 9.3) an OS command injection in the Replication Receiver; chained, they allow authentication bypass and command execution. Attackers ran reconnaissance, dropped JSP web shells and a miner disguised as edge.exe persisting as &ldquo;MicrosoftEdgeUpdateSvc&rdquo;. Patch status is disputed: Huntress first said 10.3.4 was unaffected, then reportedly found 10.3.4 (the latest version) also affected, so restrict management-interface access until Ahsay confirms a fix.</p>
+      <div class="src"><a href="https://www.huntress.com/blog/ahsaycbs-flaws-exploit" target="_blank">Huntress</a> &middot; <a href="https://thehackernews.com/2026/10/attackers-exploit-ahsaycbs-flaws-to.html" target="_blank">The Hacker News</a> &middot; <a href="https://bleepingcomputer.com/news/security/unpatched-ahsaycbs-flaws-exploited-to-deploy-webshells-mine-crypto" target="_blank">BleepingComputer</a></div>
+    </div>
+    <div class="item">
       <div class="headline"><span class="date">Oct 7</span>Exploitation attempts begin against critical Atlassian file-read flaw CVE-2026-21589 across eight Data Center/Server products</div>
       <p>Exploitation attempts began about two hours after watchTowr published technical details, per Previdian (15 attempts from three IPs in Japan and the U.S.); watchTowr says most so far are fingerprinting and sweeping for config files. The unauthenticated arbitrary file-read flaw affects Bitbucket, Confluence, Jira Service Management, Jira Software, Bamboo, Crowd, Crucible and Fisheye. In Crowd-integrated setups, attackers can read plaintext credentials from crowd.properties and use Crowd&rsquo;s API to create Jira administrator accounts. Fixes include Crowd 6.3.7/7.0.3/7.1.7/7.2.4 and Jira Software DC 9.12.40/10.3.26/11.3.12. Sources differ on whether a full PoC was published, and the CVSS score (one source says 9.3) is unverified.</p>
       <div class="src"><a href="https://www.helpnetsecurity.com/2026/10/07/exploitation-critical-atlassian-flaw-cve-2026-21589/" target="_blank">Help Net Security</a> &middot; <a href="https://thehackernews.com/2026/10/atlassian-data-center-flaw-draws.html" target="_blank">The Hacker News</a> &middot; <a href="https://watchtowr.com/intelligence/atlassian-arbitrary-file-access-vulnerability-jira-confluence-cve-2026-21589-faq/" target="_blank">watchTowr</a></div>
@@ -126,6 +131,11 @@
 
   <section class="company threatactors" id="threatactors">
     <h2><span class="dot"></span>Threat Actor &amp; APT Activity</h2>
+    <div class="item">
+      <div class="headline"><span class="date">Oct 9</span>Seven-nation advisory on China-linked Flax Typhoon; CISA adds five exploited flaws to KEV</div>
+      <p>The Hacker News reports CISA added five older flaws to KEV after exploitation by Flax Typhoon: ProFTPD CVE-2015-3306 (CVSS 10.0), ONLYOFFICE Docs CVE-2021-3199 (9.8), Strapi CVE-2023-22894 (7.2), Apache Struts CVE-2016-3081 (8.1) and ISC BIND CVE-2015-5477 (7.5). The additions coincide with a joint advisory from seven countries that links the activity to China-based Integrity Technology Group and covers eight vulnerabilities in total. The headline cites an Oct 11 federal deadline, which was not verified against CISA&rsquo;s KEV entries. VulnCheck separately says a Flax Typhoon-linked botnet targets 66 flaws, only 27 of them in KEV.</p>
+      <div class="src"><a href="https://thehackernews.com/2026/10/flax-typhoon-exploits-five-flaws-as.html" target="_blank">The Hacker News</a> &middot; <a href="https://www.cybersecuritydive.com/news/vulnerabilities-flax-typhoon-botnet/727886/" target="_blank">Cybersecurity Dive</a></div>
+    </div>
     <div class="item">
       <div class="headline"><span class="date">Oct 6</span>FBI and Secret Service warn FortiBleed credential campaign against Fortinet firewalls remains active</div>
       <p>A joint advisory dated Oct 6 says the Russian-speaking operation targets internet-facing FortiGate firewalls and SSL VPN gateways using credentials from earlier Fortinet leaks and infostealer logs, plus password spraying, creating new admin accounts and in some cases deleting existing ones to lock out owners. No new CVE or zero-day is involved. The 86,644-device, 194-country figure is SOCRadar&rsquo;s count as of June 19, cited by the agencies, not a new FBI tally. The access has fed ransomware affiliates including INC/Lynx and Payload. Guidance: end admin and VPN sessions, reset credentials, enforce phishing-resistant MFA and restrict management access.</p>
@@ -177,7 +187,7 @@
   </section>
 
   <footer>
-    Static snapshot &middot; compiled October 9, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
+    Static snapshot &middot; compiled October 12, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
   </footer>
 
 </div>
