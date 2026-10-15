@@ -82,26 +82,14 @@
       <a href="#market">Market</a>
     </div>
     <div class="note">
-      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers the period since the Oct 14 update (Oct 14&ndash;15). Three additions under Vulnerabilities &amp; Exploits: the Ivanti Connect Secure zero-day (disclosed Oct 13), Microsoft&rsquo;s October Patch Tuesday (Oct 13), which earlier runs had not yet found indexed, and CISA&rsquo;s Oct 14 KEV additions. All other sections carry over. Direct access to publisher sites was blocked, so details rest on search summaries, and some counts and CVE details differ between outlets.
+      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers Oct 8&ndash;15. Items older than seven days (before Oct 8) were removed, so sections with nothing newer show as empty. Direct access to publisher sites was blocked, so details rest on search summaries, and some counts and CVE details differ between outlets.
     </div>
   </header>
 
   <section class="company breaches" id="breaches">
     <h2><span class="dot"></span>Breaches &amp; Incidents</h2>
-    <div class="item">
-      <div class="headline"><span class="date">Oct 6&ndash;7</span>ASOS confirms breach of third-party customer-communication platform after &ldquo;HACKED&rdquo; app alert</div>
-      <p>ASOS told the London Stock Exchange that an unauthorised notification went to customers around 10 a.m. on Oct 6 after third-party platforms used to communicate with customers were accessed without authorisation. It says names and contact details may be exposed, does not believe payment-card data or passwords were affected, and that its website and app were not compromised. A group calling itself Xuanye claims it compromised a Snowflake instance and stole customer data, offering no proof; ASOS has not confirmed that, and researchers found no leaked samples. Shares fell about 12.5%.</p>
-      <div class="src"><a href="https://www.securityweek.com/asos-confirms-cyberattack-data-breach/" target="_blank">SecurityWeek</a> &middot; <a href="https://www.bleepingcomputer.com/news/security/asos-confirms-data-breach-after-hacked-in-app-notifications/" target="_blank">BleepingComputer</a> &middot; <a href="https://www.helpnetsecurity.com/2026/10/07/asos-data-breach-app-notification/" target="_blank">Help Net Security</a></div>
-    </div>
-    <div class="item">
-      <div class="headline"><span class="date">Oct 6</span>FBI removes Accenture contractor after missed patch let ShinyHunters into FBI systems</div>
-      <p>FBI cyber division chief Brett Leatherman said its review tied the incident to a third-party-managed platform where a contractor did not install an available patch, and the FBI removed the contractor. Reuters, citing two sources, identified the system as Oracle PeopleSoft HR software managed by Accenture; the FBI has not named the platform or company, and Accenture did not address the patch. ShinyHunters claimed in late September to have taken staff names, addresses, SSNs and medical records, which is unverified. One report citing Mandiant says a WAF-bypass for CVE-2026-35273 may be involved; the entry route is not confirmed.</p>
-      <div class="src"><a href="https://www.securityweek.com/fbi-blames-contractors-missed-patch-for-shinyhunters-breach/" target="_blank">SecurityWeek</a> &middot; <a href="https://thehackernews.com/2026/10/fbi-removes-accenture-contractor-after.html" target="_blank">The Hacker News</a> &middot; <a href="https://thenextweb.com/news/fbi-removes-accenture-contractor-data-breach" target="_blank">The Next Web</a></div>
-    </div>
-    <div class="item">
-      <div class="headline"><span class="date">Oct 1</span>AI agent used two Zammad zero-days to breach the Dutch Institute for Vulnerability Disclosure</div>
-      <p>DIVD disclosed that a Sept 21 intrusion exploited two Zammad ticketing-system zero-days, CVE-2026-102489 (CVSS 9.4, unauthenticated RCE and session leak) and CVE-2026-102490 (CVSS 9.4, local privilege escalation to root), chained within seconds. The attacker moved to other services and exfiltrated data, though network segmentation stopped deeper access. Scripts contained notes in which the agent justified its own actions, which DIVD says points to an agentic AI attacker. DIVD urges all Zammad users to update to version 7 or take instances offline.</p>
-      <div class="src"><a href="https://www.bleepingcomputer.com/news/security/divd-says-zammad-zero-days-enabled-ai-driven-network-breach/" target="_blank">BleepingComputer</a> &middot; <a href="https://www.securityweek.com/zammad-zero-days-exploited-in-ai-powered-divd-hack/" target="_blank">SecurityWeek</a> &middot; <a href="https://www.helpnetsecurity.com/2026/10/01/divd-agentic-ai-attack-breach/" target="_blank">Help Net Security</a></div>
+    <div class="item empty">
+      <p>No significant new developments in the past week.</p>
     </div>
   </section>
 
@@ -127,21 +115,6 @@
       <p>Huntress reports exploitation beginning Oct 7 (23:20 UTC) and five organizations targeted as of Oct 8. CVE-2026-105133 (CVSS v4 5.5) is an improper-authentication flaw and CVE-2026-105134 (CVSS v4 9.3) an OS command injection in the Replication Receiver; chained, they allow authentication bypass and command execution. Attackers ran reconnaissance, dropped JSP web shells and a miner disguised as edge.exe persisting as &ldquo;MicrosoftEdgeUpdateSvc&rdquo;. Patch status is disputed: Huntress first said 10.3.4 was unaffected, then reportedly found 10.3.4 (the latest version) also affected, so restrict management-interface access until Ahsay confirms a fix.</p>
       <div class="src"><a href="https://www.huntress.com/blog/ahsaycbs-flaws-exploit" target="_blank">Huntress</a> &middot; <a href="https://thehackernews.com/2026/10/attackers-exploit-ahsaycbs-flaws-to.html" target="_blank">The Hacker News</a> &middot; <a href="https://bleepingcomputer.com/news/security/unpatched-ahsaycbs-flaws-exploited-to-deploy-webshells-mine-crypto" target="_blank">BleepingComputer</a></div>
     </div>
-    <div class="item">
-      <div class="headline"><span class="date">Oct 7</span>Exploitation attempts begin against critical Atlassian file-read flaw CVE-2026-21589 across eight Data Center/Server products</div>
-      <p>Exploitation attempts began about two hours after watchTowr published technical details, per Previdian (15 attempts from three IPs in Japan and the U.S.); watchTowr says most so far are fingerprinting and sweeping for config files. The unauthenticated arbitrary file-read flaw affects Bitbucket, Confluence, Jira Service Management, Jira Software, Bamboo, Crowd, Crucible and Fisheye. In Crowd-integrated setups, attackers can read plaintext credentials from crowd.properties and use Crowd&rsquo;s API to create Jira administrator accounts. Fixes include Crowd 6.3.7/7.0.3/7.1.7/7.2.4 and Jira Software DC 9.12.40/10.3.26/11.3.12. Sources differ on whether a full PoC was published, and the CVSS score (one source says 9.3) is unverified.</p>
-      <div class="src"><a href="https://www.helpnetsecurity.com/2026/10/07/exploitation-critical-atlassian-flaw-cve-2026-21589/" target="_blank">Help Net Security</a> &middot; <a href="https://thehackernews.com/2026/10/atlassian-data-center-flaw-draws.html" target="_blank">The Hacker News</a> &middot; <a href="https://watchtowr.com/intelligence/atlassian-arbitrary-file-access-vulnerability-jira-confluence-cve-2026-21589-faq/" target="_blank">watchTowr</a></div>
-    </div>
-    <div class="item">
-      <div class="headline"><span class="date">Oct 3&ndash;4</span>Citrix patches exploited NetScaler SAML zero-day CVE-2026-88779; CISA adds it to KEV</div>
-      <p>Citrix published bulletin CTX697174 on Oct 3 and released NetScaler ADC/Gateway 14.1-73.41 and 13.1-64.28 for CVE-2026-88779 (CVSS v4 8.7), a memory-buffer flaw that affects appliances configured for SAML authentication and can let an unauthenticated attacker cause persistent denial of service. Citrix confirmed targeted attacks on unmitigated deployments; researchers are investigating possible remote code execution. CISA added it to KEV on Oct 4 with a federal due date of Oct 7.</p>
-      <div class="src"><a href="https://www.bleepingcomputer.com/news/security/citrix-patches-netscaler-saml-zero-day-exploited-in-attacks/" target="_blank">BleepingComputer</a> &middot; <a href="https://thehackernews.com/2026/10/new-netscaler-zero-day-exploited-in.html" target="_blank">The Hacker News</a> &middot; <a href="https://www.cisa.gov/news-events/alerts/2026/10/04/cisa-adds-one-known-exploited-vulnerability-catalog" target="_blank">CISA</a></div>
-    </div>
-    <div class="item">
-      <div class="headline"><span class="date">Oct 1</span>Fortinet FortiMail zero-day CVE-2026-104286 exploited in the wild; CISA adds to KEV</div>
-      <p>Fortinet published advisory FG-IR-26-175 on Oct 1 and CISA added CVE-2026-104286 (CVSS 9.8) to KEV the same day. The path-traversal/NULL-byte flaw lets an unauthenticated attacker write arbitrary files via crafted HTTP(S) requests. Affected: FortiMail 8.0.0&ndash;8.0.1, 7.6.0&ndash;7.6.6, 7.4.0&ndash;7.4.8, 7.2.0&ndash;7.2.9. Reporting at the time said no patch was available; Fortinet advised disabling identity-based encryption or restricting the management interface. Check Fortinet for current fix status.</p>
-      <div class="src"><a href="https://www.securityweek.com/exploited-fortinet-fortimail-zero-day-calls-for-urgent-action/" target="_blank">SecurityWeek</a> &middot; <a href="https://www.cisa.gov/news-events/alerts/2026/10/01/cisa-adds-one-known-exploited-vulnerability-catalog" target="_blank">CISA</a></div>
-    </div>
   </section>
 
   <section class="company threatactors" id="threatactors">
@@ -151,53 +124,33 @@
       <p>The Hacker News reports CISA added five older flaws to KEV after exploitation by Flax Typhoon: ProFTPD CVE-2015-3306 (CVSS 10.0), ONLYOFFICE Docs CVE-2021-3199 (9.8), Strapi CVE-2023-22894 (7.2), Apache Struts CVE-2016-3081 (8.1) and ISC BIND CVE-2015-5477 (7.5). The additions coincide with a joint advisory from seven countries that links the activity to China-based Integrity Technology Group and covers eight vulnerabilities in total. The headline cites an Oct 11 federal deadline, which was not verified against CISA&rsquo;s KEV entries. VulnCheck separately says a Flax Typhoon-linked botnet targets 66 flaws, only 27 of them in KEV.</p>
       <div class="src"><a href="https://thehackernews.com/2026/10/flax-typhoon-exploits-five-flaws-as.html" target="_blank">The Hacker News</a> &middot; <a href="https://www.cybersecuritydive.com/news/vulnerabilities-flax-typhoon-botnet/727886/" target="_blank">Cybersecurity Dive</a></div>
     </div>
-    <div class="item">
-      <div class="headline"><span class="date">Oct 6</span>FBI and Secret Service warn FortiBleed credential campaign against Fortinet firewalls remains active</div>
-      <p>A joint advisory dated Oct 6 says the Russian-speaking operation targets internet-facing FortiGate firewalls and SSL VPN gateways using credentials from earlier Fortinet leaks and infostealer logs, plus password spraying, creating new admin accounts and in some cases deleting existing ones to lock out owners. No new CVE or zero-day is involved. The 86,644-device, 194-country figure is SOCRadar&rsquo;s count as of June 19, cited by the agencies, not a new FBI tally. The access has fed ransomware affiliates including INC/Lynx and Payload. Guidance: end admin and VPN sessions, reset credentials, enforce phishing-resistant MFA and restrict management access.</p>
-      <div class="src"><a href="https://thehackernews.com/2026/10/fbi-warns-fortibleed-remains-active.html" target="_blank">The Hacker News</a> &middot; <a href="https://www.infosecurity-magazine.com/news/fbi-secret-service-fortibleed/" target="_blank">Infosecurity Magazine</a> &middot; <a href="https://decipher.sc/2026/10/06/fbi-warns-of-fortibleed-attacks-leading-to-lockouts-ransomware/" target="_blank">Decipher</a></div>
-    </div>
-    <div class="item">
-      <div class="headline"><span class="date">Oct 1</span>Proofpoint: China-aligned TA419 impersonates AI policy figures to phish U.S. AI experts</div>
-      <p>Proofpoint reported (published Thursday, Oct 1) that TA419 targeted experts on AI regulation, export controls and national AI strategy at U.S. think tanks, universities and legal organizations. Beginning July 8 the group posed as Lynne Parker and then Heidi Crebo-Rediker, inviting targets to a fictitious AI policy advisory committee or a purported Senate Foreign Relations report, then steering repliers through a Cloudflare Turnstile check to an OneDrive adversary-in-the-middle credential-phishing page. Activity likely supports Chinese intelligence collection on U.S. AI policy.</p>
-      <div class="src"><a href="https://thehackernews.com/2026/10/china-aligned-ta419-targets-us-ai.html" target="_blank">The Hacker News</a> &middot; <a href="https://betanews.com/article/ta419-ai-policy-phishing/" target="_blank">BetaNews</a> &middot; <a href="https://securityboulevard.com/2026/10/china-linked-hackers-impersonate-ex-u-s-officials-to-target-ai-experts/" target="_blank">Security Boulevard</a></div>
-    </div>
-    <div class="item">
-      <div class="headline"><span class="date">Oct 1</span>Police seize KillSec infrastructure and arrest suspected 16-year-old leader</div>
-      <p>Spanish police announced the arrest of a 16-year-old Romanian national suspected of administering KillSec, part of a Sept 30 Europe-wide operation led by Hamburg authorities with Europol that also produced arrests in the UK and Romania. Five central servers and the leak site holding at least 110TB of stolen data were seized. The teen-run extortion group is said to have compromised about 500 organizations since 2024; a developer was identified but not arrested.</p>
-      <div class="src"><a href="https://therecord.media/killsec-ransomware-raas-arrests-europe" target="_blank">The Record</a> &middot; <a href="https://cyberscoop.com/killsec-ransomware-group-arrests-operation-killswitch" target="_blank">CyberScoop</a> &middot; <a href="https://www.usnews.com/news/world/articles/2026-10-01/spanish-police-arrest-16-year-old-leader-of-hacker-group-in-europe-wide-probe" target="_blank">U.S. News/AP</a></div>
-    </div>
   </section>
 
   <section class="company gov" id="gov">
     <h2><span class="dot"></span>Government &amp; Regulatory</h2>
     <div class="item empty">
-      <p>No significant new policy or regulatory developments verified this window beyond CISA&rsquo;s KEV additions under BOD 26-04 (see Vulnerabilities &amp; Exploits).</p>
+      <p>No significant new developments in the past week.</p>
     </div>
   </section>
 
   <section class="company vendors" id="vendors">
     <h2><span class="dot"></span>Security Vendor News</h2>
     <div class="item empty">
-      <p>No significant new developments this window. The KELA/Fujitsu collaboration agreement (Sept 25) remains the latest state of play, already covered in a prior briefing.</p>
+      <p>No significant new developments in the past week.</p>
     </div>
   </section>
 
   <section class="company cloud" id="cloud">
     <h2><span class="dot"></span>Cloud &amp; Infrastructure Security</h2>
     <div class="item empty">
-      <p>No significant new developments this window. Microsoft's Storm-3168 agentic Azure attack report (Sept 25) remains the latest state of play, already covered in a prior briefing.</p>
+      <p>No significant new developments in the past week.</p>
     </div>
   </section>
 
   <section class="company market" id="market">
     <h2><span class="dot"></span>Market Moves</h2>
-    <div class="item">
-      <div class="headline"><span class="date">Oct 1</span>Armadin raises $255.5M Series B at a valuation above $2.5B</div>
-      <p>Armadin, the AI-native offensive-security startup led by Mandiant founder Kevin Mandia, raised $255.5 million in a Series B co-led by Andreessen Horowitz and Accel, with Bain Capital Ventures and Redpoint joining and existing investors including 8VC, GV and In-Q-Tel. Total funding is $445 million, seven months after emerging from stealth. Help Net Security covered it Oct 1; some outlets date it Oct 2.</p>
-      <div class="src"><a href="https://www.helpnetsecurity.com/2026/10/01/armadin-raises-255-5-million-funding/" target="_blank">Help Net Security</a> &middot; <a href="https://www.bankinfosecurity.com/armadin-targets-autonomous-remediation-2555m-series-b-a-33010" target="_blank">BankInfoSecurity</a> &middot; <a href="https://pulse2.com/armadin-raises-255-5-million-series-b-at-over-2-5-billion-valuation/" target="_blank">Pulse 2.0</a></div>
-    </div>
     <div class="item empty">
-      <p>Island&rsquo;s $400M Series F remains covered in a prior briefing.</p>
+      <p>No significant new developments in the past week.</p>
     </div>
   </section>
 
