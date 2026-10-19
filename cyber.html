@@ -71,7 +71,7 @@
   <header>
     <div class="backlink"><a href="https://news.davidvasek.work">&larr; All briefings</a></div>
     <h1>Cybersecurity Daily Briefing</h1>
-    <div class="meta">Compiled <strong>Friday, October 16, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
+    <div class="meta">Compiled <strong>Monday, October 19, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
     <div class="toc">
       <a href="#breaches">Breaches</a>
       <a href="#vulns">Vulnerabilities</a>
@@ -82,7 +82,7 @@
       <a href="#market">Market</a>
     </div>
     <div class="note">
-      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers Oct 9&ndash;16. Items older than seven days (before Oct 9) were removed, so sections with nothing newer show as empty. Direct access to publisher sites was blocked, so details rest on search summaries, and some counts and CVE details differ between outlets.
+      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers Oct 12&ndash;19. Items older than seven days (before Oct 12) were removed, so sections with nothing newer show as empty. Direct access to publisher sites was blocked, so details rest on search summaries, and some counts and CVE details differ between outlets.
     </div>
   </header>
 
@@ -98,8 +98,13 @@
   <section class="company vulns" id="vulns">
     <h2><span class="dot"></span>Vulnerabilities &amp; Exploits</h2>
     <div class="item">
+      <div class="headline"><span class="date">Oct 15</span>CISA reportedly adds critical Atlassian Data Center flaw CVE-2026-21589 to KEV after exploitation within hours of public PoC</div>
+      <p>CVE-2026-21589 (CVSS 9.3) is a path-traversal/arbitrary file access flaw affecting eight Atlassian Data Center products, including Confluence, Jira, Bitbucket and Bamboo. watchTowr published technical details Oct 6 and exploitation attempts followed quickly; VulnCheck tracked exploitation from Oct 7. Security Affairs and Senserva report the CISA KEV addition on Oct 15 with a federal deadline of Oct 18, but CISA&rsquo;s own alert was not reviewed and early reports said it was not yet listed. Atlassian published fixed versions; where patching is delayed, cut instances off from the internet.</p>
+      <div class="src"><a href="https://securityaffairs.com/?p=201086" target="_blank">Security Affairs</a> &middot; <a href="https://bleepingcomputer.com/news/security/hackers-exploit-critical-atlassian-flaw-after-public-poc-release" target="_blank">BleepingComputer</a> &middot; <a href="https://securityweek.com/attackers-target-critical-atlassian-vulnerability-within-hours-of-poc-publication" target="_blank">SecurityWeek</a></div>
+    </div>
+    <div class="item">
       <div class="headline"><span class="date">Oct 14</span>CISA adds four exploited flaws to KEV: PAN-OS, Cisco Secure Email Gateway and both AhsayCBS bugs</div>
-      <p>CISA&rsquo;s Oct 14 alert lists CVE-2026-0322 (Palo Alto Networks PAN-OS code injection), CVE-2026-76519 (Cisco Secure Email Gateway path traversal), and the two AhsayCBS flaws covered below, CVE-2026-105133 and CVE-2026-105134. Federal civilian agencies have until Oct 17 to remediate. Help Net Security reported the additions on Oct 15. The PAN-OS and Cisco entries come from the CISA alert title and search summaries; vendor advisories, CVSS scores and exploitation details for those two were not reviewed.</p>
+      <p>CISA&rsquo;s Oct 14 alert lists CVE-2026-0322 (Palo Alto Networks PAN-OS code injection), CVE-2026-76519 (Cisco Secure Email Gateway path traversal), and two AhsayCBS flaws, CVE-2026-105133 and CVE-2026-105134 (Huntress reported exploitation of the pair, with web shells and cryptominers dropped, from Oct 7; patch status for the latest 10.3.4 release was disputed). Federal civilian agencies have until Oct 17 to remediate. Palo Alto reportedly confirmed &ldquo;very limited exploitation&rdquo; of the PAN-OS flaw. Help Net Security reported the additions on Oct 15. The PAN-OS and Cisco entries come from the CISA alert title and search summaries; vendor advisories, CVSS scores and exploitation details for those two were not reviewed.</p>
       <div class="src"><a href="https://www.cisa.gov/news-events/alerts/2026/10/14/cisa-adds-four-known-exploited-vulnerabilities-catalog" target="_blank">CISA</a> &middot; <a href="https://www.helpnetsecurity.com/2026/10/15/cve-2026-0322-cve-2026-76519-cve-2026-105133-cve-2026-105134-exploted/" target="_blank">Help Net Security</a></div>
     </div>
     <div class="item">
@@ -109,22 +114,17 @@
     </div>
     <div class="item">
       <div class="headline"><span class="date">Oct 13</span>Microsoft&rsquo;s record October Patch Tuesday fixes 1,400+ CVEs; Windows Shell zero-day CVE-2026-96951 exploited</div>
-      <p>BleepingComputer&rsquo;s headline counts 1,411 flaws and three zero-days; other outlets count 1,407 to 1,413, and some report only one actively exploited. The exploited one, CVE-2026-96951 (CVSS 8.8), is a Windows Shell command-injection flaw that bypasses a security feature (Mark of the Web per BleepingComputer). CISA added it to KEV Oct 13 with a federal deadline of Oct 16; Microsoft has not said who is exploiting it. Two other zero-days were publicly disclosed, in .NET Framework-related components. Dark Reading also reports Outlook.com was affected but already patched, from a single source. One outlet lists CVE-2026-92707 as exploited, which other reports do not support.</p>
+      <p>BleepingComputer&rsquo;s headline counts 1,411 flaws and three zero-days; other outlets count 1,407 to 1,413, and some report only one actively exploited. The exploited one, CVE-2026-96951 (CVSS 8.8), is a Windows Shell command-injection flaw that bypasses a security feature (Mark of the Web per BleepingComputer). CISA added it to KEV Oct 13 with a federal deadline of Oct 16 (now passed); Microsoft has not said who is exploiting it. Two other zero-days were publicly disclosed, in .NET Framework-related components. Dark Reading also reports Outlook.com was affected but already patched, from a single source. One outlet lists CVE-2026-92707 as exploited, which other reports do not support.</p>
       <div class="src"><a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-october-2026-patch-tuesday-fixes-1-411-flaws-3-zero-days/" target="_blank">BleepingComputer</a> &middot; <a href="https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026/" target="_blank">Rapid7</a> &middot; <a href="https://www.darkreading.com/vulnerabilities-threats/zero-days-microsoft-october-patch-tuesday" target="_blank">Dark Reading</a> &middot; <a href="https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-adds-two-known-exploited-vulnerabilities-catalog" target="_blank">CISA</a></div>
-    </div>
-    <div class="item">
-      <div class="headline"><span class="date">Oct 7&ndash;9</span>Attackers chain AhsayCBS flaws CVE-2026-105133/105134 to drop web shells and XMRig miners</div>
-      <p>Huntress reports exploitation beginning Oct 7 (23:20 UTC) and five organizations targeted as of Oct 8. CVE-2026-105133 (CVSS v4 5.5) is an improper-authentication flaw and CVE-2026-105134 (CVSS v4 9.3) an OS command injection in the Replication Receiver; chained, they allow authentication bypass and command execution. Attackers ran reconnaissance, dropped JSP web shells and a miner disguised as edge.exe persisting as &ldquo;MicrosoftEdgeUpdateSvc&rdquo;. Patch status is disputed: Huntress first said 10.3.4 was unaffected, then reportedly found 10.3.4 (the latest version) also affected, so restrict management-interface access until Ahsay confirms a fix.</p>
-      <div class="src"><a href="https://www.huntress.com/blog/ahsaycbs-flaws-exploit" target="_blank">Huntress</a> &middot; <a href="https://thehackernews.com/2026/10/attackers-exploit-ahsaycbs-flaws-to.html" target="_blank">The Hacker News</a> &middot; <a href="https://bleepingcomputer.com/news/security/unpatched-ahsaycbs-flaws-exploited-to-deploy-webshells-mine-crypto" target="_blank">BleepingComputer</a></div>
     </div>
   </section>
 
   <section class="company threatactors" id="threatactors">
     <h2><span class="dot"></span>Threat Actor &amp; APT Activity</h2>
     <div class="item">
-      <div class="headline"><span class="date">Oct 9</span>Seven-nation advisory on China-linked Flax Typhoon; CISA adds five exploited flaws to KEV</div>
-      <p>The Hacker News reports CISA added five older flaws to KEV after exploitation by Flax Typhoon: ProFTPD CVE-2015-3306 (CVSS 10.0), ONLYOFFICE Docs CVE-2021-3199 (9.8), Strapi CVE-2023-22894 (7.2), Apache Struts CVE-2016-3081 (8.1) and ISC BIND CVE-2015-5477 (7.5). The additions coincide with a joint advisory from seven countries that links the activity to China-based Integrity Technology Group and covers eight vulnerabilities in total. The headline cites an Oct 11 federal deadline, which was not verified against CISA&rsquo;s KEV entries. VulnCheck separately says a Flax Typhoon-linked botnet targets 66 flaws, only 27 of them in KEV.</p>
-      <div class="src"><a href="https://thehackernews.com/2026/10/flax-typhoon-exploits-five-flaws-as.html" target="_blank">The Hacker News</a> &middot; <a href="https://www.cybersecuritydive.com/news/vulnerabilities-flax-typhoon-botnet/727886/" target="_blank">Cybersecurity Dive</a></div>
+      <div class="headline"><span class="date">Oct 15</span>Google/Mandiant: China-nexus ARMORY CASTLE exploited BeyondTrust Remote Support zero-day CVE-2026-102764 since Aug 29</div>
+      <p>Google Threat Intelligence Group and Mandiant attribute exploitation to ARMORY CASTLE (formerly UNC5221, also linked to WARP PANDA). The flaw (CVSS 4.0 9.3) is an improper origin validation bug in an internal messaging component that lets an unauthenticated attacker perform file operations. Mandiant found the SAWFLY web shell, credential harvesting and downstream access. BeyondTrust found the hosted activity Sept 28, shipped patch BT26-05 on Oct 8 and disclosed the CVE Oct 15. All Remote Support versions through 26.2.3 are affected; self-hosted customers should confirm the patch is applied. Details come from search summaries; sources differ slightly on SaaS patch timing.</p>
+      <div class="src"><a href="https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust" target="_blank">Google Cloud</a> &middot; <a href="https://thehackernews.com/2026/10/china-linked-hackers-exploited.html" target="_blank">The Hacker News</a> &middot; <a href="https://www.securityweek.com/chinese-apt-exploited-beyondtrust-vulnerability-as-zero-day/" target="_blank">SecurityWeek</a></div>
     </div>
   </section>
 
@@ -157,7 +157,7 @@
   </section>
 
   <footer>
-    Static snapshot &middot; compiled October 16, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
+    Static snapshot &middot; compiled Monday, October 19, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
   </footer>
 
 </div>
