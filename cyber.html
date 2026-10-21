@@ -71,7 +71,7 @@
   <header>
     <div class="backlink"><a href="https://news.davidvasek.work">&larr; All briefings</a></div>
     <h1>Cybersecurity Daily Briefing</h1>
-    <div class="meta">Compiled <strong>Tuesday, October 20, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
+    <div class="meta">Compiled <strong>Wednesday, October 21, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
     <div class="toc">
       <a href="#breaches">Breaches</a>
       <a href="#vulns">Vulnerabilities</a>
@@ -82,12 +82,17 @@
       <a href="#market">Market</a>
     </div>
     <div class="note">
-      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers Oct 13&ndash;20. Items older than seven days (before Oct 13) were removed, so sections with nothing newer show as empty. Direct access to publisher sites was blocked, so details rest on search summaries, and some counts and CVE details differ between outlets.
+      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers Oct 14&ndash;21. Items older than seven days (before Oct 14) were removed, so sections with nothing newer show as empty. Direct access to publisher sites was blocked, so details rest on search summaries, and some counts and CVE details differ between outlets.
     </div>
   </header>
 
   <section class="company breaches" id="breaches">
     <h2><span class="dot"></span>Breaches &amp; Incidents</h2>
+    <div class="item">
+      <div class="headline"><span class="date">Oct 19</span>OVHcloud CLI releases briefly tampered with secret-stealing binary (single source)</div>
+      <p>The Stack reports OVHcloud&rsquo;s CEO said a repository for its command-line tool was briefly compromised after a customer reported it on Oct 19; an attacker reportedly used a developer&rsquo;s GitHub account to add a binary that retrieves secrets from disk, caught in about 94 minutes. Versions v0.11.0 through v0.15.0 are reported as affected; the CEO advised changing all secrets on affected disks. No independent malware analysis or OVHcloud advisory was seen, so the version list is unconfirmed.</p>
+      <div class="src"><a href="https://www.thestack.technology/ovhcloud-cli-repo-compromised-customer-reports-incident/" target="_blank">The Stack</a></div>
+    </div>
     <div class="item">
       <div class="headline"><span class="date">Oct 15</span>Cyberattack on BAE Systems disrupts US bankruptcy court noticing service</div>
       <p>Cyberpress reports the Federal Judiciary disclosed on Oct 15 that a cyberattack affecting BAE Systems disrupted IT systems and websites supporting the Bankruptcy Noticing Center used by federal bankruptcy courts. Officials have not confirmed ransomware, data theft or exposure of creditor information. Details come from a single secondary outlet&rsquo;s search summary.</p>
@@ -98,6 +103,11 @@
   <section class="company vulns" id="vulns">
     <h2><span class="dot"></span>Vulnerabilities &amp; Exploits</h2>
     <div class="item">
+      <div class="headline"><span class="date">Oct 20</span>CISA adds six exploited flaws to KEV, including four in Plex Media Server</div>
+      <p>CISA&rsquo;s Oct 20 alert, seen via a search summary of its title and a forum report, adds six entries: four Plex Media Server flaws, CVE-2026-106931 in EG Secure Solutions SiteGuard Server Edition and CVE-2026-110936 in Siemens Software Center. Separate coverage describes Plex servers hijacked to run crypto miners. Remediation deadlines, CVSS scores and exploitation details were not reviewed.</p>
+      <div class="src"><a href="https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog" target="_blank">CISA</a> &middot; <a href="https://archyde.com/plex-media-server-setups-hijacked-by-attackers-deploying-crypto-miners" target="_blank">Archyde (Plex)</a></div>
+    </div>
+    <div class="item">
       <div class="headline"><span class="date">Oct 15</span>CISA reportedly adds critical Atlassian Data Center flaw CVE-2026-21589 to KEV after exploitation within hours of public PoC</div>
       <p>CVE-2026-21589 (CVSS 9.3) is a path-traversal/arbitrary file access flaw affecting eight Atlassian Data Center products, including Confluence, Jira, Bitbucket and Bamboo. watchTowr published technical details Oct 6 and exploitation attempts followed quickly; VulnCheck tracked exploitation from Oct 7. Security Affairs and Senserva report the CISA KEV addition on Oct 15 with a federal deadline of Oct 18, but CISA&rsquo;s own alert was not reviewed and early reports said it was not yet listed. Atlassian published fixed versions; where patching is delayed, cut instances off from the internet.</p>
       <div class="src"><a href="https://securityaffairs.com/?p=201086" target="_blank">Security Affairs</a> &middot; <a href="https://bleepingcomputer.com/news/security/hackers-exploit-critical-atlassian-flaw-after-public-poc-release" target="_blank">BleepingComputer</a> &middot; <a href="https://securityweek.com/attackers-target-critical-atlassian-vulnerability-within-hours-of-poc-publication" target="_blank">SecurityWeek</a></div>
@@ -107,23 +117,23 @@
       <p>CISA&rsquo;s Oct 14 alert lists CVE-2026-0322 (Palo Alto Networks PAN-OS code injection), CVE-2026-76519 (Cisco Secure Email Gateway path traversal), and two AhsayCBS flaws, CVE-2026-105133 and CVE-2026-105134 (Huntress reported exploitation of the pair, with web shells and cryptominers dropped, from Oct 7; patch status for the latest 10.3.4 release was disputed). Federal civilian agencies have until Oct 17 to remediate. Palo Alto reportedly confirmed &ldquo;very limited exploitation&rdquo; of the PAN-OS flaw. Help Net Security reported the additions on Oct 15. The PAN-OS and Cisco entries come from the CISA alert title and search summaries; vendor advisories, CVSS scores and exploitation details for those two were not reviewed.</p>
       <div class="src"><a href="https://www.cisa.gov/news-events/alerts/2026/10/14/cisa-adds-four-known-exploited-vulnerabilities-catalog" target="_blank">CISA</a> &middot; <a href="https://www.helpnetsecurity.com/2026/10/15/cve-2026-0322-cve-2026-76519-cve-2026-105133-cve-2026-105134-exploted/" target="_blank">Help Net Security</a></div>
     </div>
-    <div class="item">
-      <div class="headline"><span class="date">Oct 13</span>Ivanti Connect Secure authentication-bypass zero-day CVE-2026-104935 exploited; CISA adds to KEV</div>
-      <p>Ivanti disclosed CVE-2026-104935 (CVSS 8.6) on Oct 13 and confirmed exploitation of a limited number of customers before disclosure. Volexity, which found the activity, tracks the actor as UTA0576 and says it chained the flaw since at least Oct 3 with other bugs to get root-level code execution on fully patched appliances, leaving no malware or web shell and tampering with logs. Fixes cited: 22.8R2.5 and 25.1.1.2, plus 25.1.3.0/25.1.3.1; sources differ on the affected-version list and on whether a privilege-escalation fix is still pending. Volexity assessed with low confidence that the motive is criminal rather than espionage. CISA added it to KEV Oct 13 and urged immediate updates. Because logs may be altered, check appliance integrity as well as logs.</p>
-      <div class="src"><a href="https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935/" target="_blank">Rapid7</a> &middot; <a href="https://bleepingcomputer.com/news/security/ivanti-warns-of-connect-secure-zero-day-exploited-in-attacks" target="_blank">BleepingComputer</a> &middot; <a href="https://thehackernews.com/2026/10/attacker-chains-three-ivanti-connect.html" target="_blank">The Hacker News</a> &middot; <a href="https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-urges-patching-newly-exploited-vulnerability-ivanti-connect-secure" target="_blank">CISA</a></div>
-    </div>
-    <div class="item">
-      <div class="headline"><span class="date">Oct 13</span>Microsoft&rsquo;s record October Patch Tuesday fixes 1,400+ CVEs; Windows Shell zero-day CVE-2026-96951 exploited</div>
-      <p>BleepingComputer&rsquo;s headline counts 1,411 flaws and three zero-days; other outlets count 1,407 to 1,413, and some report only one actively exploited. The exploited one, CVE-2026-96951 (CVSS 8.8), is a Windows Shell command-injection flaw that bypasses a security feature (Mark of the Web per BleepingComputer). CISA added it to KEV Oct 13 with a federal deadline of Oct 16 (now passed); Microsoft has not said who is exploiting it. Two other zero-days were publicly disclosed, in .NET Framework-related components. Dark Reading also reports Outlook.com was affected but already patched, from a single source. One outlet lists CVE-2026-92707 as exploited, which other reports do not support.</p>
-      <div class="src"><a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-october-2026-patch-tuesday-fixes-1-411-flaws-3-zero-days/" target="_blank">BleepingComputer</a> &middot; <a href="https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026/" target="_blank">Rapid7</a> &middot; <a href="https://www.darkreading.com/vulnerabilities-threats/zero-days-microsoft-october-patch-tuesday" target="_blank">Dark Reading</a> &middot; <a href="https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-adds-two-known-exploited-vulnerabilities-catalog" target="_blank">CISA</a></div>
-    </div>
   </section>
 
   <section class="company threatactors" id="threatactors">
     <h2><span class="dot"></span>Threat Actor &amp; APT Activity</h2>
     <div class="item">
+      <div class="headline"><span class="date">Oct 20</span>Reported CISA/FBI advisory: SafePay ransomware has hit 600+ critical-infrastructure organizations</div>
+      <p>BleepingComputer, CyberSecurityNews and GBHackers report a joint CISA/FBI advisory saying SafePay actors have compromised at least 600 organizations since 2024, exploiting VPNs and also targeting backup systems to block recovery. The advisory text itself was not found in search, so the date and counts rest on secondary summaries.</p>
+      <div class="src"><a href="https://www.bleepingcomputer.com/news/security/cisa-and-fbi-safepay-ransomware-has-hit-over-600-critical-infrastructure-organizations/" target="_blank">BleepingComputer</a> &middot; <a href="https://gbhackers.com/safepay-ransomware-attack" target="_blank">GBHackers</a></div>
+    </div>
+    <div class="item">
+      <div class="headline"><span class="date">Oct 19</span>Reuters: one hacker used AI agents to break into 100+ company sites for about $5,000</div>
+      <p>Reuters reports, citing NorForge researcher Snorre Fagerland, that a Chinese-speaking operator used the open-source Cairn agent platform against more than 1,200 sites from Sept 25, compromising over 100 including Deere, SharkNinja and Cummins, at roughly $50 in tokens per success. Agent worker names suggest Claude Code and DeepSeek models, which is NorForge&rsquo;s reading and not a confirmed fact. Reuters could not establish how much data was taken; Deere reported remediation and Cummins said it was investigating a third-party vendor site. The Next Web noted it had not independently verified the intrusions.</p>
+      <div class="src"><a href="https://www.cp24.com/news/world/2026/10/19/how-one-hacker-used-ai-agents-and-a-few-thousand-dollars-to-break-into-scores-of-sites-reuters-exclusive/" target="_blank">CP24 (Reuters)</a> &middot; <a href="https://thenextweb.com/news/ai-agents-hacker-cairn-100-sites-deere-norforge" target="_blank">The Next Web</a></div>
+    </div>
+    <div class="item">
       <div class="headline"><span class="date">Oct 15</span>Google/Mandiant: China-nexus ARMORY CASTLE exploited BeyondTrust Remote Support zero-day CVE-2026-102764 since Aug 29</div>
-      <p>Google Threat Intelligence Group and Mandiant attribute exploitation to ARMORY CASTLE (formerly UNC5221, also linked to WARP PANDA). The flaw (CVSS 4.0 9.3) is an improper origin validation bug in an internal messaging component that lets an unauthenticated attacker perform file operations. Mandiant found the SAWFLY web shell, credential harvesting and downstream access. BeyondTrust found the hosted activity Sept 28, shipped patch BT26-05 on Oct 8 and disclosed the CVE Oct 15. All Remote Support versions through 26.2.3 are affected; self-hosted customers should confirm the patch is applied. Details come from search summaries; sources differ slightly on SaaS patch timing.</p>
+      <p>Google Threat Intelligence Group and Mandiant attribute exploitation to ARMORY CASTLE (formerly UNC5221, also linked to WARP PANDA). The flaw (CVSS 4.0 9.3) is an improper origin validation bug in an internal messaging component that lets an unauthenticated attacker perform file operations. Mandiant found the SAWFLY web shell, credential harvesting and downstream access. BeyondTrust found the hosted activity Sept 28, shipped patch BT26-05 on Oct 8 and disclosed the CVE Oct 15. All Remote Support versions through 26.2.3 are affected; self-hosted customers should confirm the patch is applied. A search summary says CISA added the flaw to KEV on Oct 16 with an Oct 19 federal deadline (CISA&rsquo;s alert was not reviewed). Details come from search summaries; sources differ slightly on SaaS patch timing.</p>
       <div class="src"><a href="https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust" target="_blank">Google Cloud</a> &middot; <a href="https://thehackernews.com/2026/10/china-linked-hackers-exploited.html" target="_blank">The Hacker News</a> &middot; <a href="https://www.securityweek.com/chinese-apt-exploited-beyondtrust-vulnerability-as-zero-day/" target="_blank">SecurityWeek</a></div>
     </div>
   </section>
@@ -151,13 +161,15 @@
 
   <section class="company market" id="market">
     <h2><span class="dot"></span>Market Moves</h2>
-    <div class="item empty">
-      <p>No significant new developments in the past week.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Oct 15</span>Crunchbase: cybersecurity investors put $6.8B to work in Q3, driven by larger rounds</div>
+      <p>Crunchbase&rsquo;s Oct 15 report, seen via a search summary, says Q3 2026 cybersecurity venture investment totaled $6.8 billion with the increase due to larger rounds rather than more of them, and that Visa&rsquo;s $2.4 billion BioCatch purchase was the largest exit. The report was not reviewed.</p>
+      <div class="src"><a href="https://news.crunchbase.com/cybersecurity/q3-2026-large-venture-investments-ai-defense-startups/" target="_blank">Crunchbase News</a></div>
     </div>
   </section>
 
   <footer>
-    Static snapshot &middot; compiled Tuesday, October 20, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
+    Static snapshot &middot; compiled Wednesday, October 21, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
   </footer>
 
 </div>
