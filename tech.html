@@ -73,7 +73,7 @@
   <header>
     <div class="backlink"><a href="https://news.davidvasek.work">&larr; All briefings</a></div>
     <h1>Emerging Technology Weekly Briefing</h1>
-    <div class="meta">Compiled <strong>Monday, October 19, 2026</strong> &middot; Post-Quantum Cryptography, 5G/Open RAN &amp; Tactical Networking, Emerging Tech Radar</div>
+    <div class="meta">Compiled <strong>Monday, October 26, 2026</strong> &middot; Post-Quantum Cryptography, 5G/Open RAN &amp; Tactical Networking, Emerging Tech Radar</div>
     <div class="toc">
       <a href="#pqc">Post-Quantum Cryptography</a>
       <a href="#5g">5G / Open RAN</a>
@@ -88,18 +88,18 @@
     <h2><span class="dot"></span>Post-Quantum Cryptography</h2>
     <p class="sub">NIST/NSA standards, CNSA 2.0 and CMMC deadlines, and PQC vendor/DoD adoption.</p>
     <div class="item">
-      <div class="headline"><span class="date">Upcoming</span>Civilian-agency PQC migration plans due to OMB/ONCD around October 22 &mdash; days away</div>
-      <p>Per secondary reporting, OMB Memorandum M-26-15 (issued June 24, following Executive Order 14412 of June 22) requires each executive department and agency to submit a PQC migration plan to OMB and the Office of the National Cyber Director within 120 days &mdash; roughly October 22, 2026 &mdash; about three days from this briefing. Plans are to cover risk-based prioritization, phased timelines, automated cryptographic inventory, crypto-agility architecture, third-party coordination, and funding. The memo does not apply to National Security Systems, which stay on the CNSA 2.0 track below. <em>Unconfirmed against the memo text itself:</em> all sources found are vendor/consultancy blogs and cite the date as approximate, so verify before relying on the exact day. Expect civilian-agency customers to be asking vendors for crypto inventories and PQC roadmaps right now. No new NIST, NSA, or CISA PQC publications were verified for Oct 12&ndash;19; NSA's Oct 1 PQC Resource Hub announcement remains the latest, and NIST's FIPS 206 (FN-DSA) and FIPS 207 (HQC) drafts could not be confirmed as published.</p>
+      <div class="headline"><span class="date">Passed</span>Civilian-agency PQC migration plans were due to OMB/ONCD around October 22</div>
+      <p>Per secondary reporting, OMB Memorandum M-26-15 (issued June 24, following Executive Order 14412 of June 22) required each executive department and agency to submit a PQC migration plan to OMB and the Office of the National Cyber Director within 120 days &mdash; roughly October 22, 2026, now four days past. Plans were to cover risk-based prioritization, phased timelines, automated cryptographic inventory, crypto-agility architecture, third-party coordination, funding, and a named PQC Migration Lead; the memo sets a phased schedule through 2035 and does not apply to National Security Systems, which stay on the CNSA 2.0 track below. <em>Unconfirmed:</em> no source found reports whether agencies met the deadline, and all sources are vendor/consultancy blogs that cite the date as approximate, so verify against the memo text before relying on the exact day. Expect civilian-agency customers to be asking vendors for crypto inventories and PQC roadmaps. No new NIST, NSA, or CISA PQC publications were verified for Oct 19&ndash;26; NSA's Oct 1 PQC Resource Hub announcement remains the latest, and NIST's final FIPS 206 (FN-DSA) and a FIPS 207 (HQC) draft could not be confirmed as published.</p>
       <div class="src"><a href="https://postquantum.com/security-pqc/omb-m-26-15-pqc-migration/" target="_blank">PostQuantum.com</a> &middot; <a href="https://www.zscaler.com/blogs/product-insights/what-omb-memorandum-m-26-15-requires-your-agency-pqc-migration-plan" target="_blank">Zscaler</a> &middot; <a href="https://www.encryptionconsulting.com/pqc-for-government-defense-inventory-to-cnsa-2-0-execution/" target="_blank">Encryption Consulting</a></div>
     </div>
     <div class="item">
-      <div class="headline"><span class="date">Status</span>CMMC Reform Task Force report still unpublished as of early October</div>
-      <p>No change found as of Oct 19: CMMC Phase 2 (third-party assessment) remains suspended since July 13, and the Task Force report delivered to the DoW CIO around September 11 has not been confirmed as released in anything found this week (the most recent status found is from late August); timing of any release is the Department's call. Keep treating the former November 10 date as off the table, and watch for the report as the next trigger.</p>
+      <div class="headline"><span class="date">Status</span>CMMC Reform Task Force report still not confirmed as public</div>
+      <p>No change found as of Oct 26: CMMC Phase 2 (third-party assessment) remains suspended since July 13, and the Task Force report delivered to the DoW CIO around September 11 has not been confirmed as released in anything found this week (searches this week found no release; the report was expected around mid-September); timing of any release is the Department's call. Keep treating the former November 10 date as off the table, and watch for the report as the next trigger.</p>
       <div class="src"><a href="https://secureframe.com/hub/cmmc/news-updates-2026" target="_blank">Secureframe</a> &middot; <a href="https://isidefense.com/compliance-status/cmmc" target="_blank">ISI Defense</a></div>
     </div>
     <div class="item">
       <div class="headline"><span class="date">Ongoing</span>CNSA 2.0: network gear now, every new NSS acquisition by Jan 1, 2027</div>
-      <p>NSA's CNSA 2.0 suite (ML-KEM-1024 for key establishment, ML-DSA-87 for signatures, plus AES-256/SHA-384-512) remains the mandated quantum-resistant algorithm set for National Security Systems. VPNs, firewalls, routers, and switches used in NSS need CNSA 2.0 support now; every new NSS acquisition must be CNSA 2.0-compliant starting January 1, 2027 &mdash; about 10 weeks out &mdash; with exclusive use across operating systems, custom applications, and cloud services required by 2033. If you're bidding network or SATCOM gear into an NSS-designated environment, CNSA 2.0 support is table stakes, not a differentiator, and unlike the CMMC deadline above, nothing has paused this clock.</p>
+      <p>NSA's CNSA 2.0 suite (ML-KEM-1024 for key establishment, ML-DSA-87 for signatures, plus AES-256/SHA-384-512) remains the mandated quantum-resistant algorithm set for National Security Systems. VPNs, firewalls, routers, and switches used in NSS need CNSA 2.0 support now; every new NSS acquisition must be CNSA 2.0-compliant starting January 1, 2027 &mdash; about 9 weeks out &mdash; with exclusive use across operating systems, custom applications, and cloud services required by 2033. If you're bidding network or SATCOM gear into an NSS-designated environment, CNSA 2.0 support is table stakes, not a differentiator, and unlike the CMMC deadline above, nothing has paused this clock.</p>
       <div class="src"><a href="https://www.qusecure.com/cnsa-2-0-pqc-requirements-timelines-federal-impact/" target="_blank">QuSecure</a></div>
     </div>
   </section>
@@ -108,27 +108,20 @@
     <h2><span class="dot"></span>5G / Open RAN &amp; Tactical Networking</h2>
     <p class="sub">DoD's open-architecture 5G push, tactical-edge deployments, and vendor moves.</p>
     <div class="item empty">
-      <p>No significant new Open RAN/tactical-5G developments verified for Oct 12&ndash;19; searches returned only older material. NIST's updated 5G/O-RAN testbed tooling, OCUDU's move under Linux Foundation governance, and the Department of the Air Force's 84-installation private 5G push remain the latest state of play, already covered in prior briefings.</p>
+      <p>No significant new Open RAN/tactical-5G developments verified for Oct 19&ndash;26; searches returned only older material (2021&ndash;2024). NIST&rsquo;s updated 5G/O-RAN testbed tooling, OCUDU&rsquo;s move under Linux Foundation governance, and the Department of the Air Force&rsquo;s 84-installation private 5G push remain the latest state of play, already covered in prior briefings.</p>
     </div>
   </section>
 
   <section class="cat radar" id="radar">
     <h2><span class="dot"></span>Emerging Tech Radar <span class="badge">open-ended</span></h2>
     <p class="sub">Whatever else is genuinely new and relevant this week — not a fixed topic list.</p>
-    <div class="item">
-      <div class="headline"><span class="date">Oct 12</span>IonQ to acquire zero-trust vendor Elisity in all-stock deal worth up to $1.3B</div>
-      <p>IonQ announced an agreement to acquire Elisity, which sells identity-based microsegmentation controlling which users, devices, workloads, and AI agents can communicate on enterprise networks. Up to $150 million of the value is performance-based earnouts; close is expected in Q4 pending regulatory approval. IonQ says the combined roadmap would add cryptographic inventory and risk data to Elisity's platform, tying zero trust to post-quantum and QKD work. Deal terms and customer figures are company-reported. Relevant as a signal that quantum-hardware vendors are moving into network-security products aimed at the same buyers as PQC migration.</p>
-      <div class="src"><a href="https://ionq.com/news/ionq-to-acquire-elisity-to-accelerate-zero-trust-for-the-quantum-era" target="_blank">IonQ</a> &middot; <a href="https://quantumcomputingreport.com/ionq-to-acquire-elisity-for-up-to-1-3-billion-to-integrate-zero-trust-with-post-quantum-cybersecurity/" target="_blank">Quantum Computing Report</a> &middot; <a href="https://www.govconwire.com/?p=346154" target="_blank">GovConWire</a></div>
-    </div>
-    <div class="item">
-      <div class="headline"><span class="date">Oct 14</span>India's DRDO tests quantum key distribution on a live weapons-test range network</div>
-      <p>DRDO said it configured and tested a QKD platform on the live network of the dynamic test ranges at the Proof &amp; Experimental Establishment, Chandipur, to protect telemetry from artillery and armoured-weapon trials; Bengaluru-based Taqbit Labs is the production partner. DRDO claims eavesdropping detection and &ldquo;unconditional&rdquo; security; coverage is largely rewrites of DRDO's statement, with no independent test data published. An earlier July 2026 fibre trial reportedly achieved roughly 5 kbps secure key rate over 100 km. QKD only distributes keys and does not replace PQC for most deployments, but it shows foreign militaries fielding quantum-secured links.</p>
-      <div class="src"><a href="https://www.gktoday.in/drdo-tests-quantum-key-distribution-platform/" target="_blank">GKToday</a> &middot; <a href="https://swarajyamag.com/defence/india-advances-quantum-secure-defence-communications-as-drdo-successfully-tests-qkd-platform-in-live-network" target="_blank">Swarajya</a> &middot; <a href="https://indiatvnews.com/news/india/drdo-successfully-tests-quantum-technology-how-it-could-boost-india-s-data-security-2026-10-14-1056928" target="_blank">India TV</a></div>
+    <div class="item empty">
+      <p>No significant new emerging-tech developments verified for Oct 19&ndash;26 across quantum, free-space optics, AI-enabled networking, edge compute, or non-terrestrial networks; searches surfaced only older or undated material. Last week&rsquo;s IonQ&ndash;Elisity acquisition (Oct 12) and DRDO QKD range trial (Oct 14) remain the latest verified items.</p>
     </div>
   </section>
 
   <footer>
-    Static snapshot &middot; compiled October 19, 2026 from public web search of standards bodies, defense-tech press, and vendor sources &middot; not auto-refreshing &middot; updated weekly
+    Static snapshot &middot; compiled October 26, 2026 from public web search of standards bodies, defense-tech press, and vendor sources &middot; not auto-refreshing &middot; updated weekly
   </footer>
 
 </div>
