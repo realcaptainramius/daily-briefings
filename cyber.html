@@ -71,7 +71,7 @@
   <header>
     <div class="backlink"><a href="https://news.davidvasek.work">&larr; All briefings</a></div>
     <h1>Cybersecurity Daily Briefing</h1>
-    <div class="meta">Compiled <strong>Tuesday, October 27, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
+    <div class="meta">Compiled <strong>Wednesday, October 28, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
     <div class="toc">
       <a href="#breaches">Breaches</a>
       <a href="#vulns">Vulnerabilities</a>
@@ -82,12 +82,17 @@
       <a href="#market">Market</a>
     </div>
     <div class="note">
-      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers Oct 20&ndash;27. Items older than seven days (before Oct 20) were removed, including the Oct 19 OVHcloud CLI tampering and Reuters AI-agent intrusion items. Ransomware leak-site listings are the groups&rsquo; own claims and are labeled unverified. Direct access to publisher sites was blocked, so details rest on search summaries, and some counts and CVE details differ between outlets.
+      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers Oct 21&ndash;28. Items older than seven days (before Oct 21) were removed, including the Oct 20 CISA Plex KEV batch, the SafePay advisory item and the Google Cloud London outage. Ransomware leak-site listings are the groups&rsquo; own claims and are labeled unverified. Searches for Oct 28 news and for government, vendor and market items found nothing new and verifiable. Direct access to publisher sites was blocked, so details rest on search summaries, and some counts and CVE details differ between outlets.
     </div>
   </header>
 
   <section class="company breaches" id="breaches">
     <h2><span class="dot"></span>Breaches &amp; Incidents</h2>
+    <div class="item">
+      <div class="headline"><span class="date">Oct 27</span>Warp, ENGIE and DreamHost report separate incidents</div>
+      <p>BleepingComputer&rsquo;s Oct 27 listings say agent decision logs and telemetry from Warp&rsquo;s agentic development environment were exposed in an attack on a third-party vendor, and that ENGIE disclosed customer data taken through a marketing platform used by business partners (ENGIE says internal systems were not breached). SecurityWeek lists DreamHost resetting email and FTP passwords after an unexplained incident affecting some systems. All three come from search-summary listings; counts, scope and exact publication dates were not confirmed.</p>
+      <div class="src"><a href="https://www.bleepingcomputer.com/news/" target="_blank">BleepingComputer</a> &middot; <a href="https://www.securityweek.com/news/" target="_blank">SecurityWeek</a></div>
+    </div>
     <div class="item">
       <div class="headline"><span class="date">Oct 25</span>Qilin ransomware group lists law firm White &amp; Case on its leak site (unverified claim)</div>
       <p>An automated leak-site tracker (HookPhish) reports White &amp; Case was listed on the Qilin ransomware leak site on Oct 25. This is the group&rsquo;s claim; no confirmation from the firm or evidence of data theft was seen.</p>
@@ -103,6 +108,11 @@
   <section class="company vulns" id="vulns">
     <h2><span class="dot"></span>Vulnerabilities &amp; Exploits</h2>
     <div class="item">
+      <div class="headline"><span class="date">Oct 27</span>Patches: Tailscale SSH flaws, Brotli decoder bug, HPE Aruba, Microsoft eMudhra certificate update</div>
+      <p>Search-summary listings from BleepingComputer and SecurityWeek on Oct 27 mention Tailscale patching almost a dozen flaws, including SSH issues that could allow root privilege escalation; a Brotli decoder flaw prompting patches across Microsoft, Node.js and Python packages that can lead to code execution; HPE Aruba fixing dozens of flaws including eight max-severity ones; and Microsoft out-of-band Windows updates for certificates tied to compromised eMudhra certificate authority keys. CVE IDs, scores and exploitation status were not seen, and the SecurityWeek page mixed in older headlines, so dates are unconfirmed.</p>
+      <div class="src"><a href="https://www.bleepingcomputer.com/news/" target="_blank">BleepingComputer</a> &middot; <a href="https://www.securityweek.com/news/" target="_blank">SecurityWeek</a></div>
+    </div>
+    <div class="item">
       <div class="headline"><span class="date">Oct 26</span>CISA adds two PHP flaws (&ldquo;PHP2Shell&rdquo;) to KEV</div>
       <p>CISA added CVE-2026-109618 and CVE-2026-109619, two PHP flaws that can allow unauthenticated remote code execution under high-complexity conditions, to its Known Exploited Vulnerabilities catalog, with a federal patch deadline reported as Thursday (Oct 29). Coverage says the PHP team patched them Oct 21 and that Amazon Threat Intelligence saw attackers targeting them four days before the patches. Details come from search summaries; the CISA alert text was not reviewed.</p>
       <div class="src"><a href="https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog" target="_blank">CISA</a> &middot; <a href="https://securityaffairs.com/201840/security/u-s-cisa-adds-php-flaws-php2shell-to-its-known-exploited-vulnerabilities-catalog.html" target="_blank">Security Affairs</a> &middot; <a href="https://bleepingcomputer.com/news/security/cisa-confirms-php2shell-vulnerabilities-now-exploited-in-attacks" target="_blank">BleepingComputer</a></div>
@@ -112,11 +122,6 @@
       <p>CISA&rsquo;s Oct 23 alert, seen via a search summary, adds CVE-2026-114625, a SQL injection flaw in Arista VeloCloud Orchestrator, citing evidence of active exploitation. The Hacker News reports a Collabora Online Built-in CODE Server flaw was added in the same batch; the CISA alert listed one entry, so counts differ between outlets. Deadlines and CVSS scores were not reviewed.</p>
       <div class="src"><a href="https://www.cisa.gov/news-events/alerts/2026/10/23/cisa-adds-one-known-exploited-vulnerability-catalog" target="_blank">CISA</a> &middot; <a href="https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html" target="_blank">The Hacker News</a></div>
     </div>
-    <div class="item">
-      <div class="headline"><span class="date">Oct 20</span>CISA adds six exploited flaws to KEV, including four in Plex Media Server</div>
-      <p>CISA&rsquo;s Oct 20 alert, seen via a search summary of its title and a forum report, adds six entries: four Plex Media Server flaws, CVE-2026-106931 in EG Secure Solutions SiteGuard Server Edition and CVE-2026-110936 in Siemens Software Center. Separate coverage describes Plex servers hijacked to run crypto miners. Remediation deadlines, CVSS scores and exploitation details were not reviewed.</p>
-      <div class="src"><a href="https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog" target="_blank">CISA</a> &middot; <a href="https://archyde.com/plex-media-server-setups-hijacked-by-attackers-deploying-crypto-miners" target="_blank">Archyde (Plex)</a></div>
-    </div>
   </section>
 
   <section class="company threatactors" id="threatactors">
@@ -125,11 +130,6 @@
       <div class="headline"><span class="date">Oct 26&ndash;27</span>Reports: ransomware affiliates using AI agents; Storm-0940 abusing Microsoft 365 tenants</div>
       <p>Check Point&rsquo;s Oct 26 threat report, per a search summary, says INC and The Gentlemen ransomware affiliates used AI agents in human-approved attacks on 62 organizations through remote-access systems and stolen credentials. A GBHackers article dated Oct 27 reports Microsoft attributed a campaign against more than 2,250 tenants to China-aligned Storm-0940 using an open-source agentic framework. Both rest on single secondary summaries; the underlying reports were not reviewed.</p>
       <div class="src"><a href="https://research.checkpoint.com/2026/26th-october-threat-intelligence-report/" target="_blank">Check Point Research</a> &middot; <a href="https://gbhackers.com/connectwise-cloud-backup/" target="_blank">GBHackers</a></div>
-    </div>
-    <div class="item">
-      <div class="headline"><span class="date">Oct 20</span>Reported CISA/FBI advisory: SafePay ransomware has hit 600+ critical-infrastructure organizations</div>
-      <p>BleepingComputer, CyberSecurityNews and GBHackers report a joint CISA/FBI advisory saying SafePay actors have compromised at least 600 organizations since 2024, exploiting VPNs and also targeting backup systems to block recovery. The advisory text itself was not found in search, so the date and counts rest on secondary summaries.</p>
-      <div class="src"><a href="https://www.bleepingcomputer.com/news/security/cisa-and-fbi-safepay-ransomware-has-hit-over-600-critical-infrastructure-organizations/" target="_blank">BleepingComputer</a> &middot; <a href="https://gbhackers.com/safepay-ransomware-attack" target="_blank">GBHackers</a></div>
     </div>
   </section>
 
@@ -149,10 +149,8 @@
 
   <section class="company cloud" id="cloud">
     <h2><span class="dot"></span>Cloud &amp; Infrastructure Security</h2>
-    <div class="item">
-      <div class="headline"><span class="date">Oct 20</span>Google Cloud power event causes europe-west2-b outage affecting UK services</div>
-      <p>The Register reports Google Cloud attributed an outage in its europe-west2-b (London) zone to a power event; the status page showed normal service for most customers by 14:03 UTC. Secondary coverage names Lloyds, HSBC, Royal Mail and Revolut as affected. This is an availability incident, not a reported security breach. Only search summaries were seen.</p>
-      <div class="src"><a href="https://theregister.com/paas-and-iaas/2026/10/20/google-cloud-says-a-power-event-caused-todays-outage/5304160" target="_blank">The Register</a></div>
+    <div class="item empty">
+      <p>No significant new developments in the past week.</p>
     </div>
   </section>
 
@@ -166,7 +164,7 @@
   </section>
 
   <footer>
-    Static snapshot &middot; compiled Tuesday, October 27, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
+    Static snapshot &middot; compiled Wednesday, October 28, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
   </footer>
 
 </div>
