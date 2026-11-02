@@ -71,7 +71,7 @@
   <header>
     <div class="backlink"><a href="https://news.davidvasek.work">&larr; All briefings</a></div>
     <h1>Cybersecurity Daily Briefing</h1>
-    <div class="meta">Compiled <strong>Friday, October 30, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
+    <div class="meta">Compiled <strong>Monday, November 2, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
     <div class="toc">
       <a href="#breaches">Breaches</a>
       <a href="#vulns">Vulnerabilities</a>
@@ -82,7 +82,7 @@
       <a href="#market">Market</a>
     </div>
     <div class="note">
-      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers Oct 23&ndash;30. Items older than seven days (before Oct 23) were removed, including the Oct 22 Everest/PwC leak-site claim. Ransomware leak-site listings are the groups&rsquo; own claims and are labeled unverified. Searches for Oct 28&ndash;30 news and for government, vendor, cloud and market items found nothing else new and verifiable. Publisher sites could not be fetched, so details rest on search summaries, and some counts and CVE details differ between outlets.
+      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers Oct 26&ndash;Nov 2. Items older than seven days (before Oct 26) were removed, including the Oct 25 Qilin/White &amp; Case leak-site claim, the Oct 23 Arista VeloCloud KEV item and the Oct 25 Opsin funding item. Ransomware leak-site listings are the groups&rsquo; own claims and are labeled unverified. Nothing dated Oct 31&ndash;Nov 2 was verified; searches for government, vendor, cloud and market items found nothing else new and verifiable. Publisher sites could not be fetched, so details rest on search summaries, and some counts, CVE details and dates differ between outlets.
     </div>
   </header>
 
@@ -99,14 +99,19 @@
       <div class="src"><a href="https://www.bleepingcomputer.com/news/" target="_blank">BleepingComputer</a> &middot; <a href="https://www.securityweek.com/news/" target="_blank">SecurityWeek</a></div>
     </div>
     <div class="item">
-      <div class="headline"><span class="date">Oct 25</span>Qilin ransomware group lists law firm White &amp; Case on its leak site (unverified claim)</div>
-      <p>An automated leak-site tracker (HookPhish) reports White &amp; Case was listed on the Qilin ransomware leak site on Oct 25. This is the group&rsquo;s claim; no confirmation from the firm or evidence of data theft was seen.</p>
-      <div class="src"><a href="https://www.hookphish.com/blog/ransomware-group-qilin-hits-white-and-case/" target="_blank">HookPhish</a></div>
+      <div class="headline"><span class="date">Oct 27</span>Sony Network Communications discloses breach of about 2.59M So-net and plala records</div>
+      <p>Multiple outlets (BleepingComputer, SecurityWeek, TechRadar, Help Net Security) report Sony disclosed on Oct 27 that records of 2,585,481 accounts (2,141,986 So-net and 443,495 plala) were exposed, including names, phone numbers, email addresses, user IDs, birth dates and gender. Bank details appeared in 16 records, and passwords for 54,401 email addresses were reportedly exposed; Sony says card numbers were not affected and has not said how attackers got in. One report puts initial access at Oct 19. Counts are records, not unique people; details are from search summaries.</p>
+      <div class="src"><a href="https://bleepingcomputer.com/news/security/sony-isp-subsidiary-data-breach-exposes-25-million-customer-records" target="_blank">BleepingComputer</a> &middot; <a href="https://securityweek.com/hackers-steal-2-6-million-records-from-sonys-japanese-isp-so-net" target="_blank">SecurityWeek</a> &middot; <a href="https://www.helpnetsecurity.com/?p=389402" target="_blank">Help Net Security</a></div>
     </div>
   </section>
 
   <section class="company vulns" id="vulns">
     <h2><span class="dot"></span>Vulnerabilities &amp; Exploits</h2>
+    <div class="item">
+      <div class="headline"><span class="date">Oct 29&ndash;30</span>CISA adds max-severity GitLab flaw CVE-2026-97229 to KEV; Cisco ASA/FTD VPN zero-day CVE-2026-76418 also listed</div>
+      <p>BleepingComputer and Security Affairs report CISA confirmed exploitation of CVE-2026-97229, a CVSS 10.0 GitLab remote code execution flaw triggered by a crafted regular expression in CI/CD configuration, fixed in GitLab 19.4.2, 19.3.x and 19.2.8 (sources disagree on the 19.3 point release). Most sources date the KEV addition Oct 29 with a federal deadline of Nov 1; some coverage is dated Oct 30. Shadowserver tracks nearly 2,800 exposed GitLab instances. Separately, Cisco patched CVE-2026-76418 (CVSS 8.6), an ASA/FTD SSL VPN flaw that lets an unauthenticated attacker force a reload and was exploited in the wild, also reported added to KEV Oct 29; patch dates differ (Oct 28 or 29) and Cisco had published no indicators of compromise as of Oct 30. Details are from search summaries; the CISA and vendor advisories were not reviewed. One roundup also lists Ivanti Connect Secure CVEs added to KEV on Oct 30; that is unconfirmed.</p>
+      <div class="src"><a href="https://bleepingcomputer.com/news/security/hackers-now-exploiting-max-severity-gitlab-flaw-in-attacks" target="_blank">BleepingComputer</a> &middot; <a href="https://securityaffairs.com/?p=202133" target="_blank">Security Affairs</a> &middot; <a href="https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html" target="_blank">The Hacker News</a> &middot; <a href="https://securityweek.com/attackers-exploit-second-cisco-firewall-vpn-zero-day-since-august" target="_blank">SecurityWeek</a></div>
+    </div>
     <div class="item">
       <div class="headline"><span class="date">Oct 28</span>Attackers reportedly scanning for recently patched Oracle E-Business Suite flaw (CVE-2026-101767)</div>
       <p>BleepingComputer reports, per a search summary, that threat intelligence firm Defused saw attackers scanning the internet for systems vulnerable to CVE-2026-101767 in Oracle E-Business Suite. Oracle had not tagged the flaw as exploited in the wild at the time. Severity and affected versions were not seen.</p>
@@ -126,11 +131,6 @@
       <div class="headline"><span class="date">Oct 26</span>CISA adds two PHP flaws (&ldquo;PHP2Shell&rdquo;) to KEV</div>
       <p>CISA added CVE-2026-109618 and CVE-2026-109619, two PHP flaws that can allow unauthenticated remote code execution under high-complexity conditions, to its Known Exploited Vulnerabilities catalog, with a federal patch deadline reported as Thursday (Oct 29). Coverage says the PHP team patched them Oct 21 and that Amazon Threat Intelligence saw attackers targeting them four days before the patches. Details come from search summaries; the CISA alert text was not reviewed.</p>
       <div class="src"><a href="https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog" target="_blank">CISA</a> &middot; <a href="https://securityaffairs.com/201840/security/u-s-cisa-adds-php-flaws-php2shell-to-its-known-exploited-vulnerabilities-catalog.html" target="_blank">Security Affairs</a> &middot; <a href="https://bleepingcomputer.com/news/security/cisa-confirms-php2shell-vulnerabilities-now-exploited-in-attacks" target="_blank">BleepingComputer</a></div>
-    </div>
-    <div class="item">
-      <div class="headline"><span class="date">Oct 23</span>CISA adds Arista VeloCloud Orchestrator SQL injection flaw to KEV</div>
-      <p>CISA&rsquo;s Oct 23 alert, seen via a search summary, adds CVE-2026-114625, a SQL injection flaw in Arista VeloCloud Orchestrator, citing evidence of active exploitation. The Hacker News reports a Collabora Online Built-in CODE Server flaw was added in the same batch; the CISA alert listed one entry, so counts differ between outlets. Deadlines and CVSS scores were not reviewed.</p>
-      <div class="src"><a href="https://www.cisa.gov/news-events/alerts/2026/10/23/cisa-adds-one-known-exploited-vulnerability-catalog" target="_blank">CISA</a> &middot; <a href="https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html" target="_blank">The Hacker News</a></div>
     </div>
   </section>
 
@@ -166,15 +166,13 @@
 
   <section class="company market" id="market">
     <h2><span class="dot"></span>Market Moves</h2>
-    <div class="item">
-      <div class="headline"><span class="date">Oct 25</span>AI-agent governance startup Opsin reportedly raises $21M</div>
-      <p>A Fintech.global weekly funding roundup dated Oct 25 says Opsin, which focuses on governing enterprise AI agents, raised $21 million in a round co-led by SYN Ventures and Race Capital. Only the roundup was seen, not a company release.</p>
-      <div class="src"><a href="https://fintech.global/2026/10/25/a-total-of-541m-was-raised-this-week-across-16-fintech-deals/" target="_blank">Fintech.global</a></div>
+    <div class="item empty">
+      <p>No significant new developments in the past week.</p>
     </div>
   </section>
 
   <footer>
-    Static snapshot &middot; compiled Friday, October 30, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
+    Static snapshot &middot; compiled Monday, November 2, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
   </footer>
 
 </div>
