@@ -71,7 +71,7 @@
   <header>
     <div class="backlink"><a href="https://news.davidvasek.work">&larr; All briefings</a></div>
     <h1>Cybersecurity Daily Briefing</h1>
-    <div class="meta">Compiled <strong>Tuesday, November 10, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
+    <div class="meta">Compiled <strong>Wednesday, November 11, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
     <div class="toc">
       <a href="#breaches">Breaches</a>
       <a href="#vulns">Vulnerabilities</a>
@@ -82,21 +82,31 @@
       <a href="#market">Market</a>
     </div>
     <div class="note">
-      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers Nov 3&ndash;10. Items older than seven days (ending before Nov 3) were removed: the Oct 29&ndash;Nov 2 Ivanti Connect Secure item and the Nov 2 Synology C3RB3R item. Ransomware listings are the groups&rsquo; or outlets&rsquo; own claims and unverified. Searches for anything dated Nov 6&ndash;10, and for government, vendor, cloud and market items, found nothing verifiable. Publisher sites could not be fetched, so details rest on search summaries.
+      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers Nov 4&ndash;11. Items older than seven days (ending before Nov 4) were removed: the Nov 3 3AM ransomware UK school item. Publisher, vendor and cisa.gov sites could not be fetched in this session, so all details rest on search summaries; CVE numbers, KEV dates and Patch Tuesday totals differ between sources and should be checked against CISA and vendor advisories.
     </div>
   </header>
 
   <section class="company breaches" id="breaches">
     <h2><span class="dot"></span>Breaches &amp; Incidents</h2>
     <div class="item">
-      <div class="headline"><span class="date">Nov 3</span>Reported: 3AM ransomware affiliate encrypts about 37 of nearly 50 machines at a UK school estate</div>
-      <p>A BleepingComputer listing dated Nov 3, seen via search summary, says a 3AM ransomware affiliate hit a UK school estate and encrypted around 37 of nearly 50 reachable machines, entering via an unmanaged host. The school group, data theft and ransom demands were not seen.</p>
-      <div class="src"><a href="https://www.bleepingcomputer.com/news/security/" target="_blank">BleepingComputer</a></div>
+      <div class="headline"><span class="date">Nov 9</span>Sega says 2.2M newsletter email addresses exposed in breach at mail provider Arara</div>
+      <p>Sega disclosed that a breach at Arara Inc., the Japanese email-delivery provider it uses for newsletters, exposed 2,196,044 email address records, 92,273 of which also held newsletter-delivery data. Sega says names, birth dates, addresses, phone numbers, card details and passwords were not included and Sega Accounts are unaffected; Arara reported the unauthorized access on Nov 1 and notified Sega on Nov 3. Sega warns of phishing risk and says this is separate from a Nov 2 Sega Fave incident. Seen via search summaries of press coverage.</p>
+      <div class="src"><a href="https://www.infosecurity-magazine.com/news/email-sega-customers-vendor-breach/" target="_blank">Infosecurity Magazine</a> &middot; <a href="https://automaton-media.com/en/news/sega-reports-over-2-19-million-email-addresses-were-compromised-in-cyberattack-on-its-third-party-provider-sega-accounts-not-affected/" target="_blank">Automaton</a> &middot; <a href="https://finalweapon.net/2026/11/09/sega-email-addresses-data-breach/" target="_blank">Final Weapon (Nov 9)</a></div>
+    </div>
+    <div class="item">
+      <div class="headline"><span class="date">Nov 10</span>Reported: Fireworks AI discloses breach via third-party cloud provider; Philippine SEC confirms breach</div>
+      <p>BleepingComputer reports, per a search summary, that AI inference startup Fireworks AI disclosed attackers reached its development machines after breaching a third-party cloud provider, accessing resource metadata, billing information and incomplete model weights and datasets for some customers. Separately, the Philippine Securities and Exchange Commission confirmed a breach of its digital platforms, without giving a count of affected users and saying no passwords leaked. Neither disclosure was reviewed directly.</p>
+      <div class="src"><a href="https://www.bleepingcomputer.com/news/security/fireworks-ai-discloses-new-breach-after-cloud-provider-hack/" target="_blank">BleepingComputer</a> &middot; <a href="https://philstar.com/headlines/2026/11/10/2569098/sec-confirms-data-breach-its-digital-platforms" target="_blank">Philstar (Nov 10)</a></div>
     </div>
   </section>
 
   <section class="company vulns" id="vulns">
     <h2><span class="dot"></span>Vulnerabilities &amp; Exploits</h2>
+    <div class="item">
+      <div class="headline"><span class="date">Nov 9&ndash;10</span>November Patch Tuesday fixes exploited Outlook flaw; Chrome zero-day patched; CISA adds batch to KEV</div>
+      <p>Microsoft&rsquo;s Nov 10 Patch Tuesday includes one exploited zero-day, an Outlook spoofing flaw (reported as CVE-2026-124194) that can leak NTLMv2 hashes; outlets report wildly different totals for the release (about 1,093 to 1,259 CVEs). Google fixed an exploited Chrome XML use-after-free (reported as CVE-2026-125350) on Nov 9, counted by outlets as the eighth Chrome zero-day of 2026. Reports say CISA added the Outlook and Chrome flaws, a Cisco BroadWorks XML parser flaw and others to KEV on Nov 10, and on Nov 9 or 10 added GPUStack, FreeSWITCH, IBM Aspera Faspex and the OpenSSH &ldquo;SSHole&rdquo; flaw (CVE-2026-123158, musl-based systems such as Alpine with PAM disabled), which watchTowr said on Nov 6 was being exploited by botnets and cryptominers. A SonicWall SonicOS SSLVPN flaw was reportedly added Nov 6. CVE numbers and dates come from search summaries and differ between sources.</p>
+      <div class="src"><a href="https://socradar.io/blog/november-2026-patch-tuesday-zero-day/" target="_blank">SOCRadar</a> &middot; <a href="https://thehackernews.com/2026/11/google-issues-chrome-security-update.html" target="_blank">The Hacker News</a> &middot; <a href="https://securityonline.info/cisa-kev-six-vulnerabilities-november-2026/" target="_blank">SecurityOnline</a> &middot; <a href="https://www.esecurityplanet.com/vulnerabilities/news-cisa-kev-gpustack-freeswitch-openssh-ibm-november-2026/" target="_blank">eSecurity Planet</a> &middot; <a href="https://bleepingcomputer.com/news/security/hackers-exploit-sshole-openssh-flaw-to-breach-linux-systems" target="_blank">BleepingComputer</a> &middot; <a href="https://www.cisa.gov/news-events/alerts/2026/11/06/cisa-adds-one-known-exploited-vulnerability-catalog" target="_blank">CISA (Nov 6)</a></div>
+    </div>
     <div class="item">
       <div class="headline"><span class="date">Nov 5</span>Reported: Zyxel switch attacks exploited a different zero-day than the patched CVE-2026-7273, per Binarly</div>
       <p>A SecurityWeek item dated Nov 5, seen via search summary, says CISA added CVE-2026-7273 to its KEV catalog, but Binarly found the Zyxel switch compromises actually used a previously unknown flaw and that the CVE-2026-7273 patch did not stop it. The summary also mentions GreyNoise and Acronis reporting on a Chinese actor (&ldquo;Red Heron&rdquo;) targeting Gitea instances; how that relates to the Zyxel activity was unclear and is not asserted here. The article itself and any Zyxel or CISA advisory were not reviewed.</p>
@@ -106,41 +116,56 @@
 
   <section class="company threatactors" id="threatactors">
     <h2><span class="dot"></span>Threat Actor &amp; APT Activity</h2>
-    <div class="item empty">
-      <p>No significant new developments in the past week.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Nov 9</span>Roundup: APT29 watering-hole campaign pushes mobile exploit chains; Turla seen with new &ldquo;Cereal&rdquo; toolset</div>
+      <p>Search summaries tied to The Hacker News&rsquo; Nov 9 weekly recap and related coverage say Russia&rsquo;s APT29 is compromising legitimate websites to push iOS and Android exploit chains at visitors (attributed to Sekoia reporting), and that Turla is using a previously undocumented espionage toolset called Cereal to pull email from government Exchange servers. India&rsquo;s CERT-In also flagged an AI-assisted actor it tracks as Crafty Falcon targeting the banking and insurance sector. The underlying vendor reports and their exact publication dates were not reviewed; attributions are the researchers&rsquo; own.</p>
+      <div class="src"><a href="https://thehackernews.com/2026/11/weekly-recap-sshole-exploited-apt-root.html" target="_blank">The Hacker News weekly recap</a> &middot; <a href="https://research.checkpoint.com/2026/9th-november-threat-intelligence-report/" target="_blank">Check Point (Nov 9)</a></div>
     </div>
   </section>
 
   <section class="company gov" id="gov">
     <h2><span class="dot"></span>Government &amp; Regulatory</h2>
-    <div class="item empty">
-      <p>No significant new developments in the past week.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Nov 10</span>Singapore awards S$5.6M to 13 firms under CyberCall and opens CyberCall 2026</div>
+      <p>The Cyber Security Agency of Singapore awarded about S$5.6 million to 13 companies at CyberSG Innovation Day on Nov 10 for work on AI-related threats, quantum risk and critical-infrastructure security, and opened its CyberCall 2026 round. Seen via search summaries of press coverage and one awardee&rsquo;s release.</p>
+      <div class="src"><a href="https://www.techedt.com/singapore-awards-s5-6-million-to-13-cybersecurity-firms-as-cybercall-2026-opens" target="_blank">Tech Edition</a> &middot; <a href="https://www.asiaone.com/singapore/singapore-cybersecurity-challenges-innovation-cybercall" target="_blank">AsiaOne</a></div>
     </div>
   </section>
 
   <section class="company vendors" id="vendors">
     <h2><span class="dot"></span>Security Vendor News</h2>
-    <div class="item empty">
-      <p>No significant new developments in the past week.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Nov 4</span>Reported: CrowdStrike launches sovereign cloud in Saudi Arabia</div>
+      <p>A search summary of CrowdStrike&rsquo;s newsroom lists a Nov 4 launch of a sovereign cloud in Saudi Arabia, alongside undated items on new AWS integrations (Amazon Bedrock AgentCore and ECS). A single-source report that CrowdStrike agreed to pay nearly $500 million for two AI security startups could not be corroborated and is not asserted here. Release text was not reviewed.</p>
+      <div class="src"><a href="https://www.crowdstrike.com/en-us/press-releases/" target="_blank">CrowdStrike press releases</a></div>
     </div>
   </section>
 
   <section class="company cloud" id="cloud">
     <h2><span class="dot"></span>Cloud &amp; Infrastructure Security</h2>
-    <div class="item empty">
-      <p>No significant new developments in the past week.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Nov 9</span>Wiz: attacker abused Qubole&rsquo;s trusted AWS access to reach customer accounts</div>
+      <p>Wiz, working with Sentra and Mandiant, reported that a threat actor used IAM credentials tied to an AWS account associated with data-lake platform Qubole (owned by Idera) between Oct 14 and Oct 26 to assume customer roles that trusted Qubole, then read Lambda environment variables, Secrets Manager and SSM Parameter Store values, stealing customers&rsquo; AWS keys and Entra ID and Okta client secrets, with some opportunistic S3 downloads. A separate Oct 8&ndash;11 wave used customers&rsquo; own access keys set up for Qubole. How the credentials were obtained has not been disclosed; AWS said its services operated as designed. Seen via search summaries of the Wiz post and press coverage.</p>
+      <div class="src"><a href="https://www.wiz.io/blog/qubole-cross-account-access-abused-in-the-wild" target="_blank">Wiz</a> &middot; <a href="https://thehackernews.com/2026/11/hackers-exploit-quboles-trusted-aws.html" target="_blank">The Hacker News</a> &middot; <a href="https://www.theregister.com/security/2026/11/09/attackers-backdoor-trusted-aws-integrations-to-steal-secrets/5308553" target="_blank">The Register (Nov 9)</a></div>
     </div>
   </section>
 
   <section class="company market" id="market">
     <h2><span class="dot"></span>Market Moves</h2>
-    <div class="item empty">
-      <p>No significant new developments in the past week.</p>
+    <div class="item">
+      <div class="headline"><span class="date">Nov 10</span>Reported: Goldman Sachs leads $80M Series B for Daylight Security</div>
+      <p>A search summary says Goldman Sachs&rsquo; growth equity arm led an $80 million Series B for New York-based Daylight Security, at a post-money valuation of about $400 million and $120 million raised in total. The company announcement was not reviewed.</p>
+      <div class="src"><a href="https://www.gurufocus.com/news/9188488/goldman-sachs-leads-80-million-series-b-round-for-daylight-security" target="_blank">GuruFocus</a></div>
+    </div>
+    <div class="item">
+      <div class="headline"><span class="date">Nov 5</span>Reported: Cybersecurity stocks sell off with software&rsquo;s AI winners</div>
+      <p>Market coverage, seen via search summaries, says CrowdStrike fell about 9% and Okta about 10% on Nov 5 as investors sold software names, and that Palo Alto Networks and CrowdStrike were each down about 17% and Zscaler about 18% for the week to the Nov 5 close. Palo Alto Networks reports fiscal Q1 results on Nov 18. Figures were not checked against exchange data.</p>
+      <div class="src"><a href="https://247wallst.com/investing/2026/11/05/palantir-tumbles-10-crowdstrike-sinks-9-as-wall-street-dumps-softwares-ai-winners-okta-drops-10" target="_blank">24/7 Wall St (Nov 5)</a> &middot; <a href="https://finance.yahoo.com/markets/stocks/articles/palo-alto-networks-crowdstrike-sink-235225172.html" target="_blank">Yahoo Finance</a></div>
     </div>
   </section>
 
   <footer>
-    Static snapshot &middot; compiled Tuesday, November 10, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
+    Static snapshot &middot; compiled Wednesday, November 11, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
   </footer>
 
 </div>
