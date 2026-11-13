@@ -71,7 +71,7 @@
   <header>
     <div class="backlink"><a href="https://news.davidvasek.work">&larr; All briefings</a></div>
     <h1>Cybersecurity Daily Briefing</h1>
-    <div class="meta">Compiled <strong>Thursday, November 12, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
+    <div class="meta">Compiled <strong>Friday, November 13, 2026</strong> &middot; Breaches, Vulnerabilities &amp; Exploits, Threat Actors, Government &amp; Regulatory, Vendor News, Cloud Security, Market Moves</div>
     <div class="toc">
       <a href="#breaches">Breaches</a>
       <a href="#vulns">Vulnerabilities</a>
@@ -82,12 +82,27 @@
       <a href="#market">Market</a>
     </div>
     <div class="note">
-      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers Nov 5&ndash;12. Items older than seven days (ending before Nov 5) were removed: the Nov 4 CrowdStrike Saudi sovereign cloud item. Publisher, vendor and cisa.gov sites could not be fetched in this session, so all details rest on search summaries; CVE numbers, KEV dates and Patch Tuesday totals differ between sources and should be checked against CISA and vendor advisories.
+      This is a static snapshot compiled from official/vendor and press sources &mdash; it does not auto-refresh. This run covers Nov 6&ndash;13. Items older than seven days (ending before Nov 6) were removed: the Nov 5 Zyxel/Binarly zero-day report and the Nov 5 cybersecurity stock selloff. Publisher, vendor and cisa.gov sites could not be fetched in this session, so all details rest on search summaries; CVE numbers and KEV dates should be checked against CISA and vendor advisories, and some source links point to outlet sections because exact article URLs were not seen. An unconfirmed ransomware claim against Malaysia&rsquo;s Ministry of Health and a Check Point Gaia exploited-flaw report with an unverifiable CVE were left out.
     </div>
   </header>
 
   <section class="company breaches" id="breaches">
     <h2><span class="dot"></span>Breaches &amp; Incidents</h2>
+    <div class="item">
+      <div class="headline"><span class="date">Nov 12</span>TSMC says employee data leaked via an outside cloud provider; seller claims 46,000 records</div>
+      <p>TSMC said data on some current and former employees appeared online. The data matched records held by an unnamed outside cloud provider, and TSMC found no compromise of its own systems. A seller claims 6.9GB and about 46,000 records, including names, national IDs, addresses and bank accounts, priced at 3 BTC with a one-week deadline. These are the seller&rsquo;s claims; TSMC has not confirmed the count or the provider. Seen via search summaries, largely from aggregator sites.</p>
+      <div class="src"><a href="https://cybernews.com/security/tsmc-chip-giant-employee-data-breach/" target="_blank">Cybernews</a> &middot; <a href="https://cybersecuritynews.com/tsmc-data-breach/" target="_blank">Cyber Security News</a></div>
+    </div>
+    <div class="item">
+      <div class="headline"><span class="date">Nov 11&ndash;12</span>Attackers abuse cloud ScreenConnect at MSPs to push &ldquo;SCKit&rdquo; backdoor to 288 endpoints</div>
+      <p>Huntress reports that on Nov 11 attackers used ScreenConnect&rsquo;s Run Command feature in cloud-hosted instances at six or more managed service providers to push rogue clients and an &ldquo;SCKit&rdquo; backdoor toolkit to 288 endpoints across 48 organizations within 90 minutes. The likely entry point was RMM+, a third-party ScreenConnect extension, and ConnectWise disabled five extensions across about 400 partner environments. Some outlets call SCKit worm-like, but Huntress and Blackpoint did not see it spread successfully to patched clients. Seen via search summaries.</p>
+      <div class="src"><a href="https://www.huntress.com/blog/sckit-worm-rogue-screenconnect" target="_blank">Huntress</a> &middot; <a href="https://www.bleepingcomputer.com/" target="_blank">BleepingComputer</a> &middot; <a href="https://www.securityweek.com/" target="_blank">SecurityWeek</a></div>
+    </div>
+    <div class="item">
+      <div class="headline"><span class="date">Nov 11</span>Apify rotates secrets after internal-systems breach; Fullerton Health server for Singapore migrant-worker care plan breached</div>
+      <p>Web-scraping platform Apify said attackers had unauthorized access to internal systems on Nov 9&ndash;10. It rotated critical secrets, revoked some third-party OAuth connections including GitHub, and told users to reset 2FA. Apify says it found no sign account data was affected, while Risky Bulletin reportedly says customer accounts were accessed. In Singapore, Fullerton Health disclosed a breach, discovered Oct 31, of a server supporting the Ministry of Manpower&rsquo;s Migrant Worker Primary Care Plan. Names, foreign ID numbers, birth dates and contact details may have been exposed, but no medical or financial data, and no count was given. Seen via search summaries only.</p>
+      <div class="src"><a href="https://www.bleepingcomputer.com/news/security/apify-rotates-api-tokens-prompts-2fa-resets-after-breach/" target="_blank">BleepingComputer</a> &middot; <a href="https://www.malaymail.com/news/singapore" target="_blank">Malay Mail (Nov 11)</a></div>
+    </div>
     <div class="item">
       <div class="headline"><span class="date">Nov 11</span>Maersk confirms breach of a legacy system; WhiteArmor group demands $5M</div>
       <p>Maersk disclosed on Nov 11 a breach of a legacy system inherited through an acquisition, saying it is confined to one local system, has not affected other systems or customer API/EDI connections, and that findings so far strongly suggest no sensitive data was disclosed. The WhiteArmor extortion group claims about 100GB from the LF Logistics platform Maersk bought in 2022 and is demanding $5 million in bitcoin; Maersk has not tied the incident to WhiteArmor, and reports conflict on what was taken. Seen via search summaries only.</p>
@@ -105,7 +120,7 @@
     </div>
     <div class="item">
       <div class="headline"><span class="date">Nov 12</span>Reported: 4,837 hijacked GitHub accounts used to plant CI secret stealer in 1,800+ repositories</div>
-      <p>The Hacker News, citing Aikido Security, reports an attacker used thousands of hijacked GitHub accounts to plant a CI secret-stealing workflow in more than 1,806 repositories, and later appended a correction on related infrastructure. Only one outlet&rsquo;s report was seen, via search summary; the figures are uncorroborated.</p>
+      <p>The Hacker News, citing Aikido Security, reports an attacker used thousands of hijacked GitHub accounts to plant a CI secret-stealing workflow in more than 1,806 repositories, and later appended a correction on related infrastructure. Help Net Security (Nov 12) adds that the campaign rewrites AWS role trust policies to allow any account and adds Azure federated credentials that survive secret rotation. Only one outlet&rsquo;s report was seen, via search summary; the figures are uncorroborated.</p>
       <div class="src"><a href="https://thehackernews.com/2026/11/4837-hijacked-github-accounts-ran-ci.html" target="_blank">The Hacker News (Nov 12)</a></div>
     </div>
     <div class="item">
@@ -123,6 +138,16 @@
   <section class="company vulns" id="vulns">
     <h2><span class="dot"></span>Vulnerabilities &amp; Exploits</h2>
     <div class="item">
+      <div class="headline"><span class="date">Nov 8&ndash;12</span>N-able N-central zero-day exploited within hours of public PoC, even on latest hotfix</div>
+      <p>BleepingComputer reports researcher Sean Bales released &ldquo;4EverAble2Shell&rdquo; and &ldquo;Agent2Shell&rdquo; exploits claiming root on N-central appliances and SYSTEM on Windows agents. Attackers used them within hours to drop cryptominers on at least 21 systems, 19 of them on N-able&rsquo;s latest hotfix. This follows the &ldquo;Able2Shell&rdquo; batch of alleged zero-days published Nov 8&ndash;9, after which N-able took hosted N-central offline on Nov 9 and shipped 2026.4 Hotfix 2 on Nov 10. Patch and CVE status for the new flaw is unconfirmed. Seen via search summaries only.</p>
+      <div class="src"><a href="https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/" target="_blank">BleepingComputer</a> &middot; <a href="https://www.tenable.com/" target="_blank">Tenable FAQ</a></div>
+    </div>
+    <div class="item">
+      <div class="headline"><span class="date">Nov 10&ndash;12</span>Critical Apache httpd and Red Hat Quay flaws fixed; unpatched Windows &ldquo;SignDrop&rdquo; privilege-escalation PoC published</div>
+      <p>Apache HTTP Server 2.4.71, released Nov 11, fixes a mod_http2 race condition (reported as CVE-2026-119618, CVSS 9.8 per Red Hat) allowing unauthenticated remote code execution on 2.4.55&ndash;2.4.70 with HTTP/2 enabled. No in-the-wild exploitation is reported. Red Hat Quay flaws reported as CVE-2026-123710 (CVSS 9.8) and CVE-2026-110697 (CVSS 9.9) can be chained to read, overwrite and inject images across a registry; fixes were merged Nov 11 and Quay.io is fixed, but sources disagree on self-hosted fix status. Researcher Abdelhamid Naceri published a Windows local privilege escalation to SYSTEM, dubbed SignDrop, on Nov 10; it has no CVE or patch and Microsoft has not confirmed it. No CISA KEV additions dated Nov 11&ndash;13 were found. CVE IDs come from search summaries.</p>
+      <div class="src"><a href="https://www.bitsight.com/" target="_blank">Bitsight</a> &middot; <a href="https://www.securityweek.com/" target="_blank">SecurityWeek</a> &middot; <a href="https://thehackernews.com/2026/11/" target="_blank">The Hacker News</a></div>
+    </div>
+    <div class="item">
       <div class="headline"><span class="date">Nov 10&ndash;11</span>Barracuda ESG flaws now exploited; Fortinet, Citrix, Ivanti and Git ship patches</div>
       <p>SecurityWeek reports attackers are chaining two Barracuda Email Security Gateway flaws patched Nov 2 (reported as CVE-2026-116606, auth bypass, and CVE-2026-111560, command injection) to gain root; CISA&rsquo;s Nov 10 KEV batch reportedly includes two Barracuda flaws plus Openwave Webtop. Fortinet published details of AI-assisted fixes it shipped in late October, with a SecurityWeek headline citing nearly 100 vulnerabilities; no exploitation was reported. Citrix and Ivanti patched critical and high-severity flaws, and Git fixed six flaws including a recursive-clone code-execution bug. No KEV additions dated Nov 11&ndash;12 were found. Seen via search summaries and headlines only; CVE IDs should be checked against vendor advisories.</p>
       <div class="src"><a href="https://www.securityweek.com/recently-patched-barracuda-vulnerabilities-exploited-in-attacks/" target="_blank">SecurityWeek</a> &middot; <a href="https://www.cisa.gov/news-events/alerts/2026/11/10/cisa-adds-six-known-exploited-vulnerabilities-catalog" target="_blank">CISA (Nov 10)</a> &middot; <a href="https://www.securityweek.com/fortinet-patches-nearly-100-vulnerabilities/" target="_blank">SecurityWeek</a> &middot; <a href="https://www.securityweek.com/citrix-ivanti-patch-critical-and-high-severity-vulnerabilities/" target="_blank">SecurityWeek</a> &middot; <a href="https://thehackernews.com/2026/11/git-patches-flaw-that-lets-malicious.html" target="_blank">The Hacker News</a></div>
@@ -132,15 +157,20 @@
       <p>Microsoft&rsquo;s Nov 10 Patch Tuesday includes one exploited zero-day, an Outlook spoofing flaw (reported as CVE-2026-124194) that can leak NTLMv2 hashes; outlets report wildly different totals for the release (about 1,093 to 1,259 CVEs). Google fixed an exploited Chrome XML use-after-free (reported as CVE-2026-125350) on Nov 9, counted by outlets as the eighth Chrome zero-day of 2026. Reports say CISA added the Outlook and Chrome flaws, a Cisco BroadWorks XML parser flaw and others to KEV on Nov 10, and on Nov 9 or 10 added GPUStack, FreeSWITCH, IBM Aspera Faspex and the OpenSSH &ldquo;SSHole&rdquo; flaw (CVE-2026-123158, musl-based systems such as Alpine with PAM disabled), which watchTowr said on Nov 6 was being exploited by botnets and cryptominers. A SonicWall SonicOS SSLVPN flaw was reportedly added Nov 6. CVE numbers and dates come from search summaries and differ between sources.</p>
       <div class="src"><a href="https://socradar.io/blog/november-2026-patch-tuesday-zero-day/" target="_blank">SOCRadar</a> &middot; <a href="https://thehackernews.com/2026/11/google-issues-chrome-security-update.html" target="_blank">The Hacker News</a> &middot; <a href="https://securityonline.info/cisa-kev-six-vulnerabilities-november-2026/" target="_blank">SecurityOnline</a> &middot; <a href="https://www.esecurityplanet.com/vulnerabilities/news-cisa-kev-gpustack-freeswitch-openssh-ibm-november-2026/" target="_blank">eSecurity Planet</a> &middot; <a href="https://bleepingcomputer.com/news/security/hackers-exploit-sshole-openssh-flaw-to-breach-linux-systems" target="_blank">BleepingComputer</a> &middot; <a href="https://www.cisa.gov/news-events/alerts/2026/11/06/cisa-adds-one-known-exploited-vulnerability-catalog" target="_blank">CISA (Nov 6)</a></div>
     </div>
-    <div class="item">
-      <div class="headline"><span class="date">Nov 5</span>Reported: Zyxel switch attacks exploited a different zero-day than the patched CVE-2026-7273, per Binarly</div>
-      <p>A SecurityWeek item dated Nov 5, seen via search summary, says CISA added CVE-2026-7273 to its KEV catalog, but Binarly found the Zyxel switch compromises actually used a previously unknown flaw and that the CVE-2026-7273 patch did not stop it. The summary also mentions GreyNoise and Acronis reporting on a Chinese actor (&ldquo;Red Heron&rdquo;) targeting Gitea instances; how that relates to the Zyxel activity was unclear and is not asserted here. The article itself and any Zyxel or CISA advisory were not reviewed.</p>
-      <div class="src"><a href="https://securityweek.com/zyxel-switch-hacks-blamed-on-patched-flaw-actually-exploited-a-zero-day" target="_blank">SecurityWeek</a></div>
-    </div>
   </section>
 
   <section class="company threatactors" id="threatactors">
     <h2><span class="dot"></span>Threat Actor &amp; APT Activity</h2>
+    <div class="item">
+      <div class="headline"><span class="date">Nov 12</span>US moves to seize $1.2B of North Korea&rsquo;s Binance theft and disrupts &ldquo;FaceStealer&rdquo; deepfake scheme</div>
+      <p>DOJ obtained court authority to seize or restrain more than $1.2 billion from the roughly $6 billion Binance theft around Oct 29, which the FBI attributes to North Korea&rsquo;s TraderTraitor. Agents also seized cloud infrastructure behind &ldquo;FaceStealer,&rdquo; attributed to APT38/BlueNoroff, which allegedly stole more than $400 million over 18 months by impersonating victims with a library of 900+ secretly recorded webcam videos. The FBI published an advisory on Nov 12. No charges were announced, and the funds are held under a seizure order, which does not transfer ownership. Seen via search summaries.</p>
+      <div class="src"><a href="https://www.ic3.gov/CSA/2026/261112.pdf" target="_blank">FBI advisory (Nov 12)</a> &middot; <a href="https://www.coindesk.com/" target="_blank">CoinDesk (Nov 12)</a> &middot; <a href="https://cyberscoop.com/" target="_blank">CyberScoop</a></div>
+    </div>
+    <div class="item">
+      <div class="headline"><span class="date">Nov 9&ndash;10</span>France blames Iran&rsquo;s IRGC for sabotage of supermarket refrigeration systems</div>
+      <p>France attributed an Oct 11&ndash;12 attack on refrigeration systems at about 700 stores, which reportedly pushed temperatures to 50&deg;C and caused 15&ndash;20 fires, to the IRGC&rsquo;s Shahid Kaveh unit. Foreign Minister Barrot summoned Iran&rsquo;s ambassador and is seeking EU sanctions, and Paris prosecutors requested arrest warrants for the unit leader and two deputies. Iran calls the accusations baseless. Seen via search summaries.</p>
+      <div class="src"><a href="https://www.aljazeera.com/" target="_blank">Al Jazeera (Nov 9)</a> &middot; <a href="https://www.nbcnews.com/" target="_blank">NBC News</a></div>
+    </div>
     <div class="item">
       <div class="headline"><span class="date">Nov 9&ndash;10</span>Roundup: APT29 watering-hole campaign pushes mobile exploit chains; Turla seen with new &ldquo;Cereal&rdquo; toolset</div>
       <p>Search summaries tied to The Hacker News&rsquo; Nov 9 weekly recap and related coverage say Russia&rsquo;s APT29 is compromising legitimate websites to push iOS and Android exploit chains at visitors (attributed to Sekoia reporting), and that Turla is using a previously undocumented espionage toolset called Cereal to pull email from government Exchange servers, which ESET announced in a Nov 10 release on EU and NATO email espionage. India&rsquo;s CERT-In also flagged an AI-assisted actor it tracks as Crafty Falcon targeting the banking and insurance sector. The underlying vendor reports and their exact publication dates were not reviewed; attributions are the researchers&rsquo; own.</p>
@@ -150,6 +180,11 @@
 
   <section class="company gov" id="gov">
     <h2><span class="dot"></span>Government &amp; Regulatory</h2>
+    <div class="item">
+      <div class="headline"><span class="date">Nov 11&ndash;12</span>Operation Endgame hits Gootloader, CastleRAT and StealC; Palantir CISO reportedly nominated to lead CISA</div>
+      <p>Europol announced on Nov 12 a new Operation Endgame phase with nine countries that seized about 235 servers and 257 domains and identified credentials of 6.4 million victims; DOJ and the FBI took down a Gootloader botnet active since 2018 (25,000+ infected systems). No arrests were reported. Separately, a National CIO Review item dated Nov 11 says the White House nominated Palantir CISO Michael LoSapio to lead CISA; no White House or Senate record was reviewed. Seen via search summaries only.</p>
+      <div class="src"><a href="https://www.helpnetsecurity.com/2026/11/12/" target="_blank">Help Net Security (Nov 12)</a> &middot; <a href="https://therecord.media/" target="_blank">The Record</a> &middot; <a href="https://nationalcioreview.com/articles-insights/extra-bytes/white-house-nominates-palantir-security-chief-to-lead-cisa/" target="_blank">National CIO Review</a></div>
+    </div>
     <div class="item">
       <div class="headline"><span class="date">Nov 6&ndash;10</span>Reported: US plans to bar Chinese telecoms from direct access to US phone numbers; CISA 2015 info-sharing law lapses Dec 11</div>
       <p>A Nov 6 threat briefing relaying Reuters reporting says US regulators plan to bar Chinese telecom firms from direct access to US phone numbers; the underlying Reuters article was not reviewed. Nextgov/FCW reports Congress returns from the midterms facing cyber deadlines, including the Dec 11 expiry of the Cybersecurity Information Sharing Act of 2015, which the House NDAA would extend through 2035. Seen via search summaries only.</p>
@@ -188,6 +223,11 @@
   <section class="company market" id="market">
     <h2><span class="dot"></span>Market Moves</h2>
     <div class="item">
+      <div class="headline"><span class="date">Nov 9&ndash;12</span>IBM reportedly buys AuthMind; Bay ($50M) and WhiteMatter ($20M) raise; Qualys shares drop on Q4 guide</div>
+      <p>ID Tech Digest reports IBM is acquiring identity-security firm AuthMind to integrate its identity monitoring into HashiCorp Vault, terms undisclosed; CryptoBriefing said the same day no official confirmation existed. SecurityWeek reports Israeli AI-agent security startup Bay emerged with $50 million ($37 million Series A led by Battery Ventures plus a $13 million seed) and WhiteMatter raised a $20 million Series A led by Blumberg Capital. Qualys reported Q3 revenue of $188.0 million (+11%) on Nov 9 and raised full-year guidance, but shares fell about 8% after hours on a softer Q4 outlook. Palo Alto Networks reports Nov 18. Seen via search summaries only.</p>
+      <div class="src"><a href="https://idtechwire.com/" target="_blank">ID Tech Digest</a> &middot; <a href="https://www.securityweek.com/" target="_blank">SecurityWeek</a> &middot; <a href="https://finviz.com/" target="_blank">Finviz</a></div>
+    </div>
+    <div class="item">
       <div class="headline"><span class="date">Nov 4&ndash;6</span>Reported: Palo Alto Networks in talks to buy Clutch Security for about $500M</div>
       <p>The Information reported, and TechCrunch followed, that Palo Alto Networks is in talks to acquire AI-agent access-security startup Clutch Security for about $500 million in cash plus earn-outs. Neither company has confirmed; seen via search summaries only.</p>
       <div class="src"><a href="https://techcrunch.com/?p=3185713" target="_blank">TechCrunch</a> &middot; <a href="https://www.techzine.eu/news/security/145637/palo-alto-networks-wants-to-acquire-clutch-security/" target="_blank">Techzine</a></div>
@@ -197,15 +237,10 @@
       <p>A search summary says Goldman Sachs&rsquo; growth equity arm led an $80 million Series B for New York-based Daylight Security, at a post-money valuation of about $400 million and $120 million raised in total. The company announcement was not reviewed.</p>
       <div class="src"><a href="https://www.gurufocus.com/news/9188488/goldman-sachs-leads-80-million-series-b-round-for-daylight-security" target="_blank">GuruFocus</a></div>
     </div>
-    <div class="item">
-      <div class="headline"><span class="date">Nov 5</span>Reported: Cybersecurity stocks sell off with software&rsquo;s AI winners</div>
-      <p>Market coverage, seen via search summaries, says CrowdStrike fell about 9% and Okta about 10% on Nov 5 as investors sold software names, and that Palo Alto Networks and CrowdStrike were each down about 17% and Zscaler about 18% for the week to the Nov 5 close. Palo Alto Networks reports fiscal Q1 results on Nov 18. Figures were not checked against exchange data.</p>
-      <div class="src"><a href="https://247wallst.com/investing/2026/11/05/palantir-tumbles-10-crowdstrike-sinks-9-as-wall-street-dumps-softwares-ai-winners-okta-drops-10" target="_blank">24/7 Wall St (Nov 5)</a> &middot; <a href="https://finance.yahoo.com/markets/stocks/articles/palo-alto-networks-crowdstrike-sink-235225172.html" target="_blank">Yahoo Finance</a></div>
-    </div>
   </section>
 
   <footer>
-    Static snapshot &middot; compiled Thursday, November 12, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
+    Static snapshot &middot; compiled Friday, November 13, 2026 from public web search of official/vendor and press sources &middot; not auto-refreshing
   </footer>
 
 </div>
